@@ -1,6 +1,7 @@
 
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import Logo from "./Logo";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,9 +18,7 @@ const Navigation = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-[#F17C58]/10 backdrop-blur-sm">
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex items-center justify-between h-16">
-          <div className="text-2xl font-bold text-gray-900 font-serif italic">
-            AH
-          </div>
+          <Logo size="default" />
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
