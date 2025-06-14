@@ -42,14 +42,14 @@ const Projects = () => {
     <section className="py-20 bg-gray-50">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
+          <p className="text-sm text-gray-500 mb-4">
+            Take a look at my work
+          </p>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Featured Projects
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
             Here are some of my recent projects that showcase my skills and passion for creating exceptional digital experiences.
-          </p>
-          <p className="text-sm text-gray-500 max-w-2xl mx-auto">
-            Each project demonstrates different aspects of modern web development, from e-commerce solutions to collaborative tools. Hover over the cards to see more details about each project.
           </p>
         </div>
         
@@ -57,7 +57,7 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div 
               key={project.title}
-              className="project-card group cursor-pointer"
+              className="project-card"
             >
               {/* Image Section */}
               <div className="project-thumb">
@@ -85,10 +85,6 @@ const Projects = () => {
                   
                   <p className="project-short-description">
                     {project.shortDescription}
-                  </p>
-                  
-                  <p className="project-description">
-                    {project.description}
                   </p>
                   
                   <div className="project-tags">
@@ -130,23 +126,18 @@ const Projects = () => {
       <style>{`
         .project-card {
           width: 100%;
-          height: 400px;
+          height: 450px;
           border-radius: 8px;
           box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
           overflow: hidden;
           position: relative;
           background: white;
           transform: translateZ(0);
-          transition: transform 0.3s ease;
-        }
-
-        .project-card:hover {
-          transform: translateY(-5px);
         }
 
         .project-thumb {
           width: 100%;
-          height: 300px;
+          height: 250px;
           overflow: hidden;
           border-radius: 8px 8px 0 0;
         }
@@ -156,20 +147,16 @@ const Projects = () => {
           bottom: 0;
           left: 0;
           right: 0;
-          height: 100%;
+          height: 200px;
           background: white;
           padding: 20px 24px;
-          transition: transform 0.4s cubic-bezier(0.17, 0.67, 0.5, 1.03) 0.15s;
-          transform: translateY(150px);
-        }
-
-        .project-card:hover .project-infos {
-          transform: translateY(0);
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
         }
 
         .project-content {
-          height: calc(100% - 60px);
-          overflow: hidden;
+          flex: 1;
         }
 
         .project-title {
@@ -178,7 +165,7 @@ const Projects = () => {
           text-transform: uppercase;
           letter-spacing: 2px;
           color: #152536;
-          margin: 10px 0 15px 0;
+          margin: 0 0 10px 0;
           line-height: 1.2;
         }
 
@@ -195,16 +182,10 @@ const Projects = () => {
           font-size: 0.85rem;
           text-transform: uppercase;
           color: rgba(21, 37, 54, 0.7);
-          margin-bottom: 20px;
-          padding-bottom: 20px;
+          margin-bottom: 15px;
+          padding-bottom: 15px;
           border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-          opacity: 0;
-          transition: opacity 0.5s cubic-bezier(0.17, 0.67, 0.5, 1.03) 0.25s;
           font-weight: 500;
-        }
-
-        .project-card:hover .project-status {
-          opacity: 1;
         }
 
         .project-short-description {
@@ -212,25 +193,6 @@ const Projects = () => {
           line-height: 1.6;
           color: rgba(21, 37, 54, 0.7);
           margin-bottom: 15px;
-          opacity: 1;
-          transition: opacity 0.3s ease;
-        }
-
-        .project-card:hover .project-short-description {
-          opacity: 0;
-        }
-
-        .project-description {
-          font-size: 0.9rem;
-          line-height: 1.6;
-          color: rgba(21, 37, 54, 0.7);
-          margin-bottom: 15px;
-          opacity: 0;
-          transition: opacity 0.5s cubic-bezier(0.17, 0.67, 0.5, 1.03) 0.25s;
-        }
-
-        .project-card:hover .project-description {
-          opacity: 1;
         }
 
         .project-tags {
@@ -238,12 +200,6 @@ const Projects = () => {
           flex-wrap: wrap;
           gap: 8px;
           margin-bottom: 15px;
-          opacity: 0;
-          transition: opacity 0.5s cubic-bezier(0.17, 0.67, 0.5, 1.03) 0.3s;
-        }
-
-        .project-card:hover .project-tags {
-          opacity: 1;
         }
 
         .tag {
@@ -256,17 +212,7 @@ const Projects = () => {
         }
 
         .project-details {
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          padding: 20px 24px;
-          opacity: 0;
-          transition: opacity 0.5s cubic-bezier(0.17, 0.67, 0.5, 1.03) 0.25s;
-        }
-
-        .project-card:hover .project-details {
-          opacity: 1;
+          margin-top: auto;
         }
 
         .project-links {
