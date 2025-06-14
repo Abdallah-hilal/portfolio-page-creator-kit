@@ -1,27 +1,27 @@
 
-import { Code, Palette, Smartphone, Globe } from "lucide-react";
+import { BarChart3, Bot, Database, Brain } from "lucide-react";
 
 const About = () => {
   const skills = [
     {
-      icon: Code,
-      title: "Frontend Development",
-      description: "React, TypeScript, Tailwind CSS"
+      icon: BarChart3,
+      title: "Data Analysis",
+      description: "Python, R, SQL, Tableau"
     },
     {
-      icon: Globe,
-      title: "Backend Development", 
-      description: "Node.js, Python, PostgreSQL"
+      icon: Brain,
+      title: "Machine Learning", 
+      description: "Scikit-learn, TensorFlow, PyTorch"
     },
     {
-      icon: Palette,
-      title: "UI/UX Design",
-      description: "Figma, Adobe Creative Suite"
+      icon: Bot,
+      title: "Process Automation",
+      description: "RPA, APIs, Workflow Optimization"
     },
     {
-      icon: Smartphone,
-      title: "Mobile Development",
-      description: "React Native, Flutter"
+      icon: Database,
+      title: "Data Engineering",
+      description: "ETL Pipelines, Big Data, Cloud Platforms"
     }
   ];
 
@@ -33,8 +33,8 @@ const About = () => {
             About Me
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            I'm a passionate developer with 5+ years of experience creating digital solutions 
-            that make a difference. I love turning complex problems into simple, beautiful designs.
+            I'm a passionate data scientist with 5+ years of experience transforming raw data into actionable insights 
+            and building automated solutions that drive business growth and operational efficiency.
           </p>
         </div>
         
