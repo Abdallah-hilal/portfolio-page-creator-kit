@@ -20,13 +20,9 @@ const Navigation = () => {
     <nav className="fixed top-6 left-1/2 transform -translate-x-1/2 z-50">
       {/* Desktop Navigation - Pill Shape with Logo */}
       <div className="hidden lg:flex items-center bg-white/90 backdrop-blur-md rounded-full shadow-lg border border-gray-200/50 px-6 py-4 gap-6">
-        {/* Logo and Name */}
-        <div className="flex items-center gap-3 px-3">
+        {/* Logo */}
+        <div className="flex items-center px-3">
           <Logo size="small" />
-          <div className="flex flex-col">
-            <span className="font-bold text-gray-900 text-lg whitespace-nowrap">Abdallah Helal</span>
-            <span className="text-xs text-gray-600 font-medium">Data Scientist</span>
-          </div>
         </div>
         
         {/* Navigation Items */}
@@ -50,14 +46,8 @@ const Navigation = () => {
 
       {/* Mobile Navigation */}
       <div className="lg:hidden">
-        <div className="bg-white/90 backdrop-blur-md rounded-full shadow-lg border border-gray-200/50 px-5 py-3 flex items-center justify-between min-w-[220px]">
-          <div className="flex items-center gap-3">
-            <Logo size="small" />
-            <div className="flex flex-col">
-              <span className="font-bold text-gray-900 text-base whitespace-nowrap">Abdallah Helal</span>
-              <span className="text-xs text-gray-600 font-medium">Data Scientist</span>
-            </div>
-          </div>
+        <div className="bg-white/90 backdrop-blur-md rounded-full shadow-lg border border-gray-200/50 px-5 py-3 flex items-center justify-between">
+          <Logo size="small" />
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="p-2 rounded-full hover:bg-gray-100 transition-colors"
