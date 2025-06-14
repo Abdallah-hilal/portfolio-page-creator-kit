@@ -7,7 +7,7 @@ const Skills = () => {
       icon: Workflow,
       title: "Process Automation",
       skills: [
-        { name: "n8n", logo: "https://docs.n8n.io/favicon.ico" },
+        { name: "n8n", logo: "/lovable-uploads/6ebcda68-310a-4914-800e-f9dd0d7026ef.png" },
         { name: "Zapier", logo: "https://cdn.zapier.com/storage/services/6cf3f5a0238d7971d4e2d62e8a9ec1c6.png" },
         { name: "Power Automate", logo: "https://powerautomate.microsoft.com/images/application-logos/svg/powerautomate.svg" },
         { name: "UiPath", logo: "https://www.uipath.com/hs-fs/hubfs/UiPath-Logo.png" }
