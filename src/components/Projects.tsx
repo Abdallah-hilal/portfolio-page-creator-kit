@@ -9,7 +9,9 @@ const Projects = () => {
       image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
       tags: ["React", "Node.js", "MongoDB", "Stripe"],
       liveUrl: "#",
-      githubUrl: "#"
+      githubUrl: "#",
+      date: "2024",
+      status: "Live Project"
     },
     {
       title: "Task Management App",
@@ -17,7 +19,9 @@ const Projects = () => {
       image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop",
       tags: ["React", "TypeScript", "Socket.io", "PostgreSQL"],
       liveUrl: "#",
-      githubUrl: "#"
+      githubUrl: "#",
+      date: "2024",
+      status: "In Development"
     },
     {
       title: "Portfolio Website",
@@ -25,7 +29,9 @@ const Projects = () => {
       image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=400&fit=crop",
       tags: ["React", "Tailwind CSS", "Framer Motion"],
       liveUrl: "#",
-      githubUrl: "#"
+      githubUrl: "#",
+      date: "2024",
+      status: "Completed"
     }
   ];
 
@@ -45,57 +51,223 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div 
               key={project.title}
-              className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02] group"
+              className="project-card group cursor-pointer"
             >
-              <div className="relative overflow-hidden">
+              {/* Image Section */}
+              <div className="project-thumb">
                 <img 
                   src={project.image} 
                   alt={project.title}
-                  className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-orange-600 bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
               </div>
               
-              <div className="p-6">
-                <h3 className="text-2xl font-bold text-gray-900 mb-3">
-                  {project.title}
-                </h3>
-                <p className="text-gray-600 mb-4 leading-relaxed">
-                  {project.description}
-                </p>
-                
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.tags.map((tag) => (
-                    <span 
-                      key={tag}
-                      className="px-3 py-1 bg-orange-100 text-orange-600 text-sm rounded-full"
-                    >
-                      {tag}
-                    </span>
-                  ))}
+              {/* Info Section */}
+              <div className="project-infos">
+                <div className="project-content">
+                  <h3 className="project-title">
+                    {project.title}
+                  </h3>
+                  
+                  <div className="project-date">
+                    {project.date}
+                  </div>
+                  
+                  <div className="project-status">
+                    {project.status}
+                  </div>
+                  
+                  <p className="project-description">
+                    {project.description}
+                  </p>
+                  
+                  <div className="project-tags">
+                    {project.tags.map((tag) => (
+                      <span 
+                        key={tag}
+                        className="tag"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
                 </div>
                 
-                <div className="flex gap-4">
-                  <a 
-                    href={project.liveUrl}
-                    className="flex items-center gap-2 text-orange-600 hover:text-orange-700 font-medium transition-colors"
-                  >
-                    <ExternalLink className="w-4 h-4" />
-                    Live Demo
-                  </a>
-                  <a 
-                    href={project.githubUrl}
-                    className="flex items-center gap-2 text-gray-600 hover:text-gray-700 font-medium transition-colors"
-                  >
-                    <Github className="w-4 h-4" />
-                    Code
-                  </a>
+                <div className="project-details">
+                  <div className="project-links">
+                    <a 
+                      href={project.liveUrl}
+                      className="project-link"
+                    >
+                      <ExternalLink className="w-4 h-4" />
+                      Live Demo
+                    </a>
+                    <a 
+                      href={project.githubUrl}
+                      className="project-link"
+                    >
+                      <Github className="w-4 h-4" />
+                      Code
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
           ))}
         </div>
       </div>
+
+      <style jsx>{`
+        .project-card {
+          width: 100%;
+          height: 350px;
+          border-radius: 8px;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+          overflow: hidden;
+          position: relative;
+          background: white;
+          transform: translateZ(0);
+          transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+          transform: translateY(-5px);
+        }
+
+        .project-thumb {
+          width: 100%;
+          height: 260px;
+          overflow: hidden;
+          border-radius: 8px 8px 0 0;
+        }
+
+        .project-infos {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          height: 100%;
+          background: white;
+          padding: 20px 24px;
+          transition: transform 0.4s cubic-bezier(0.17, 0.67, 0.5, 1.03) 0.15s;
+          transform: translateY(170px);
+        }
+
+        .project-card:hover .project-infos {
+          transform: translateY(0);
+        }
+
+        .project-content {
+          height: calc(100% - 60px);
+          overflow: hidden;
+        }
+
+        .project-title {
+          font-size: 1rem;
+          font-weight: 800;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          color: #152536;
+          margin: 10px 0 15px 0;
+          line-height: 1.2;
+        }
+
+        .project-date {
+          font-size: 0.85rem;
+          text-transform: uppercase;
+          color: rgba(21, 37, 54, 0.7);
+          margin-bottom: 8px;
+          font-weight: 500;
+        }
+
+        .project-status {
+          display: inline-block;
+          font-size: 0.85rem;
+          text-transform: uppercase;
+          color: rgba(21, 37, 54, 0.7);
+          margin-bottom: 20px;
+          padding-bottom: 20px;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+          opacity: 0;
+          transition: opacity 0.5s cubic-bezier(0.17, 0.67, 0.5, 1.03) 0.25s;
+          font-weight: 500;
+        }
+
+        .project-card:hover .project-status {
+          opacity: 1;
+        }
+
+        .project-description {
+          font-size: 0.9rem;
+          line-height: 1.6;
+          color: rgba(21, 37, 54, 0.7);
+          margin-bottom: 15px;
+          opacity: 0;
+          transition: opacity 0.5s cubic-bezier(0.17, 0.67, 0.5, 1.03) 0.25s;
+        }
+
+        .project-card:hover .project-description {
+          opacity: 1;
+        }
+
+        .project-tags {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 8px;
+          margin-bottom: 15px;
+          opacity: 0;
+          transition: opacity 0.5s cubic-bezier(0.17, 0.67, 0.5, 1.03) 0.3s;
+        }
+
+        .project-card:hover .project-tags {
+          opacity: 1;
+        }
+
+        .tag {
+          padding: 4px 12px;
+          background: #F17C58;
+          color: white;
+          font-size: 0.75rem;
+          border-radius: 12px;
+          font-weight: 500;
+        }
+
+        .project-details {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          padding: 20px 24px;
+          opacity: 0;
+          transition: opacity 0.5s cubic-bezier(0.17, 0.67, 0.5, 1.03) 0.25s;
+        }
+
+        .project-card:hover .project-details {
+          opacity: 1;
+        }
+
+        .project-links {
+          display: flex;
+          gap: 20px;
+        }
+
+        .project-link {
+          display: flex;
+          items-center;
+          gap: 8px;
+          font-size: 0.9rem;
+          font-weight: 800;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          color: #4e958b;
+          text-decoration: none;
+          transition: color 0.3s ease;
+        }
+
+        .project-link:hover {
+          color: #F17C58;
+        }
+      `}</style>
     </section>
   );
 };
