@@ -44,7 +44,7 @@ const About = () => {
               key={skill.title}
               className="text-center p-6 rounded-xl bg-gray-50 hover:bg-gray-100 transition-all duration-300 hover:scale-105 hover:shadow-lg group"
             >
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 text-blue-600 rounded-full mb-4 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-orange-100 text-orange-600 rounded-full mb-4 group-hover:bg-orange-600 group-hover:text-white transition-all duration-300">
                 <skill.icon className="w-8 h-8" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">

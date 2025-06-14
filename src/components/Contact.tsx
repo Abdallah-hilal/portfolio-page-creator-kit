@@ -52,7 +52,7 @@ const Contact = () => {
                   href={item.href}
                   className="flex items-center gap-4 p-4 rounded-lg bg-gray-800 hover:bg-gray-700 transition-colors group"
                 >
-                  <div className="flex items-center justify-center w-12 h-12 bg-blue-600 text-white rounded-lg group-hover:bg-blue-500 transition-colors">
+                  <div className="flex items-center justify-center w-12 h-12 bg-orange-600 text-white rounded-lg group-hover:bg-orange-500 transition-colors">
                     <item.icon className="w-6 h-6" />
                   </div>
                   <div>
@@ -70,7 +70,7 @@ const Contact = () => {
                   <a 
                     key={social.label}
                     href={social.href}
-                    className="flex items-center justify-center w-12 h-12 bg-gray-800 hover:bg-blue-600 text-gray-400 hover:text-white rounded-lg transition-all duration-300 hover:scale-110"
+                    className="flex items-center justify-center w-12 h-12 bg-gray-800 hover:bg-orange-600 text-gray-400 hover:text-white rounded-lg transition-all duration-300 hover:scale-110"
                     aria-label={social.label}
                   >
                     <social.icon className="w-5 h-5" />
@@ -90,7 +90,7 @@ const Contact = () => {
                   </label>
                   <input 
                     type="text" 
-                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent text-white"
+                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-600 focus:border-transparent text-white"
                     placeholder="John"
                   />
                 </div>
@@ -100,7 +100,7 @@ const Contact = () => {
                   </label>
                   <input 
                     type="text" 
-                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent text-white"
+                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-600 focus:border-transparent text-white"
                     placeholder="Doe"
                   />
                 </div>
@@ -112,7 +112,7 @@ const Contact = () => {
                 </label>
                 <input 
                   type="email" 
-                  className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent text-white"
+                  className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-600 focus:border-transparent text-white"
                   placeholder="john@example.com"
                 />
               </div>
@@ -123,14 +123,14 @@ const Contact = () => {
                 </label>
                 <textarea 
                   rows={5}
-                  className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent text-white resize-none"
+                  className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-600 focus:border-transparent text-white resize-none"
                   placeholder="Tell me about your project..."
                 ></textarea>
               </div>
               
               <button 
                 type="submit"
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-blue-500/25"
+                className="w-full bg-orange-600 hover:bg-orange-700 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-orange-500/25"
               >
                 Send Message
               </button>

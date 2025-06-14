@@ -26,10 +26,10 @@ const Navigation = () => {
               <a 
                 key={item.name}
                 href={item.href}
-                className="text-gray-700 hover:text-blue-600 font-medium transition-colors relative group"
+                className="text-gray-700 hover:text-orange-600 font-medium transition-colors relative group"
               >
                 {item.name}
-                <span className="absolute inset-x-0 -bottom-1 h-0.5 bg-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+                <span className="absolute inset-x-0 -bottom-1 h-0.5 bg-orange-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
               </a>
             ))}
           </div>
@@ -50,7 +50,7 @@ const Navigation = () => {
               <a 
                 key={item.name}
                 href={item.href}
-                className="block py-2 text-gray-700 hover:text-blue-600 font-medium transition-colors"
+                className="block py-2 text-gray-700 hover:text-orange-600 font-medium transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 {item.name}

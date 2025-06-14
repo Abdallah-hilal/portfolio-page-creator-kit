@@ -53,7 +53,7 @@ const Projects = () => {
                   alt={project.title}
                   className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-blue-600 bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
+                <div className="absolute inset-0 bg-orange-600 bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
               </div>
               
               <div className="p-6">
@@ -68,7 +68,7 @@ const Projects = () => {
                   {project.tags.map((tag) => (
                     <span 
                       key={tag}
-                      className="px-3 py-1 bg-blue-100 text-blue-600 text-sm rounded-full"
+                      className="px-3 py-1 bg-orange-100 text-orange-600 text-sm rounded-full"
                     >
                       {tag}
                     </span>
@@ -78,7 +78,7 @@ const Projects = () => {
                 <div className="flex gap-4">
                   <a 
                     href={project.liveUrl}
-                    className="flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium transition-colors"
+                    className="flex items-center gap-2 text-orange-600 hover:text-orange-700 font-medium transition-colors"
                   >
                     <ExternalLink className="w-4 h-4" />
                     Live Demo
