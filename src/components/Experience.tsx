@@ -27,53 +27,47 @@ const Experience = () => {
   ];
 
   return (
-    <section className="py-20 bg-white">
-      <div className="max-w-6xl mx-auto px-6">
+    <section className="py-20 bg-gray-50">
+      <div className="max-w-4xl mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-5xl font-bold text-gray-900 mb-6">
-            My Work Experience
+          <h2 className="text-4xl font-bold text-gray-900 mb-6">
+            Experience
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            A journey through my professional career in data science and analytics
-          </p>
         </div>
 
         {/* Experience Timeline */}
         <div className="relative">
           {/* Timeline line */}
-          <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gray-200"></div>
+          <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-gray-300"></div>
           
           <div className="space-y-12">
             {experiences.map((exp, index) => (
-              <div key={index} className="relative flex items-start">
+              <div key={index} className="relative flex">
                 {/* Timeline dot */}
-                <div className={`absolute left-6 w-4 h-4 ${exp.color} rounded-full border-4 border-white shadow-lg z-10`}></div>
+                <div className={`absolute left-2 w-4 h-4 ${exp.color} rounded-full border-2 border-white shadow-sm z-10`}></div>
                 
                 {/* Content */}
-                <div className="ml-16 bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-shadow duration-300">
-                  <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-4">
-                    <div className="mb-4 lg:mb-0">
-                      <div className="flex items-center gap-2 text-gray-600 mb-2">
-                        <MapPin className="w-4 h-4" />
-                        <span className="font-medium">{exp.company}</span>
-                      </div>
-                      <div className="flex items-center gap-2 text-gray-500 text-sm">
-                        <Calendar className="w-4 h-4" />
-                        <span>{exp.period}</span>
-                      </div>
-                    </div>
-                    
-                    <div className="text-right">
-                      <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                        {exp.position}
-                      </h3>
-                    </div>
+                <div className="ml-12 grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
+                  {/* Left side - Company and Date */}
+                  <div className="space-y-2">
+                    <h3 className="text-xl font-bold text-gray-900">
+                      {exp.company}
+                    </h3>
+                    <p className="text-gray-600 text-sm">
+                      {exp.period}
+                    </p>
                   </div>
                   
-                  <p className="text-gray-700 leading-relaxed">
-                    {exp.description}
-                  </p>
+                  {/* Right side - Position and Description */}
+                  <div className="space-y-3">
+                    <h4 className="text-lg font-semibold text-gray-900">
+                      {exp.position}
+                    </h4>
+                    <p className="text-gray-700 text-sm leading-relaxed">
+                      {exp.description}
+                    </p>
+                  </div>
                 </div>
               </div>
             ))}
