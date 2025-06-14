@@ -6,38 +6,49 @@ const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
-    { name: "Home", href: "#home" },
-    { name: "About", href: "#about" },
-    { name: "Projects", href: "#projects" },
-    { name: "Contact", href: "#contact" }
+    { name: "SERVICES", href: "#about" },
+    { name: "WORKS", href: "#projects" },
+    { name: "NOTES", href: "#notes" },
+    { name: "EXPERIENCE", href: "#contact" }
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-orange-100/95 backdrop-blur-sm">
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex items-center justify-between h-16">
-          <div className="text-2xl font-bold text-gray-900">
-            AH
+          <div className="text-2xl font-bold text-gray-900 font-serif italic">
+            Abdallah
           </div>
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            {navItems.map((item) => (
+            {navItems.map((item, index) => (
               <a 
                 key={item.name}
                 href={item.href}
-                className="text-gray-700 hover:text-orange-600 font-medium transition-colors relative group"
+                className={`text-sm font-medium transition-colors relative group ${
+                  index === 0 
+                    ? 'text-gray-900 border border-gray-900 px-4 py-2 rounded-full' 
+                    : 'text-gray-700 hover:text-gray-900'
+                }`}
               >
                 {item.name}
-                <span className="absolute inset-x-0 -bottom-1 h-0.5 bg-orange-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+                {index !== 0 && (
+                  <span className="absolute inset-x-0 -bottom-1 h-0.5 bg-gray-900 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+                )}
               </a>
             ))}
+          </div>
+          
+          {/* Phone number */}
+          <div className="hidden md:block text-sm font-medium text-gray-900">
+            +001 (313) 345 678
           </div>
           
           {/* Mobile menu button */}
           <button 
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
+            className="md:hidden p-2 rounded-lg hover:bg-white/50 transition-colors"
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -50,7 +61,7 @@ const Navigation = () => {
               <a 
                 key={item.name}
                 href={item.href}
-                className="block py-2 text-gray-700 hover:text-orange-600 font-medium transition-colors"
+                className="block py-2 text-gray-700 hover:text-gray-900 font-medium transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 {item.name}
