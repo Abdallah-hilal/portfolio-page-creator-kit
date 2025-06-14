@@ -24,7 +24,7 @@ const Navigation = () => {
         <div className="flex items-center gap-3 px-3">
           <Logo size="small" />
           <div className="flex flex-col">
-            <span className="font-bold text-gray-900 text-lg">Abdallah Helal</span>
+            <span className="font-bold text-gray-900 text-lg whitespace-nowrap">Abdallah Helal</span>
             <span className="text-xs text-gray-600 font-medium">Data Scientist</span>
           </div>
         </div>
@@ -54,7 +54,7 @@ const Navigation = () => {
           <div className="flex items-center gap-3">
             <Logo size="small" />
             <div className="flex flex-col">
-              <span className="font-bold text-gray-900 text-base">Abdallah Helal</span>
+              <span className="font-bold text-gray-900 text-base whitespace-nowrap">Abdallah Helal</span>
               <span className="text-xs text-gray-600 font-medium">Data Scientist</span>
             </div>
           </div>
