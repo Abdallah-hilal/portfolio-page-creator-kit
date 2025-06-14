@@ -51,7 +51,7 @@ const Testimonials = () => {
             >
               {/* Quote Icon */}
               <div className="absolute top-6 right-6 opacity-10 group-hover:opacity-20 transition-opacity">
-                <Quote className="w-12 h-12 text-orange-500" />
+                <Quote className="w-12 h-12 text-[#F17C58]" />
               </div>
               
               {/* Rating */}
@@ -80,7 +80,7 @@ const Testimonials = () => {
                   <p className="text-gray-600 text-sm">
                     {testimonial.position}
                   </p>
-                  <p className="text-orange-600 text-sm font-medium">
+                  <p className="text-[#F17C58] text-sm font-medium">
                     {testimonial.company}
                   </p>
                 </div>
@@ -91,7 +91,7 @@ const Testimonials = () => {
 
         {/* Call to Action */}
         <div className="text-center mt-16">
-          <div className="inline-flex items-center gap-4 bg-orange-50 px-8 py-4 rounded-full">
+          <div className="inline-flex items-center gap-4 bg-[#F17C58]/10 px-8 py-4 rounded-full">
             <div className="flex -space-x-3">
               {testimonials.map((testimonial, index) => (
                 <img 
@@ -103,8 +103,8 @@ const Testimonials = () => {
               ))}
             </div>
             <div className="text-left">
-              <p className="text-orange-700 font-semibold">Join 190+ Happy Clients</p>
-              <p className="text-orange-600 text-sm">Ready to transform your data?</p>
+              <p className="text-[#F17C58] font-semibold">Join 190+ Happy Clients</p>
+              <p className="text-[#F17C58]/80 text-sm">Ready to transform your data?</p>
             </div>
           </div>
         </div>

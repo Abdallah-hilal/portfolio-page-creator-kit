@@ -3,7 +3,7 @@ import { ChevronDown, Mail, Phone } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section className="min-h-screen flex flex-col justify-center items-center relative bg-orange-100 overflow-hidden">
+    <section className="min-h-screen flex flex-col justify-center items-center relative bg-[#F17C58]/10 overflow-hidden">
       {/* Main content container with white background */}
       <div className="bg-white rounded-3xl shadow-2xl max-w-6xl mx-auto p-12 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -24,8 +24,8 @@ const Hero = () => {
             
             <div className="mb-8">
               <div className="flex items-center gap-2 mb-4">
-                <Mail className="w-4 h-4 text-orange-500" />
-                <span className="text-orange-500 font-medium">abdallah@example.com</span>
+                <Mail className="w-4 h-4 text-[#F17C58]" />
+                <span className="text-[#F17C58] font-medium">abdallah@example.com</span>
               </div>
             </div>
             
@@ -46,13 +46,13 @@ const Hero = () => {
                 <svg viewBox="0 0 400 400" className="w-full h-full absolute">
                   <path 
                     d="M50 200 Q200 50 350 200 Q200 350 50 200" 
-                    fill="#2dd4bf" 
+                    fill="#F17C58" 
                     opacity="0.9"
                     transform="rotate(-15 200 200)"
                   />
                   <path 
                     d="M80 180 Q220 80 320 220 Q180 320 80 180" 
-                    fill="#06b6d4" 
+                    fill="#F17C58" 
                     opacity="0.7"
                     transform="rotate(10 200 200)"
                   />
