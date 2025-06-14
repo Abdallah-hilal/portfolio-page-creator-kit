@@ -21,13 +21,13 @@ const Hero = () => {
             />
           </div>
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-orange-100 to-orange-200 bg-clip-text text-transparent">
-            John Developer
+            Abdallah Helal
           </h1>
           <p className="text-xl md:text-2xl text-orange-100 mb-8 font-light">
-            Full-Stack Developer & Digital Craftsman
+            Data Scientist & Automation Expert
           </p>
           <p className="text-lg text-orange-200 mb-12 max-w-2xl mx-auto leading-relaxed">
-            I create beautiful, functional digital experiences that bridge the gap between design and technology.
+            I create intelligent solutions that transform data into insights and automate complex processes to drive business efficiency.
           </p>
         </div>
         
