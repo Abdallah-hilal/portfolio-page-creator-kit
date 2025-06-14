@@ -1,35 +1,63 @@
 
-import { BarChart3, Bot, Database, Brain } from "lucide-react";
+import { BarChart3, Bot, Database, Brain, Workflow, Code, Cloud, Zap } from "lucide-react";
 
 const About = () => {
   const skills = [
     {
-      icon: BarChart3,
-      title: "Data Analysis",
-      description: "Python, R, SQL, Tableau",
-      color: "bg-blue-500",
-      lightColor: "bg-blue-100"
-    },
-    {
-      icon: Brain,
-      title: "Machine Learning", 
-      description: "Scikit-learn, TensorFlow, PyTorch",
+      icon: Workflow,
+      title: "Process Automation",
+      description: "n8n, Zapier, Power Automate, UiPath",
       color: "bg-purple-500",
       lightColor: "bg-purple-100"
     },
     {
-      icon: Bot,
-      title: "Process Automation",
-      description: "RPA, APIs, Workflow Optimization",
+      icon: Brain,
+      title: "Machine Learning", 
+      description: "Python, Scikit-learn, TensorFlow, PyTorch",
+      color: "bg-blue-500",
+      lightColor: "bg-blue-100"
+    },
+    {
+      icon: BarChart3,
+      title: "Data Analysis",
+      description: "Python, R, SQL, Pandas, NumPy",
       color: "bg-green-500",
       lightColor: "bg-green-100"
     },
     {
       icon: Database,
       title: "Data Engineering",
-      description: "ETL Pipelines, Big Data, Cloud Platforms",
+      description: "ETL Pipelines, Apache Airflow, PostgreSQL",
       color: "bg-orange-500",
       lightColor: "bg-orange-100"
+    },
+    {
+      icon: Code,
+      title: "Programming",
+      description: "Python, JavaScript, SQL, R, Git",
+      color: "bg-red-500",
+      lightColor: "bg-red-100"
+    },
+    {
+      icon: Cloud,
+      title: "Cloud Platforms",
+      description: "AWS, Google Cloud, Azure, Docker",
+      color: "bg-cyan-500",
+      lightColor: "bg-cyan-100"
+    },
+    {
+      icon: Zap,
+      title: "API Integration",
+      description: "REST APIs, GraphQL, Webhooks, OAuth",
+      color: "bg-yellow-500",
+      lightColor: "bg-yellow-100"
+    },
+    {
+      icon: Bot,
+      title: "Data Visualization",
+      description: "Tableau, Power BI, Plotly, D3.js",
+      color: "bg-indigo-500",
+      lightColor: "bg-indigo-100"
     }
   ];
 
