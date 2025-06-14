@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, FileText } from "lucide-react";
 import Logo from "./Logo";
 
 const Navigation = () => {
@@ -104,6 +104,19 @@ const Navigation = () => {
                   }`} />
                 </a>
               ))}
+              
+              {/* Resume Button */}
+              <button
+                className="w-full flex items-center justify-center gap-3 py-4 px-5 mt-3 bg-[#F17C58] text-white rounded-xl font-semibold transition-all duration-300 hover:bg-[#E16A47] transform hover:scale-[1.02] active:scale-95 shadow-lg"
+                onClick={() => {
+                  // Handle resume download/view
+                  console.log('Open resume');
+                  setIsOpen(false);
+                }}
+              >
+                <FileText className="w-5 h-5" />
+                <span>See My Resume</span>
+              </button>
             </div>
             
             {/* Mobile Footer */}
