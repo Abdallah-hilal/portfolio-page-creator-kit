@@ -1,5 +1,6 @@
 
 import { Calendar, MapPin } from "lucide-react";
+import { Separator } from "@/components/ui/separator";
 
 const Experience = () => {
   const experiences = [
@@ -48,7 +49,7 @@ const Experience = () => {
                 <div className={`absolute left-2 w-4 h-4 ${exp.color} rounded-full border-2 border-white shadow-sm z-10`}></div>
                 
                 {/* Content */}
-                <div className="ml-12 grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
+                <div className="ml-12 grid grid-cols-1 md:grid-cols-2 gap-8 w-full relative">
                   {/* Left side - Company and Date */}
                   <div className="space-y-2">
                     <h3 className="text-xl font-bold text-gray-900">
@@ -58,6 +59,9 @@ const Experience = () => {
                       {exp.period}
                     </p>
                   </div>
+
+                  {/* Vertical divider */}
+                  <Separator orientation="vertical" className="absolute left-1/2 top-0 bottom-0 transform -translate-x-1/2 hidden md:block" />
                   
                   {/* Right side - Position and Description */}
                   <div className="space-y-3">
