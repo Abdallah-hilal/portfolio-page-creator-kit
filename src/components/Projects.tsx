@@ -5,6 +5,7 @@ const Projects = () => {
   const projects = [
     {
       title: "E-Commerce Platform",
+      shortDescription: "Modern e-commerce solution with real-time inventory",
       description: "A modern e-commerce solution built with React and Node.js, featuring real-time inventory management and secure payment processing.",
       image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
       tags: ["React", "Node.js", "MongoDB", "Stripe"],
@@ -15,6 +16,7 @@ const Projects = () => {
     },
     {
       title: "Task Management App",
+      shortDescription: "Collaborative task management with real-time updates",
       description: "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
       image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop",
       tags: ["React", "TypeScript", "Socket.io", "PostgreSQL"],
@@ -25,6 +27,7 @@ const Projects = () => {
     },
     {
       title: "Portfolio Website",
+      shortDescription: "Responsive portfolio with smooth animations",
       description: "A responsive portfolio website showcasing modern design principles with smooth animations and optimized performance.",
       image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=400&fit=crop",
       tags: ["React", "Tailwind CSS", "Framer Motion"],
@@ -79,6 +82,10 @@ const Projects = () => {
                   <div className="project-status">
                     {project.status}
                   </div>
+                  
+                  <p className="project-short-description">
+                    {project.shortDescription}
+                  </p>
                   
                   <p className="project-description">
                     {project.description}
@@ -153,7 +160,7 @@ const Projects = () => {
           background: white;
           padding: 20px 24px;
           transition: transform 0.4s cubic-bezier(0.17, 0.67, 0.5, 1.03) 0.15s;
-          transform: translateY(200px);
+          transform: translateY(150px);
         }
 
         .project-card:hover .project-infos {
@@ -198,6 +205,19 @@ const Projects = () => {
 
         .project-card:hover .project-status {
           opacity: 1;
+        }
+
+        .project-short-description {
+          font-size: 0.9rem;
+          line-height: 1.6;
+          color: rgba(21, 37, 54, 0.7);
+          margin-bottom: 15px;
+          opacity: 1;
+          transition: opacity 0.3s ease;
+        }
+
+        .project-card:hover .project-short-description {
+          opacity: 0;
         }
 
         .project-description {
