@@ -13,6 +13,13 @@ const Hero = () => {
       
       <div className="text-center z-10 max-w-4xl mx-auto px-6">
         <div className="animate-fade-in">
+          <div className="mb-8">
+            <img 
+              src="/lovable-uploads/c23bab3c-222c-4f0b-8920-fcd80f9033ee.png" 
+              alt="Profile" 
+              className="w-32 h-32 md:w-40 md:h-40 mx-auto rounded-full object-cover border-4 border-orange-400 shadow-2xl"
+            />
+          </div>
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-orange-100 to-orange-200 bg-clip-text text-transparent">
             John Developer
           </h1>
