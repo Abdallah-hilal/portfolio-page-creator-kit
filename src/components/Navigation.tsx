@@ -44,37 +44,85 @@ const Navigation = () => {
         </div>
       </div>
 
-      {/* Mobile Navigation */}
-      <div className="lg:hidden">
-        <div className="bg-white/90 backdrop-blur-md rounded-full shadow-lg border border-gray-200/50 px-5 py-3 flex items-center justify-between">
-          <Logo size="small" />
+      {/* Mobile Navigation - Enhanced Design */}
+      <div className="lg:hidden relative">
+        {/* Mobile Header */}
+        <div className="bg-white/95 backdrop-blur-md rounded-2xl shadow-xl border border-gray-200/50 px-6 py-4 flex items-center justify-between min-w-[200px]">
+          <div className="flex items-center">
+            <Logo size="small" />
+            <span className="ml-3 font-bold text-gray-900 text-lg">Portfolio</span>
+          </div>
+          
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="p-2 rounded-full hover:bg-gray-100 transition-colors"
+            className="relative p-3 rounded-xl bg-gray-50 hover:bg-gray-100 transition-all duration-300 hover:scale-105 active:scale-95"
+            aria-label="Toggle menu"
           >
-            {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            <div className="relative w-5 h-5">
+              <Menu 
+                className={`absolute w-5 h-5 transition-all duration-300 ${
+                  isOpen ? 'opacity-0 rotate-90' : 'opacity-100 rotate-0'
+                }`} 
+              />
+              <X 
+                className={`absolute w-5 h-5 transition-all duration-300 ${
+                  isOpen ? 'opacity-100 rotate-0' : 'opacity-0 -rotate-90'
+                }`} 
+              />
+            </div>
           </button>
         </div>
 
-        {/* Mobile Dropdown */}
-        {isOpen && (
-          <div className="absolute top-full mt-2 left-0 right-0 bg-white/95 backdrop-blur-md rounded-2xl shadow-xl border border-gray-200/50 p-4">
-            <div className="space-y-2">
-              {navItems.map((item) => (
+        {/* Mobile Dropdown - Enhanced with animations */}
+        <div className={`absolute top-full mt-3 left-0 right-0 transition-all duration-300 ease-out ${
+          isOpen 
+            ? 'opacity-100 transform translate-y-0 pointer-events-auto' 
+            : 'opacity-0 transform -translate-y-4 pointer-events-none'
+        }`}>
+          <div className="bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl border border-gray-200/50 p-2 overflow-hidden">
+            <div className="space-y-1">
+              {navItems.map((item, index) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="block py-3 px-4 text-gray-700 hover:text-[#F17C58] hover:bg-gray-50 rounded-xl font-medium transition-colors"
+                  className={`flex items-center py-4 px-5 rounded-xl font-medium transition-all duration-300 transform hover:scale-[1.02] active:scale-95 ${
+                    activeItem === item.name
+                      ? 'bg-[#F17C58] text-white shadow-lg'
+                      : 'text-gray-700 hover:text-[#F17C58] hover:bg-gray-50'
+                  }`}
+                  style={{
+                    animationDelay: isOpen ? `${index * 50}ms` : '0ms'
+                  }}
                   onClick={() => {
                     setActiveItem(item.name);
                     setIsOpen(false);
                   }}
                 >
-                  {item.name}
+                  <span className="text-lg">{item.name}</span>
+                  <div className={`ml-auto w-2 h-2 rounded-full transition-all duration-300 ${
+                    activeItem === item.name ? 'bg-white' : 'bg-transparent'
+                  }`} />
                 </a>
               ))}
             </div>
+            
+            {/* Mobile Footer */}
+            <div className="mt-4 pt-4 border-t border-gray-200/50">
+              <div className="px-5 py-3 text-center">
+                <div className="text-xs text-gray-500 font-medium">
+                  © 2024 Portfolio
+                </div>
+              </div>
+            </div>
           </div>
+        </div>
+
+        {/* Mobile Backdrop */}
+        {isOpen && (
+          <div 
+            className="fixed inset-0 bg-black/20 backdrop-blur-sm -z-10 transition-opacity duration-300"
+            onClick={() => setIsOpen(false)}
+          />
         )}
       </div>
     </nav>
