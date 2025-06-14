@@ -10,28 +10,39 @@ const Navigation = () => {
   const navItems = [
     { name: "Home", href: "#home" },
     { name: "About", href: "#about" },
+    { name: "Skills", href: "#skills" },
+    { name: "Education", href: "#education" },
     { name: "Projects", href: "#projects" },
     { name: "Work", href: "#experience" },
   ];
 
   return (
     <nav className="fixed top-6 left-1/2 transform -translate-x-1/2 z-50">
-      {/* Desktop Navigation - Pill Shape */}
-      <div className="hidden lg:flex items-center bg-white/90 backdrop-blur-md rounded-full shadow-lg border border-gray-200/50 px-2 py-2">
-        {navItems.map((item) => (
-          <a
-            key={item.name}
-            href={item.href}
-            onClick={() => setActiveItem(item.name)}
-            className={`px-6 py-3 rounded-full font-medium text-sm transition-all duration-300 ${
-              activeItem === item.name
-                ? "bg-[#F17C58] text-white shadow-md"
-                : "text-gray-700 hover:text-[#F17C58] hover:bg-gray-50"
-            }`}
-          >
-            {item.name}
-          </a>
-        ))}
+      {/* Desktop Navigation - Pill Shape with Logo */}
+      <div className="hidden lg:flex items-center bg-white/90 backdrop-blur-md rounded-full shadow-lg border border-gray-200/50 px-4 py-2 gap-4">
+        {/* Logo and Name */}
+        <div className="flex items-center gap-2 px-2">
+          <Logo size="small" />
+          <span className="font-bold text-gray-900">Abdallah</span>
+        </div>
+        
+        {/* Navigation Items */}
+        <div className="flex items-center">
+          {navItems.map((item) => (
+            <a
+              key={item.name}
+              href={item.href}
+              onClick={() => setActiveItem(item.name)}
+              className={`px-6 py-3 rounded-full font-medium text-sm transition-all duration-300 ${
+                activeItem === item.name
+                  ? "bg-[#F17C58] text-white shadow-md"
+                  : "text-gray-700 hover:text-[#F17C58] hover:bg-gray-50"
+              }`}
+            >
+              {item.name}
+            </a>
+          ))}
+        </div>
       </div>
 
       {/* Mobile Navigation */}
