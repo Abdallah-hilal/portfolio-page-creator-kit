@@ -1,9 +1,6 @@
-
 import { ChevronDown, Mail, Phone } from "lucide-react";
-
 const Hero = () => {
-  return (
-    <section className="min-h-screen flex flex-col justify-center items-center relative bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden pt-16">
+  return <section className="min-h-screen flex flex-col justify-center items-center relative bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden pt-16">
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-[#F17C58]/10 rounded-full blur-3xl"></div>
@@ -11,7 +8,7 @@ const Hero = () => {
       </div>
       
       {/* Main content container - Adjusted margins and padding */}
-      <div className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl max-w-7xl mx-auto px-8 py-16 md:px-16 md:py-20 relative z-10 border border-white/20 mx-6">
+      <div className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl max-w-7xl px-8 py-16 md:py-20 relative z-10 border border-white/20 md:px-[60px] mx-[66px] my-0">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left side - Text content with adjusted spacing */}
           <div className="text-left space-y-8">
@@ -64,11 +61,7 @@ const Hero = () => {
               
               {/* Profile image */}
               <div className="relative z-10">
-                <img 
-                  src="/lovable-uploads/c23bab3c-222c-4f0b-8920-fcd80f9033ee.png" 
-                  alt="Abdallah Helal" 
-                  className="w-72 h-72 lg:w-96 lg:h-96 mx-auto rounded-full object-cover border-8 border-white shadow-2xl relative z-10" 
-                />
+                <img src="/lovable-uploads/c23bab3c-222c-4f0b-8920-fcd80f9033ee.png" alt="Abdallah Helal" className="w-72 h-72 lg:w-96 lg:h-96 mx-auto rounded-full object-cover border-8 border-white shadow-2xl relative z-10" />
               </div>
               
               {/* Floating certification badge */}
@@ -96,8 +89,6 @@ const Hero = () => {
           <ChevronDown className="w-6 h-6 text-[#F17C58]" />
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
