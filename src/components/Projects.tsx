@@ -38,6 +38,19 @@ const Projects = () => {
     }
   ];
 
+  const getStatusColor = (status: string) => {
+    switch (status) {
+      case "Live Project":
+        return "bg-green-100 text-green-800";
+      case "In Development":
+        return "bg-yellow-100 text-yellow-800";
+      case "Completed":
+        return "bg-blue-100 text-blue-800";
+      default:
+        return "bg-gray-100 text-gray-800";
+    }
+  };
+
   return (
     <section className="py-20 bg-gray-50">
       <div className="max-w-6xl mx-auto px-6">
@@ -53,190 +66,75 @@ const Projects = () => {
           </p>
         </div>
         
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8">
           {projects.map((project, index) => (
             <div 
               key={project.title}
-              className="project-card"
+              className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group"
             >
               {/* Image Section */}
-              <div className="project-thumb">
+              <div className="relative h-48 overflow-hidden">
                 <img 
                   src={project.image} 
                   alt={project.title}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
+                <div className="absolute top-4 right-4">
+                  <span className={`px-3 py-1 rounded-full text-xs font-medium ${getStatusColor(project.status)}`}>
+                    {project.status}
+                  </span>
+                </div>
               </div>
               
-              {/* Info Section */}
-              <div className="project-infos">
-                <div className="project-content">
-                  <h3 className="project-title">
+              {/* Content Section */}
+              <div className="p-6">
+                <div className="flex items-center justify-between mb-3">
+                  <h3 className="text-xl font-bold text-gray-900 group-hover:text-[#F17C58] transition-colors">
                     {project.title}
                   </h3>
-                  
-                  <div className="project-date">
+                  <span className="text-sm text-gray-500 font-medium">
                     {project.date}
-                  </div>
-                  
-                  <div className="project-status">
-                    {project.status}
-                  </div>
-                  
-                  <p className="project-short-description">
-                    {project.shortDescription}
-                  </p>
-                  
-                  <div className="project-tags">
-                    {project.tags.map((tag) => (
-                      <span 
-                        key={tag}
-                        className="tag"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
+                  </span>
                 </div>
                 
-                <div className="project-details">
-                  <div className="project-links">
-                    <a 
-                      href={project.liveUrl}
-                      className="project-link"
+                <p className="text-gray-600 mb-4 line-clamp-2">
+                  {project.shortDescription}
+                </p>
+                
+                {/* Tags */}
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {project.tags.map((tag) => (
+                    <span 
+                      key={tag}
+                      className="px-3 py-1 bg-[#F17C58]/10 text-[#F17C58] text-xs font-medium rounded-full"
                     >
-                      <ExternalLink className="w-4 h-4" />
-                      Live Demo
-                    </a>
-                    <a 
-                      href={project.githubUrl}
-                      className="project-link"
-                    >
-                      <Github className="w-4 h-4" />
-                      Code
-                    </a>
-                  </div>
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                
+                {/* Links */}
+                <div className="flex gap-4 pt-4 border-t border-gray-100">
+                  <a 
+                    href={project.liveUrl}
+                    className="inline-flex items-center gap-2 text-sm font-medium text-gray-700 hover:text-[#F17C58] transition-colors"
+                  >
+                    <ExternalLink className="w-4 h-4" />
+                    Live Demo
+                  </a>
+                  <a 
+                    href={project.githubUrl}
+                    className="inline-flex items-center gap-2 text-sm font-medium text-gray-700 hover:text-[#F17C58] transition-colors"
+                  >
+                    <Github className="w-4 h-4" />
+                    View Code
+                  </a>
                 </div>
               </div>
             </div>
           ))}
         </div>
       </div>
-
-      <style>{`
-        .project-card {
-          width: 100%;
-          height: 450px;
-          border-radius: 8px;
-          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-          overflow: hidden;
-          position: relative;
-          background: white;
-          transform: translateZ(0);
-        }
-
-        .project-thumb {
-          width: 100%;
-          height: 250px;
-          overflow: hidden;
-          border-radius: 8px 8px 0 0;
-        }
-
-        .project-infos {
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          height: 200px;
-          background: white;
-          padding: 20px 24px;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-        }
-
-        .project-content {
-          flex: 1;
-        }
-
-        .project-title {
-          font-size: 1rem;
-          font-weight: 800;
-          text-transform: uppercase;
-          letter-spacing: 2px;
-          color: #152536;
-          margin: 0 0 10px 0;
-          line-height: 1.2;
-        }
-
-        .project-date {
-          font-size: 0.85rem;
-          text-transform: uppercase;
-          color: rgba(21, 37, 54, 0.7);
-          margin-bottom: 8px;
-          font-weight: 500;
-        }
-
-        .project-status {
-          display: inline-block;
-          font-size: 0.85rem;
-          text-transform: uppercase;
-          color: rgba(21, 37, 54, 0.7);
-          margin-bottom: 15px;
-          padding-bottom: 15px;
-          border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-          font-weight: 500;
-        }
-
-        .project-short-description {
-          font-size: 0.9rem;
-          line-height: 1.6;
-          color: rgba(21, 37, 54, 0.7);
-          margin-bottom: 15px;
-        }
-
-        .project-tags {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 8px;
-          margin-bottom: 15px;
-        }
-
-        .tag {
-          padding: 4px 12px;
-          background: #F17C58;
-          color: white;
-          font-size: 0.75rem;
-          border-radius: 12px;
-          font-weight: 500;
-        }
-
-        .project-details {
-          margin-top: auto;
-        }
-
-        .project-links {
-          display: flex;
-          gap: 20px;
-        }
-
-        .project-link {
-          display: flex;
-          items-center;
-          gap: 8px;
-          font-size: 0.9rem;
-          font-weight: 800;
-          text-transform: uppercase;
-          letter-spacing: 1px;
-          color: #4e958b;
-          text-decoration: none;
-          transition: color 0.3s ease;
-        }
-
-        .project-link:hover {
-          color: #F17C58;
-        }
-      `}</style>
     </section>
   );
 };
