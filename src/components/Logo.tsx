@@ -1,5 +1,4 @@
 
-
 const Logo = ({ size = "default", className = "" }: { size?: "small" | "default" | "large", className?: string }) => {
   const sizeClasses = {
     small: "w-8 h-8",
@@ -9,45 +8,32 @@ const Logo = ({ size = "default", className = "" }: { size?: "small" | "default"
 
   return (
     <div className={`${sizeClasses[size]} ${className} flex items-center justify-center relative`}>
-      {/* Crown */}
-      <div className="absolute -top-2 left-1/2 transform -translate-x-1/2">
-        <svg width="16" height="12" viewBox="0 0 16 12" fill="none">
-          <path 
-            d="M2 8L4 4L6 6L8 2L10 6L12 4L14 8H2Z" 
-            fill="#D4A574"
-            stroke="#B8956A" 
-            strokeWidth="0.5"
-          />
-        </svg>
-      </div>
-      
-      {/* Shield */}
+      {/* Main Shield */}
       <div className="relative w-full h-full">
         <svg width="100%" height="100%" viewBox="0 0 48 48" fill="none">
-          {/* Outer shield */}
+          {/* Shield background */}
           <path 
-            d="M24 2L36 8V20C36 30 24 44 24 44C24 44 12 30 12 20V8L24 2Z" 
-            fill="#D4A574"
-            stroke="#B8956A" 
+            d="M24 4L34 8V18C34 26 24 40 24 40C24 40 14 26 14 18V8L24 4Z" 
+            fill="#2563EB"
+            stroke="#1E40AF" 
             strokeWidth="1"
-          />
-          {/* Inner shield */}
-          <path 
-            d="M24 6L32 10V19C32 26 24 36 24 36C24 36 16 26 16 19V10L24 6Z" 
-            fill="#3A4A5C"
           />
         </svg>
         
         {/* AH Text */}
         <div className="absolute inset-0 flex items-center justify-center">
-          <span className="text-[#D4A574] font-bold text-lg font-serif tracking-tight">
+          <span className="text-white font-bold text-sm font-sans tracking-wider">
             AH
           </span>
         </div>
+      </div>
+      
+      {/* Small crown accent */}
+      <div className="absolute -top-1 left-1/2 transform -translate-x-1/2">
+        <div className="w-2 h-2 bg-yellow-400 rounded-full border border-yellow-500"></div>
       </div>
     </div>
   );
 };
 
 export default Logo;
-
