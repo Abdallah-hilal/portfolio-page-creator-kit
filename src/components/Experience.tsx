@@ -1,6 +1,5 @@
 
 import { Calendar, MapPin } from "lucide-react";
-import { Separator } from "@/components/ui/separator";
 
 const Experience = () => {
   const experiences = [
@@ -39,19 +38,25 @@ const Experience = () => {
 
         {/* Experience Timeline */}
         <div className="relative">
-          {/* Timeline line */}
-          <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-gray-300"></div>
+          {/* Main vertical dotted line through center */}
+          <div className="absolute left-1/2 top-0 bottom-0 w-0.5 border-l-2 border-dotted border-gray-400 transform -translate-x-1/2 hidden md:block"></div>
           
           <div className="space-y-12">
             {experiences.map((exp, index) => (
               <div key={index} className="relative flex">
                 {/* Timeline dot */}
-                <div className={`absolute left-2 w-4 h-4 ${exp.color} rounded-full border-2 border-white shadow-sm z-10`}></div>
+                <div className={`absolute left-1/2 transform -translate-x-1/2 w-4 h-4 ${exp.color} rounded-full border-2 border-white shadow-sm z-10 hidden md:block`}></div>
+                
+                {/* Mobile timeline dot (left side for mobile) */}
+                <div className={`absolute left-4 w-4 h-4 ${exp.color} rounded-full border-2 border-white shadow-sm z-10 md:hidden`}></div>
+                
+                {/* Mobile timeline line */}
+                <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-gray-300 md:hidden"></div>
                 
                 {/* Content */}
-                <div className="ml-12 grid grid-cols-1 md:grid-cols-2 gap-8 w-full relative">
+                <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-8 ml-12 md:ml-0">
                   {/* Left side - Company and Date */}
-                  <div className="space-y-2">
+                  <div className="space-y-2 md:text-right md:pr-8">
                     <h3 className="text-xl font-bold text-gray-900">
                       {exp.company}
                     </h3>
@@ -59,12 +64,9 @@ const Experience = () => {
                       {exp.period}
                     </p>
                   </div>
-
-                  {/* Vertical divider */}
-                  <Separator orientation="vertical" className="absolute left-1/2 top-0 bottom-0 transform -translate-x-1/2 hidden md:block" />
                   
                   {/* Right side - Position and Description */}
-                  <div className="space-y-3">
+                  <div className="space-y-3 md:pl-8">
                     <h4 className="text-lg font-semibold text-gray-900">
                       {exp.position}
                     </h4>
