@@ -8,29 +8,22 @@ const Logo = ({ size = "default", className = "" }: { size?: "small" | "default"
 
   return (
     <div className={`${sizeClasses[size]} ${className} flex items-center justify-center relative`}>
-      {/* Main Shield */}
       <div className="relative w-full h-full">
         <svg width="100%" height="100%" viewBox="0 0 48 48" fill="none">
-          {/* Shield background */}
+          {/* Hexagonal background */}
           <path 
-            d="M24 4L34 8V18C34 26 24 40 24 40C24 40 14 26 14 18V8L24 4Z" 
-            fill="#2563EB"
-            stroke="#1E40AF" 
-            strokeWidth="1"
+            d="M24 2L38 10V28L24 36L10 28V10L24 2Z" 
+            fill="#1F2937"
+            stroke="none"
           />
         </svg>
         
         {/* AH Text */}
         <div className="absolute inset-0 flex items-center justify-center">
-          <span className="text-white font-bold text-sm font-sans tracking-wider">
+          <span className="text-white font-bold text-lg font-sans tracking-tight">
             AH
           </span>
         </div>
-      </div>
-      
-      {/* Small crown accent */}
-      <div className="absolute -top-1 left-1/2 transform -translate-x-1/2">
-        <div className="w-2 h-2 bg-yellow-400 rounded-full border border-yellow-500"></div>
       </div>
     </div>
   );
