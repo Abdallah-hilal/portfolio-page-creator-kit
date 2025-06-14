@@ -8,8 +8,8 @@ const Navigation = () => {
   const navItems = [
     { name: "SERVICES", href: "#about" },
     { name: "WORKS", href: "#projects" },
-    { name: "NOTES", href: "#notes" },
-    { name: "EXPERIENCE", href: "#contact" }
+    { name: "EXPERIENCE", href: "#experience" },
+    { name: "CONTACT", href: "#contact" }
   ];
 
   return (
@@ -17,7 +17,7 @@ const Navigation = () => {
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           <div className="text-2xl font-bold text-gray-900 font-serif italic">
-            Abdallah
+            AH
           </div>
           
           {/* Desktop Navigation */}
