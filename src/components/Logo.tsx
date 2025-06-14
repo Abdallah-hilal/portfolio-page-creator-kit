@@ -17,14 +17,20 @@ const Logo = ({ size = "default", className = "" }: { size?: "small" | "default"
             fill="#1F2937"
             stroke="none"
           />
-        </svg>
-        
-        {/* AH Text */}
-        <div className="absolute inset-0 flex items-center justify-center">
-          <span className="text-white font-bold text-lg font-sans tracking-tight">
+          
+          {/* AH Text directly in SVG */}
+          <text 
+            x="24" 
+            y="28" 
+            textAnchor="middle" 
+            fill="white" 
+            fontSize="14" 
+            fontFamily="Arial Black, sans-serif" 
+            fontWeight="900"
+          >
             AH
-          </span>
-        </div>
+          </text>
+        </svg>
       </div>
     </div>
   );
