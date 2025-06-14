@@ -19,11 +19,14 @@ const Navigation = () => {
   return (
     <nav className="fixed top-6 left-1/2 transform -translate-x-1/2 z-50">
       {/* Desktop Navigation - Pill Shape with Logo */}
-      <div className="hidden lg:flex items-center bg-white/90 backdrop-blur-md rounded-full shadow-lg border border-gray-200/50 px-4 py-2 gap-4">
+      <div className="hidden lg:flex items-center bg-white/90 backdrop-blur-md rounded-full shadow-lg border border-gray-200/50 px-6 py-4 gap-6">
         {/* Logo and Name */}
-        <div className="flex items-center gap-2 px-2">
+        <div className="flex items-center gap-3 px-3">
           <Logo size="small" />
-          <span className="font-bold text-gray-900">Abdallah</span>
+          <div className="flex flex-col">
+            <span className="font-bold text-gray-900 text-lg">Abdallah Helal</span>
+            <span className="text-xs text-gray-600 font-medium">Data Scientist</span>
+          </div>
         </div>
         
         {/* Navigation Items */}
@@ -47,10 +50,13 @@ const Navigation = () => {
 
       {/* Mobile Navigation */}
       <div className="lg:hidden">
-        <div className="bg-white/90 backdrop-blur-md rounded-full shadow-lg border border-gray-200/50 px-4 py-2 flex items-center justify-between min-w-[200px]">
-          <div className="flex items-center gap-2">
+        <div className="bg-white/90 backdrop-blur-md rounded-full shadow-lg border border-gray-200/50 px-5 py-3 flex items-center justify-between min-w-[220px]">
+          <div className="flex items-center gap-3">
             <Logo size="small" />
-            <span className="font-bold text-gray-900">Abdallah</span>
+            <div className="flex flex-col">
+              <span className="font-bold text-gray-900 text-base">Abdallah Helal</span>
+              <span className="text-xs text-gray-600 font-medium">Data Scientist</span>
+            </div>
           </div>
           <button
             onClick={() => setIsOpen(!isOpen)}
