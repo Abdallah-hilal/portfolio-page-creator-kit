@@ -1,4 +1,5 @@
 
+
 const Logo = ({ size = "default", className = "" }: { size?: "small" | "default" | "large", className?: string }) => {
   const sizeClasses = {
     small: "w-8 h-8",
@@ -10,9 +11,9 @@ const Logo = ({ size = "default", className = "" }: { size?: "small" | "default"
     <div className={`${sizeClasses[size]} ${className} flex items-center justify-center relative`}>
       <div className="relative w-full h-full">
         <svg width="100%" height="100%" viewBox="0 0 48 48" fill="none">
-          {/* Hexagonal background */}
+          {/* Hexagonal background - made larger */}
           <path 
-            d="M24 2L38 10V28L24 36L10 28V10L24 2Z" 
+            d="M24 1L39 9.5V29.5L24 38L9 29.5V9.5L24 1Z" 
             fill="#1F2937"
             stroke="none"
           />
@@ -30,3 +31,4 @@ const Logo = ({ size = "default", className = "" }: { size?: "small" | "default"
 };
 
 export default Logo;
+
