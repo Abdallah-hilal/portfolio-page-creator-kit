@@ -42,8 +42,11 @@ const Projects = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Featured Projects
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
             Here are some of my recent projects that showcase my skills and passion for creating exceptional digital experiences.
+          </p>
+          <p className="text-sm text-gray-500 max-w-2xl mx-auto">
+            Each project demonstrates different aspects of modern web development, from e-commerce solutions to collaborative tools. Hover over the cards to see more details about each project.
           </p>
         </div>
         
@@ -117,10 +120,10 @@ const Projects = () => {
         </div>
       </div>
 
-      <style jsx>{`
+      <style>{`
         .project-card {
           width: 100%;
-          height: 350px;
+          height: 400px;
           border-radius: 8px;
           box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
           overflow: hidden;
@@ -136,7 +139,7 @@ const Projects = () => {
 
         .project-thumb {
           width: 100%;
-          height: 260px;
+          height: 300px;
           overflow: hidden;
           border-radius: 8px 8px 0 0;
         }
@@ -150,7 +153,7 @@ const Projects = () => {
           background: white;
           padding: 20px 24px;
           transition: transform 0.4s cubic-bezier(0.17, 0.67, 0.5, 1.03) 0.15s;
-          transform: translateY(170px);
+          transform: translateY(200px);
         }
 
         .project-card:hover .project-infos {
