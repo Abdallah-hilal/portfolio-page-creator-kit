@@ -1,5 +1,4 @@
 
-
 const Logo = ({ size = "default", className = "" }: { size?: "small" | "default" | "large", className?: string }) => {
   const sizeClasses = {
     small: "w-8 h-8",
@@ -21,7 +20,7 @@ const Logo = ({ size = "default", className = "" }: { size?: "small" | "default"
           {/* AH Text directly in SVG */}
           <text 
             x="24" 
-            y="28" 
+            y="25" 
             textAnchor="middle" 
             fill="white" 
             fontSize="14" 
@@ -37,4 +36,3 @@ const Logo = ({ size = "default", className = "" }: { size?: "small" | "default"
 };
 
 export default Logo;
-
