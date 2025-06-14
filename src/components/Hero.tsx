@@ -1,9 +1,6 @@
-
 import { ChevronDown, Mail, Phone } from "lucide-react";
-
 const Hero = () => {
-  return (
-    <section className="min-h-screen flex flex-col justify-center items-center relative bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden">
+  return <section className="min-h-screen flex flex-col justify-center items-center relative bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-[#F17C58]/10 rounded-full blur-3xl"></div>
@@ -11,7 +8,7 @@ const Hero = () => {
       </div>
       
       {/* Main content container */}
-      <div className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl max-w-7xl mx-auto p-8 md:p-16 relative z-10 border border-white/20">
+      <div className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl max-w-7xl mx-auto p-8 md:p-16 relative z-10 border border-white/20 my-[60px] px-[106px] py-[46px]">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left side - Text content */}
           <div className="text-left space-y-8">
@@ -64,11 +61,7 @@ const Hero = () => {
               
               {/* Profile image */}
               <div className="relative z-10">
-                <img 
-                  src="/lovable-uploads/c23bab3c-222c-4f0b-8920-fcd80f9033ee.png" 
-                  alt="Abdallah Helal" 
-                  className="w-80 h-80 lg:w-96 lg:h-96 mx-auto rounded-full object-cover border-8 border-white shadow-2xl relative z-10"
-                />
+                <img src="/lovable-uploads/c23bab3c-222c-4f0b-8920-fcd80f9033ee.png" alt="Abdallah Helal" className="w-80 h-80 lg:w-96 lg:h-96 mx-auto rounded-full object-cover border-8 border-white shadow-2xl relative z-10" />
               </div>
               
               {/* Floating certification badge */}
@@ -78,8 +71,8 @@ const Hero = () => {
                     <div className="w-5 h-5 bg-white rounded-full"></div>
                   </div>
                   <div className="text-xs font-bold text-gray-900 leading-tight">
-                    ICF CERTIFIED<br/>
-                    PROFESSIONAL<br/>
+                    ICF CERTIFIED<br />
+                    PROFESSIONAL<br />
                     DATA SCIENTIST
                   </div>
                 </div>
@@ -90,8 +83,9 @@ const Hero = () => {
         
         {/* Contact info in top right */}
         <div className="absolute top-6 right-6 flex items-center gap-3 text-sm text-gray-600 bg-white/70 px-4 py-2 rounded-full backdrop-blur-sm">
-          <Phone className="w-4 h-4 text-[#F17C58]" />
-          <span className="font-medium">+001 (313) 345 678</span>
+          
+          <span className="font-medium">
+        </span>
         </div>
       </div>
       
@@ -102,8 +96,6 @@ const Hero = () => {
           <ChevronDown className="w-6 h-6 text-[#F17C58]" />
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
