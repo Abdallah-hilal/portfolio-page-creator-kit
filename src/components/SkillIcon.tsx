@@ -1,3 +1,4 @@
+
 import React from 'react';
 import {
   SiGooglesheets,
@@ -10,7 +11,6 @@ import {
   SiPlotly,
   SiPython,
   SiScikitlearn,
-  SiScrapy,
   SiSelenium,
   SiTableau,
   SiTensorflow,
@@ -84,7 +84,7 @@ const SkillIcon = ({ skill, className }: SkillIconProps) => {
     case 'selenium':
       return <SiSelenium {...iconProps} />;
     case 'scrapy':
-      return <SiScrapy {...iconProps} />;
+      return <img src="/lovable-uploads/53da92b7-6280-4b67-85c6-58c757e10c9a.png" alt="Scrapy" className={iconProps.className} />;
     case 'api-based scraping':
       return <Link {...iconProps} />;
 
