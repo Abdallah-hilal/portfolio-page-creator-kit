@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { Menu, X, FileText } from "lucide-react";
@@ -54,10 +55,15 @@ const Navigation = () => {
       <nav className="fixed top-6 left-1/2 transform -translate-x-1/2 z-50">
         {/* Desktop Navigation - Pill Shape with Logo */}
         <div className="hidden lg:flex items-center bg-white/90 backdrop-blur-md rounded-full shadow-lg border border-gray-200/50 px-4 py-3 gap-4">
-          {/* Logo */}
-          <div className="flex items-center px-3">
+          {/* Logo and Name */}
+          <a
+            href="#home"
+            onClick={() => setActiveItem("Home")}
+            className="flex items-center px-3 gap-3 text-gray-900 hover:text-[#F17C58] transition-colors"
+          >
             <Logo size="small" />
-          </div>
+            <span className="font-bold text-lg whitespace-nowrap">Abdallah Helal</span>
+          </a>
           
           {/* Navigation Items */}
           <div className="flex items-center">
@@ -82,11 +88,18 @@ const Navigation = () => {
         <div className="lg:hidden relative">
           {/* Mobile Header */}
           <div className="bg-white/95 backdrop-blur-md rounded-2xl shadow-xl border border-gray-200/50 px-6 py-4 flex items-center justify-between min-w-[200px]">
-            {/* Logo */}
-            <div className="flex items-center">
+            {/* Logo and Name */}
+            <a
+              href="#home"
+              className="flex items-center"
+              onClick={() => {
+                setActiveItem("Home");
+                setIsOpen(false);
+              }}
+            >
               <Logo size="small" />
-              <span className="ml-3 font-bold text-gray-900 text-lg">Portfolio</span>
-            </div>
+              <span className="ml-3 font-bold text-gray-900 text-lg">Abdallah Helal</span>
+            </a>
             
             <button
               onClick={() => setIsOpen(!isOpen)}
