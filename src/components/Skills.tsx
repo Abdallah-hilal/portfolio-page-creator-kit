@@ -1,14 +1,9 @@
-
-import { Workflow, Brain, CheckCircle2, Wrench, BarChart3 as Plotly, Phone, ScanSearch } from "lucide-react";
-
-const PythonIcon = ({ className }: { className?: string }) => (
-  <img src="/lovable-uploads/b07d673d-1d88-4f7e-b707-987d4416af72.png" alt="Python logo" className={className} />
-);
+import { Workflow, Brain, Code, CheckCircle2, Wrench, BarChart3 as Plotly, Phone, ScanSearch } from "lucide-react";
 
 const Skills = () => {
   const skillCategories = [
     {
-      icon: PythonIcon,
+      icon: Code,
       title: "Programming & Data Science",
       skills: [ "Python", "Pandas", "NumPy", "Scikit-learn", "TensorFlow", "Keras", "SQL" ],
       lightColor: "bg-red-100"
