@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { Menu, X, FileText } from "lucide-react";
@@ -163,9 +162,9 @@ const Navigation = () => {
         </div>
       </nav>
       {isHomePage && activeItem === "Home" && (
-        <Button asChild className="hidden lg:flex fixed top-8 right-16 z-50 bg-[#F17C58] hover:bg-[#E16A47] text-white px-10 py-5 rounded-full text-lg font-semibold items-center gap-3 shadow-md hover:shadow-lg transition-all">
+        <Button asChild className="hidden lg:flex fixed top-8 right-24 z-50 bg-[#F17C58] hover:bg-[#E16A47] text-white px-8 py-4 rounded-full text-base font-semibold items-center gap-2 shadow-md hover:shadow-lg transition-all">
           <a href="https://drive.google.com/file/d/1Bm92GbS2ei0P9oKTy3XS-JLFghZbfgg0/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-            <FileText className="w-6 h-6" />
+            <FileText className="w-5 h-5" />
             View Resume
           </a>
         </Button>
