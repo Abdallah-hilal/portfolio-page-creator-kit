@@ -29,9 +29,9 @@ const SkillIcon = ({ skill, className }: SkillIconProps) => {
     case 'python':
       return <img src="/lovable-uploads/e9225aa9-d2f4-4550-8d1a-6ff2ffd8b892.png" alt="Python" className={iconProps.className} />;
     case 'pandas':
-      return <SiPandas {...iconProps} />;
+      return <img src="/lovable-uploads/2ac801c1-a8fe-466d-af77-72d08cf52dd2.png" alt="Pandas" className={iconProps.className} />;
     case 'numpy':
-      return <SiNumpy {...iconProps} />;
+      return <img src="/lovable-uploads/602ec0ae-15ed-426a-9413-24f2bfab5dc1.png" alt="NumPy" className={iconProps.className} />;
     case 'scikit-learn':
       return <img src="/lovable-uploads/1557b0a5-8232-4854-b6db-5f495466648a.png" alt="Scikit-learn" className={iconProps.className} />;
     case 'tensorflow':
