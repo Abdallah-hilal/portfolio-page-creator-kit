@@ -1,5 +1,4 @@
 
-```tsx
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { Menu, X, FileText } from "lucide-react";
@@ -174,4 +173,3 @@ const Navigation = () => {
 };
 
 export default Navigation;
-```
