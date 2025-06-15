@@ -34,7 +34,7 @@ const Education = () => {
       year: "November 2024",
       courses: 9,
       description: "Completed a 90-hour career track, mastering core data science concepts with hands-on projects in Python, pandas, data visualization, and machine learning.",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/DataCamp_logo.svg/2048px-DataCamp_logo.svg.png"
+      logo: "/lovable-uploads/df763234-1fb1-417a-8649-c0ccc670f721.png"
     },
     {
       name: "ALX Data Science Certificate",
@@ -42,7 +42,7 @@ const Education = () => {
       year: "August 2024",
       courses: 8,
       description: "Completed 8 intensive courses in data science, covering Python, SQL, data wrangling, statistics, machine learning, and project-based learning to build real-world data-driven solutions.",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/ALX_Logo.png/2048px-ALX_Logo.png"
+      logo: "/lovable-uploads/e59f144a-c467-4ca5-ab6b-ceb49b6a1d50.png"
     }
   ];
 
