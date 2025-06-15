@@ -1,5 +1,5 @@
 
-import { ChevronDown, Briefcase, Mail } from "lucide-react";
+import { ChevronDown, Briefcase, Mail, Linkedin, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 const Hero = () => {
   return <section className="min-h-screen flex flex-col justify-center items-center relative bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden pt-16">
@@ -69,7 +69,7 @@ const Hero = () => {
 
           {/* Right side - Image */}
           <div className="flex justify-center lg:justify-end relative">
-            <div className="relative">
+            <div className="relative text-center">
               {/* Decorative background shape */}
               <div className="absolute inset-0 w-72 h-72 lg:w-96 lg:h-96">
                 <div className="absolute inset-0 bg-gradient-to-br from-[#F17C58]/20 to-[#F17C58]/10 rounded-full transform rotate-6"></div>
@@ -79,6 +79,22 @@ const Hero = () => {
               {/* Profile image */}
               <div className="relative z-10">
                 <img src="/lovable-uploads/710cffca-786e-40f1-a31c-31a56d5e6bb7.png" alt="Abdallah Helal" className="w-72 h-72 lg:w-96 lg:h-96 mx-auto rounded-full object-cover border-8 border-white shadow-2xl relative z-10" />
+              </div>
+              
+              {/* Social Links */}
+              <div className="mt-6 flex justify-center items-center gap-x-6 relative z-10">
+                <a href="https://www.linkedin.com/in/abdallah-helal/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" className="text-gray-500 hover:text-[#F17C58] transition-colors duration-300">
+                  <Linkedin className="w-7 h-7" />
+                </a>
+                <a href="https://github.com/abdallah-helal" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" className="text-gray-500 hover:text-[#F17C58] transition-colors duration-300">
+                  <Github className="w-7 h-7" />
+                </a>
+                <a href="https://www.upwork.com/freelancers/~01bb96f2647f529f76" target="_blank" rel="noopener noreferrer" aria-label="Upwork Profile" className="text-gray-500 hover:text-[#F17C58] transition-colors duration-300">
+                  <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" className="w-7 h-7" fill="currentColor"><title>Upwork</title><path d="M18.563 15.25c-1.375 0-2.583.834-3.157 2.042-1.408-2.04-2.053-4.375-2.053-6.917h2.179c1.375 0 2.5-1.125 2.5-2.5S19.408 7.5 18.033 7.5h-4.642c0-1.25.969-2.458 2.459-2.458.479 0 .916.125 1.291.375.375.25.834.209 1.167-.083l.925-.792c.333-.291.396-.791.146-1.187-.729-1.125-1.969-1.833-3.375-1.833-2.991 0-5.125 2.208-5.125 4.916v5.292c0 3.791 1.396 6.75 4.104 8.208.021.011.041.021.063.032 1.104.541 2.344.812 3.646.812 2.916 0 4.75-2.25 4.75-4.625.001-1.937-1.282-3.437-3.158-3.437zM2.5 8.75h2.187c0 2.625.646 4.958 2.053 7-1 2.25-2.896 3.75-5.239 3.75-1.375 0-2.5-1.125-2.5-2.5v-5.75C-.001 9.875 1.125 8.75 2.5 8.75z"/></svg>
+                </a>
+                <a href="https://www.kaggle.com/abdallahhelal" target="_blank" rel="noopener noreferrer" aria-label="Kaggle Profile" className="text-gray-500 hover:text-[#F17C58] transition-colors duration-300">
+                  <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" className="w-7 h-7" fill="currentColor"><title>Kaggle</title><path d="M10.153 24c-1.95 0-3.523-1.573-3.523-3.523V3.523C6.63 1.573 8.203 0 10.153 0s3.523 1.573 3.523 3.523v16.954c0 1.95-1.573 3.523-3.523 3.523zm9.79-10.37L13.23 3.523v6.577c0 .378-.308.686-.686.686H6.012c-.378 0-.686-.308-.686-.686V4.023c0-.378-.308-.686-.686-.686H.58c-.378 0-.686.308-.686.686v13.725c0 .378.308.686.686.686h4.06c.378 0 .686-.308.686-.686v-5.49c0-.378.308-.686.686-.686h6.532c.378 0 .686.308.686.686v5.908c0 .378.308.686.686.686h4.06c.378 0 .686-.308.686-.686l-.11-13.726z"/></svg>
+                </a>
               </div>
             </div>
           </div>
