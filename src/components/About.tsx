@@ -1,31 +1,46 @@
-
-import { BarChart3, Bot, Database, Brain } from "lucide-react";
+import { BarChart3, Bot, Brain, Globe } from "lucide-react";
 const About = () => {
-  const skills = [{
-    icon: BarChart3,
-    title: "Data Analysis",
-    description: "Python, R, SQL, Tableau",
-    color: "bg-blue-500",
-    lightColor: "bg-blue-100"
-  }, {
-    icon: Brain,
-    title: "Machine Learning",
-    description: "Scikit-learn, TensorFlow, PyTorch",
-    color: "bg-purple-500",
-    lightColor: "bg-purple-100"
-  }, {
-    icon: Bot,
-    title: "Process Automation",
-    description: "RPA, APIs, Workflow Optimization",
-    color: "bg-green-500",
-    lightColor: "bg-green-100"
-  }, {
-    icon: Database,
-    title: "Data Engineering",
-    description: "ETL Pipelines, Big Data, Cloud Platforms",
-    color: "bg-orange-500",
-    lightColor: "bg-orange-100"
-  }];
+  const skills = [
+    {
+      icon: Bot,
+      title: "Process Automation",
+      description: (
+        <>
+          I connect and automate your apps, tools, and systems using low-code
+          platforms — creating smooth, end-to-end workflows that{" "}
+          <span className="font-semibold text-gray-800">
+            save your valuable time and money.
+          </span>
+        </>
+      ),
+      color: "bg-green-500",
+      lightColor: "bg-green-100",
+    },
+    {
+      icon: BarChart3,
+      title: "Data Analysis",
+      description:
+        "I analyze, clean, and visualize your data to help you make clear, informed business decisions.",
+      color: "bg-blue-500",
+      lightColor: "bg-blue-100",
+    },
+    {
+      icon: Brain,
+      title: "Machine Learning",
+      description:
+        "I build custom ML models to predict trends, automate tasks, and generate valuable business insights.",
+      color: "bg-purple-500",
+      lightColor: "bg-purple-100",
+    },
+    {
+      icon: Globe,
+      title: "Web Scraping",
+      description:
+        "I extract valuable data from websites and APIs, giving you access to real-time information for your business needs.",
+      color: "bg-orange-500",
+      lightColor: "bg-orange-100",
+    },
+  ];
   const stats = [{
     number: "285+",
     label: "Projects Completed"
