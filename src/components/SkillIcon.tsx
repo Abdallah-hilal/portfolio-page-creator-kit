@@ -107,6 +107,8 @@ const SkillIcon = ({ skill, className }: SkillIconProps) => {
       return <img src="https://static-00.iconduck.com/assets.00/airtable-icon-512x428-olxouyvv.png" alt="Airtable" className={iconProps.className} />;
     case 'apify':
       return <img src="/lovable-uploads/62fe8dde-f8b4-4716-a00e-843acb5a46a4.png" alt="Apify" className={iconProps.className} />;
+    case 'trello':
+      return <img src="/lovable-uploads/94cb4e46-6f4f-479d-a78a-3f4e1cdcedc2.png" alt="Trello" className={iconProps.className} />;
 
     default:
       return <CheckCircle2 {...iconProps} />;
