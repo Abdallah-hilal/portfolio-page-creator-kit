@@ -1,3 +1,4 @@
+
 import React from 'react';
 import {
   SiGooglesheets,
@@ -59,7 +60,7 @@ const SkillIcon = ({ skill, className }: SkillIconProps) => {
     case 'make.com':
       return <img src="/lovable-uploads/2ec6b24e-3cc1-49f0-8767-04f528b0161f.png" alt="Make.com" className={iconProps.className} />;
     case 'zapier':
-      return <SiZapier {...iconProps} />;
+      return <img src="/lovable-uploads/87678276-0f3d-4e88-bb5e-586a87ff1814.png" alt="Zapier" className={iconProps.className} />;
     case 'gohighlevel':
       return <img src="/lovable-uploads/04712556-9998-4af7-b87b-babed2b948f3.png" alt="GoHighLevel" className={iconProps.className} />;
     case 'api integration':
