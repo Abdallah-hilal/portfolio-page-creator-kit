@@ -17,7 +17,7 @@ import {
   SiTensorflow,
   SiZapier,
 } from 'react-icons/si';
-import { DiDatabase, DiGit } from 'react-icons/di';
+import { DiDatabase } from 'react-icons/di';
 import { Bot, BrainCircuit, CheckCircle2, Cpu, Link, Mic, Search, Workflow } from 'lucide-react';
 
 interface SkillIconProps {
@@ -97,7 +97,7 @@ const SkillIcon = ({ skill, className }: SkillIconProps) => {
 
     // Other Tools & Platforms
     case 'git':
-      return <DiGit {...iconProps} />;
+      return <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/1200px-Git_icon.svg.png" alt="Git" className={iconProps.className} />;
     case 'notion':
       return <SiNotion {...iconProps} />;
     case 'google sheets automation':
