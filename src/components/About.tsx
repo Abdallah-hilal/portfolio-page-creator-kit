@@ -1,4 +1,3 @@
-
 import { BarChart3, Bot, Brain, Globe, Phone } from "lucide-react";
 const About = () => {
   const skills = [
@@ -17,32 +16,18 @@ const About = () => {
       lightColor: "bg-green-100",
     },
     {
-      icon: BarChart3,
-      title: "Data Analysis",
+      icon: Phone,
+      title: "AI Voice Agent",
       description: (
         <ul className="list-disc list-inside text-left space-y-2 text-gray-600 leading-relaxed">
-            <li>Data cleaning and preparation</li>
-            <li>Data visualization and reporting</li>
-            <li><span className="font-semibold text-gray-800">SQL</span> and <span className="font-semibold text-gray-800">Python</span> analytics</li>
-            <li>Turn raw data into <span className="font-semibold text-gray-800">clear business insights</span></li>
+            <li>Build <span className="font-semibold text-gray-800">AI-powered voice assistants</span> for customer support & automation</li>
+            <li>Integrate <span className="font-semibold text-gray-800">voice bots</span> into your existing systems</li>
+            <li>Automate phone calls, bookings, and customer inquiries</li>
+            <li>Reduce support costs and <span className="font-semibold text-gray-800">improve customer experience</span></li>
         </ul>
       ),
-      color: "bg-blue-500",
-      lightColor: "bg-blue-100",
-    },
-    {
-      icon: Brain,
-      title: "Machine Learning",
-      description: (
-        <ul className="list-disc list-inside text-left space-y-2 text-gray-600 leading-relaxed">
-            <li>Build custom <span className="font-semibold text-gray-800">ML models</span></li>
-            <li>Predict trends and customer behavior</li>
-            <li>Automate decision-making processes</li>
-            <li>Deliver <span className="font-semibold text-gray-800">actionable business insights</span></li>
-        </ul>
-      ),
-      color: "bg-purple-500",
-      lightColor: "bg-purple-100",
+      color: "bg-red-500",
+      lightColor: "bg-red-100",
     },
     {
       icon: Globe,
@@ -59,18 +44,32 @@ const About = () => {
       lightColor: "bg-orange-100",
     },
     {
-      icon: Phone,
-      title: "AI Voice Agent",
+      icon: Brain,
+      title: "Machine Learning",
       description: (
         <ul className="list-disc list-inside text-left space-y-2 text-gray-600 leading-relaxed">
-            <li>Build <span className="font-semibold text-gray-800">AI-powered voice assistants</span> for customer support & automation</li>
-            <li>Integrate <span className="font-semibold text-gray-800">voice bots</span> into your existing systems</li>
-            <li>Automate phone calls, bookings, and customer inquiries</li>
-            <li>Reduce support costs and <span className="font-semibold text-gray-800">improve customer experience</span></li>
+            <li>Build custom <span className="font-semibold text-gray-800">ML models</span></li>
+            <li>Predict trends and customer behavior</li>
+            <li>Automate decision-making processes</li>
+            <li>Deliver <span className="font-semibold text-gray-800">actionable business insights</span></li>
         </ul>
       ),
-      color: "bg-red-500",
-      lightColor: "bg-red-100",
+      color: "bg-purple-500",
+      lightColor: "bg-purple-100",
+    },
+    {
+      icon: BarChart3,
+      title: "Data Analysis",
+      description: (
+        <ul className="list-disc list-inside text-left space-y-2 text-gray-600 leading-relaxed">
+            <li>Data cleaning and preparation</li>
+            <li>Data visualization and reporting</li>
+            <li><span className="font-semibold text-gray-800">SQL</span> and <span className="font-semibold text-gray-800">Python</span> analytics</li>
+            <li>Turn raw data into <span className="font-semibold text-gray-800">clear business insights</span></li>
+        </ul>
+      ),
+      color: "bg-blue-500",
+      lightColor: "bg-blue-100",
     },
   ];
   const stats = [{
