@@ -1,3 +1,4 @@
+
 import { BarChart3, Bot, Brain, Globe, Phone } from "lucide-react";
 const About = () => {
   const skills = [
@@ -73,10 +74,10 @@ const About = () => {
     },
   ];
   const stats = [{
-    number: "285+",
+    number: "50+",
     label: "Projects Completed"
   }, {
-    number: "190+",
+    number: "10+",
     label: "Happy Clients"
   }];
   return <section className="py-20 bg-gray-50">
