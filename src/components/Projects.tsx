@@ -1,5 +1,13 @@
 
-import { ExternalLink, Github } from "lucide-react";
+import React, { useState } from "react";
+import { ExternalLink, Github, filter as FilterIcon } from "lucide-react";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "./ui/select";
 
 const Projects = () => {
   const projects = [
@@ -60,6 +68,15 @@ const Projects = () => {
     }
   ];
 
+  const [statusFilter, setStatusFilter] = useState("All");
+
+  const statusOptions = [
+    { label: "All", value: "All" },
+    { label: "Live Project", value: "Live Project" },
+    { label: "Completed", value: "Completed" },
+    { label: "In Development", value: "In Development" },
+  ];
+
   const getStatusColor = (status: string) => {
     switch (status) {
       case "Live Project":
@@ -72,6 +89,11 @@ const Projects = () => {
         return "bg-gray-100 text-gray-800";
     }
   };
+
+  const filteredProjects =
+    statusFilter === "All"
+      ? projects
+      : projects.filter((proj) => proj.status === statusFilter);
 
   return (
     <section className="py-20 bg-gray-50">
@@ -87,9 +109,27 @@ const Projects = () => {
             Here are some of my recent projects that showcase my skills and passion for creating exceptional digital experiences.
           </p>
         </div>
-        
+
+        {/* Filter Dropdown */}
+        <div className="flex items-center gap-3 mb-8">
+          <FilterIcon className="w-5 h-5 text-gray-500" />
+          <span className="font-medium text-gray-700">Filter by status:</span>
+          <Select value={statusFilter} onValueChange={setStatusFilter}>
+            <SelectTrigger className="w-44 bg-white z-20">
+              <SelectValue placeholder="Select status" />
+            </SelectTrigger>
+            <SelectContent>
+              {statusOptions.map((opt) => (
+                <SelectItem key={opt.value} value={opt.value}>
+                  {opt.label}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+        </div>
+
         <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8">
-          {projects.map((project, index) => (
+          {filteredProjects.map((project, index) => (
             <div 
               key={project.title}
               className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group"
@@ -156,6 +196,11 @@ const Projects = () => {
             </div>
           ))}
         </div>
+        {filteredProjects.length === 0 && (
+          <div className="text-center text-gray-500 text-lg mt-12">
+            No projects found for this status.
+          </div>
+        )}
       </div>
     </section>
   );
