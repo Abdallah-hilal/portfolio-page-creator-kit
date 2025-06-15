@@ -9,7 +9,7 @@ const Testimonials = () => {
       company: "TechStart Inc",
       content: "Working with this data scientist has been transformative for our business. Their insights helped us increase our conversion rate by 40% and optimize our entire customer journey.",
       rating: 5,
-      avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=80&h=80&fit=crop&crop=face"
+      avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=80&h=80&fit=crop&crop=face"
     },
     {
       name: "Michael Chen",
