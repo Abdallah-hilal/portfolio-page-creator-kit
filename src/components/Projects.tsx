@@ -111,7 +111,7 @@ const Projects = () => {
         </div>
         {/* Category Tabs Row */}
         <div className="flex justify-center mb-8">
-          <div className="inline-flex rounded-full border border-purple-500 bg-transparent overflow-hidden">
+          <div className="inline-flex rounded-full bg-white border border-[#F17C58]/30 shadow-sm overflow-hidden">
             {categoryOptions.map((opt) => {
               const isActive = categoryFilter === opt.value;
               return (
@@ -119,19 +119,25 @@ const Projects = () => {
                   key={opt.value}
                   type="button"
                   onClick={() => setCategoryFilter(opt.value)}
-                  className={`px-6 py-2 font-semibold transition-colors text-sm outline-none
-                    ${
-                      isActive
-                        ? "bg-purple-600 text-white"
-                        : "bg-transparent text-purple-500 hover:bg-purple-50"
-                    }
+                  className={`
+                    px-6
+                    py-2
+                    font-semibold
+                    text-sm
+                    outline-none
+                    transition-all
+                    duration-200
+                    rounded-full
+                    ${isActive
+                      ? "bg-[#F17C58] text-white shadow-md"
+                      : "bg-white text-[#F17C58] hover:bg-[#f17c58]/10 hover:text-[#F17C58]"}
                     border-none
-                    focus:z-10
+                    focus-visible:ring-2 focus-visible:ring-[#F17C58] focus-visible:ring-offset-2
                   `}
                   style={{
                     borderRight:
                       opt.value !== categoryOptions[categoryOptions.length - 1].value
-                        ? "1px solid rgba(139,92,246,.22)" // Tailwind purple-500/20
+                        ? "1px solid #f17c5822"
                         : undefined,
                   }}
                 >
