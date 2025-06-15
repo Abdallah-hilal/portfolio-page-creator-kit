@@ -1,3 +1,4 @@
+
 import React from 'react';
 import {
   SiGooglesheets,
@@ -86,11 +87,11 @@ const SkillIcon = ({ skill, className }: SkillIconProps) => {
 
     // AI Voice Agent
     case 'voice automation':
-      return <Mic {...iconProps} />;
+      return <img src="/lovable-uploads/fb379029-ff01-4436-8654-69505a202c1c.png" alt="Voice Automation" className={iconProps.className} />;
     case 'ai-powered call agents':
-      return <Bot {...iconProps} />;
+      return <img src="/lovable-uploads/e288e924-880d-4cd8-bf8b-d4c5cb547654.png" alt="AI-powered Call Agents" className={iconProps.className} />;
     case 'customer support automation':
-      return <Bot {...iconProps} />;
+      return <img src="/lovable-uploads/38b1fe26-eb65-4dd3-90c6-2ee08ae63330.png" alt="Customer Support Automation" className={iconProps.className} />;
     case 'twilio':
       return <img src="/lovable-uploads/f0f40f93-e965-4b9f-bd5c-232d1573df81.png" alt="Twilio" className={iconProps.className} />;
 
