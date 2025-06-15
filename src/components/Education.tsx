@@ -11,10 +11,10 @@ const Education = () => {
       type: "degree"
     },
     {
-      degree: "Bachelor of Science in Computer Science",
-      institution: "Queensland University",
-      period: "2013 - 2016",
-      description: "Foundation in programming, algorithms, database systems, and software engineering principles.",
+      degree: "Data Science Program (15 months)",
+      institution: "ALX Africa",
+      period: "2022 - 2024",
+      description: "Completed an intensive program covering data analysis, machine learning, data visualization, Python programming, statistics, and real-world data projects. Gained hands-on experience applying data science techniques to solve business problems.",
       type: "degree"
     }
   ];
