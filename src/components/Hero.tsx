@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { ChevronDown, Briefcase, Mail, Linkedin, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -7,7 +8,19 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 
+const titles = ["a Data Scientist", "an Automation Specialist"];
+
 const Hero = () => {
+  const [titleIndex, setTitleIndex] = useState(0);
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setTitleIndex((prevIndex) => (prevIndex + 1) % titles.length);
+    }, 3000); // Change title every 3 seconds
+
+    return () => clearInterval(intervalId);
+  }, []);
+
   return <section className="min-h-screen flex flex-col justify-center items-center relative bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden pt-16">
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
@@ -27,7 +40,20 @@ const Hero = () => {
                 </span>
               </div>
               <h1 className="text-5xl lg:text-6xl font-black text-gray-900 leading-tight">
-                Hi, I'm <span className="text-[#F17C58]">Abdallah</span>
+                Hi, I'm{" "}
+                <span className="inline-grid text-left">
+                  {titles.map((title, index) => (
+                    <span
+                      key={title}
+                      style={{ gridArea: '1 / 1' }}
+                      className={`transition-opacity duration-1000 ${
+                        titleIndex === index ? 'opacity-100' : 'opacity-0'
+                      }`}
+                    >
+                      <span className="text-[#F17C58]">{title}</span>
+                    </span>
+                  ))}
+                </span>
               </h1>
             </div>
 
