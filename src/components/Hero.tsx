@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { ChevronDown, Briefcase, Mail, Linkedin, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -8,6 +7,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { TypeAnimation } from "react-type-animation";
 
 const titles = ["a Data Scientist", "an Automation Specialist"];
 
@@ -42,18 +42,19 @@ const Hero = () => {
               </div>
               <h1 className="text-4xl lg:text-5xl font-black text-gray-900 leading-tight">
                 Hi, I'm{" "}
-                <span className="inline-grid text-left">
-                  {titles.map((title, index) => (
-                    <span
-                      key={title}
-                      style={{ gridArea: '1 / 1' }}
-                      className={`transition-opacity duration-1000 ${
-                        titleIndex === index ? 'opacity-100' : 'opacity-0'
-                      }`}
-                    >
-                      <span className="text-[#F17C58]">{title}</span>
-                    </span>
-                  ))}
+                <span className="text-[#F17C58]">
+                  <TypeAnimation
+                    sequence={[
+                      titles[0],
+                      2000,
+                      titles[1],
+                      2000,
+                    ]}
+                    wrapper="span"
+                    speed={50}
+                    repeat={Infinity}
+                    className="inline-block"
+                  />
                 </span>
               </h1>
             </div>
