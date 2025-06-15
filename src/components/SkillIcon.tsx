@@ -27,7 +27,7 @@ const SkillIcon = ({ skill, className }: SkillIconProps) => {
   switch (skill.toLowerCase()) {
     // Programming & Data Science
     case 'python':
-      return <SiPython {...iconProps} />;
+      return <img src="/lovable-uploads/e9225aa9-d2f4-4550-8d1a-6ff2ffd8b892.png" alt="Python" className={iconProps.className} />;
     case 'pandas':
       return <SiPandas {...iconProps} />;
     case 'numpy':
