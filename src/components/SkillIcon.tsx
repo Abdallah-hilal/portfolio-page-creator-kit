@@ -101,7 +101,7 @@ const SkillIcon = ({ skill, className }: SkillIconProps) => {
     case 'notion':
       return <SiNotion {...iconProps} />;
     case 'google sheets automation':
-      return <SiGooglesheets {...iconProps} />;
+      return <img src="/lovable-uploads/27b26e72-2ddf-4938-9e56-c425fdb3ea07.png" alt="Google Sheets" className={iconProps.className} />;
     case 'airtable':
       return <SiAirtable {...iconProps} />;
 
