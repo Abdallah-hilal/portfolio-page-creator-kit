@@ -1,4 +1,6 @@
-import { Workflow, Brain, Code, CheckCircle2, Wrench, BarChart3 as Plotly, Phone, ScanSearch } from "lucide-react";
+
+import { Workflow, Brain, Code, Wrench, BarChart3 as Plotly, Phone, ScanSearch } from "lucide-react";
+import SkillIcon from "./SkillIcon";
 
 const Skills = () => {
   const skillCategories = [
@@ -75,7 +77,7 @@ const Skills = () => {
               <ul className="space-y-2">
                 {category.skills.map((skill) => (
                   <li key={skill} className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-green-500 shrink-0" />
+                    <SkillIcon skill={skill} className="w-4 h-4 text-gray-600 shrink-0" />
                     <span className="text-gray-700 font-medium">{skill}</span>
                   </li>
                 ))}
