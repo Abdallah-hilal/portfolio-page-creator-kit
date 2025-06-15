@@ -1,3 +1,4 @@
+
 import { Workflow, Brain, Code, Wrench, BarChart3 as Plotly, Phone, ScanSearch } from "lucide-react";
 import SkillIcon from "./SkillIcon";
 
@@ -42,7 +43,7 @@ const Skills = () => {
     {
       icon: Wrench,
       title: "Other Tools & Platforms",
-      skills: [ "Git", "Notion", "Google Sheets Automation", "Airtable" ],
+      skills: [ "Git", "Notion", "Google Sheets Automation", "Airtable", "Apify" ],
       lightColor: "bg-yellow-100"
     }
   ];

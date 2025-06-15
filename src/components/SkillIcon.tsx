@@ -1,7 +1,5 @@
-
 import React from 'react';
 import {
-  SiAirtable,
   SiGooglesheets,
   SiKeras,
   SiMake,
@@ -105,6 +103,8 @@ const SkillIcon = ({ skill, className }: SkillIconProps) => {
       return <img src="/lovable-uploads/27b26e72-2ddf-4938-9e56-c425fdb3ea07.png" alt="Google Sheets" className={iconProps.className} />;
     case 'airtable':
       return <img src="https://static-00.iconduck.com/assets.00/airtable-icon-512x428-olxouyvv.png" alt="Airtable" className={iconProps.className} />;
+    case 'apify':
+      return <img src="/lovable-uploads/62fe8dde-f8b4-4716-a00e-843acb5a46a4.png" alt="Apify" className={iconProps.className} />;
 
     default:
       return <CheckCircle2 {...iconProps} />;
