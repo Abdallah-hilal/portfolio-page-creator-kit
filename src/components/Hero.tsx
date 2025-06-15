@@ -139,13 +139,12 @@ const Hero = () => {
                       <a href="https://www.datacamp.com/portfolio/AbdallahHelal" target="_blank" rel="noopener noreferrer" aria-label="DataCamp Profile" className="text-gray-500 hover:text-[#F17C58] transition-all duration-300 hover:scale-110">
                         <svg
                           className="w-7 h-7"
-                          viewBox="0 0 24 24"
+                          viewBox="-9.6 -9.6 43.20 43.20"
+                          role="img"
                           fill="currentColor"
                           xmlns="http://www.w3.org/2000/svg"
                         >
-                          <path d="M12.33 16.4L9.6 17.8L7.2 16.4V13.6L9.6 12.2L12.33 10.6V13.8V16.4Z" />
-                          <path d="M20.92 15.75L17.4 13.8V10.2L20.92 8.25C21.42 7.98 22 8.32 22 8.88V15.12C22 15.68 21.42 16.02 20.92 15.75Z" />
-                          <path d="M14.67 12.2L12 13.8L9.33 12.2L6.6 10.6L3.08 8.25C2.58 7.98 2 8.32 2 8.88V15.12C2 15.68 2.58 16.02 3.08 15.75L6.6 13.8L9.33 15.4L12 17L14.67 15.4L17.4 13.8L20.92 11.85C21.42 11.58 22 11.24 22 10.68V9C22 8.44 21.42 8.1 20.92 8.25L17.4 10.2L14.67 9L12.33 10.6L9.6 12.2L6.6 10.2L3.08 8.25" />
+                          <path d="M12.946 18.151v-5.239L21.209 8.2 19.2 7.048l-6.254 3.567V5.36c0-.356-.192-.689-.5-.866L4.922.177a1.434 1.434 0 0 0-1.455.044 1.438 1.438 0 0 0-.676 1.224v14.777A1.44 1.44 0 0 0 4.92 17.49l6.032-3.44v4.683a1 1 0 0 0 .504.867l7.73 4.4 2.01-1.152-8.25-4.697zM10.953 5.938v5.814L4.785 15.27V2.4l6.168 3.539v-.001z"></path>
                         </svg>
                       </a>
                     </TooltipTrigger>
