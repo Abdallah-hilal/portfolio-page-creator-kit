@@ -1,3 +1,4 @@
+
 import React from 'react';
 import {
   SiGooglesheets,
@@ -34,7 +35,7 @@ const SkillIcon = ({ skill, className }: SkillIconProps) => {
     case 'scikit-learn':
       return <img src="/lovable-uploads/1557b0a5-8232-4854-b6db-5f495466648a.png" alt="Scikit-learn" className={iconProps.className} />;
     case 'tensorflow':
-      return <img src="/lovable-uploads/cdc45e84-97cf-46d1-955b-14fe11d848c3.png" alt="TensorFlow" className={iconProps.className} />;
+      return <img src="/lovable-uploads/575963b6-76af-4b76-b13a-dafe5cdc2358.png" alt="TensorFlow" className={iconProps.className} />;
     case 'keras':
       return <img src="/lovable-uploads/7ee7e781-8f24-46e0-890d-802388c7d934.png" alt="Keras" className={iconProps.className} />;
     case 'sql':
