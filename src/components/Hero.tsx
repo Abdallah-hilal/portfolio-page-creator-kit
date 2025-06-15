@@ -1,4 +1,3 @@
-
 import { ChevronDown, Briefcase } from "lucide-react";
 import { Button } from "@/components/ui/button";
 const Hero = () => {
@@ -64,13 +63,13 @@ const Hero = () => {
             <div className="relative">
               {/* Decorative background shape */}
               <div className="absolute inset-0 w-72 h-72 lg:w-96 lg:h-96">
-                <div className="absolute inset-0 bg-gradient-to-br from-gray-400/20 to-gray-400/10 rounded-full transform rotate-6"></div>
-                <div className="absolute inset-2 bg-gradient-to-br from-gray-400/10 to-transparent rounded-full transform -rotate-3"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-[#F17C58]/20 to-[#F17C58]/10 rounded-full transform rotate-6"></div>
+                <div className="absolute inset-2 bg-gradient-to-br from-[#F17C58]/10 to-transparent rounded-full transform -rotate-3"></div>
               </div>
 
               {/* Profile image */}
               <div className="relative z-10">
-                <img src="/lovable-uploads/6ebcda68-310a-4914-800e-f9dd0d7026ef.png" alt="Abdallah Helal" className="w-72 h-72 lg:w-96 lg:h-96 mx-auto rounded-full object-cover border-8 border-white shadow-2xl relative z-10 grayscale" />
+                <img src="/lovable-uploads/710cffca-786e-40f1-a31c-31a56d5e6bb7.png" alt="Abdallah Helal" className="w-72 h-72 lg:w-96 lg:h-96 mx-auto rounded-full object-cover border-8 border-white shadow-2xl relative z-10" />
               </div>
             </div>
           </div>
