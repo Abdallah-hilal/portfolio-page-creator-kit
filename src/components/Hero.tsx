@@ -138,7 +138,7 @@ const Hero = () => {
                     <TooltipTrigger asChild>
                       <a href="https://www.datacamp.com/portfolio/AbdallahHelal" target="_blank" rel="noopener noreferrer" aria-label="DataCamp Profile" className="text-gray-500 hover:text-[#F17C58] transition-all duration-300 hover:scale-110">
                         <svg
-                          className="w-7 h-7"
+                          className="w-8 h-8"
                           viewBox="-9.6 -9.6 43.20 43.20"
                           role="img"
                           fill="currentColor"
