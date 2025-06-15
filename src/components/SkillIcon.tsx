@@ -1,4 +1,3 @@
-
 import React from 'react';
 import {
   SiGooglesheets,
@@ -33,13 +32,13 @@ const SkillIcon = ({ skill, className }: SkillIconProps) => {
     case 'numpy':
       return <img src="/lovable-uploads/602ec0ae-15ed-426a-9413-24f2bfab5dc1.png" alt="NumPy" className={iconProps.className} />;
     case 'scikit-learn':
-      return <img src="/lovable-uploads/1557b0a5-8232-4854-b6db-5f495466648a.png" alt="Scikit-learn" className={iconProps.className} />;
+      return <img src="/lovable-uploads/76a90a9a-9e88-40a0-bc05-618bc28b7bf2.png" alt="Scikit-learn" className={iconProps.className} />;
     case 'tensorflow':
       return <img src="/lovable-uploads/575963b6-76af-4b76-b13a-dafe5cdc2358.png" alt="TensorFlow" className={iconProps.className} />;
     case 'keras':
       return <img src="/lovable-uploads/7ee7e781-8f24-46e0-890d-802388c7d934.png" alt="Keras" className={iconProps.className} />;
     case 'sql':
-      return <DiDatabase {...iconProps} />;
+      return <img src="/lovable-uploads/48ea64ef-e583-4a22-9cf4-aa80c8d767d8.png" alt="SQL" className={iconProps.className} />;
 
     // Data Visualization & Analysis
     case 'tableau':
