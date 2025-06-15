@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { Menu, X, FileText } from "lucide-react";
 import Logo from "./Logo";
+import { Button } from "@/components/ui/button";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,7 +20,7 @@ const Navigation = () => {
   return (
     <nav className="fixed top-6 left-1/2 transform -translate-x-1/2 z-50">
       {/* Desktop Navigation - Pill Shape with Logo */}
-      <div className="hidden lg:flex items-center bg-white/90 backdrop-blur-md rounded-full shadow-lg border border-gray-200/50 px-6 py-4 gap-6">
+      <div className="hidden lg:flex items-center bg-white/90 backdrop-blur-md rounded-full shadow-lg border border-gray-200/50 px-4 py-3 gap-4">
         {/* Logo */}
         <div className="flex items-center px-3">
           <Logo size="small" />
@@ -42,6 +43,14 @@ const Navigation = () => {
             </a>
           ))}
         </div>
+
+        {/* Resume Button */}
+        <Button
+          className="bg-[#F17C58] hover:bg-[#E16A47] text-white px-6 py-3 rounded-full font-semibold text-sm flex items-center gap-2 shadow-md hover:shadow-lg transition-all"
+        >
+          <FileText className="w-4 h-4" />
+          Show My Resume
+        </Button>
       </div>
 
       {/* Mobile Navigation - Enhanced Design */}
@@ -115,7 +124,7 @@ const Navigation = () => {
                 }}
               >
                 <FileText className="w-5 h-5" />
-                <span>See My Resume</span>
+                <span>Show My Resume</span>
               </button>
             </div>
             

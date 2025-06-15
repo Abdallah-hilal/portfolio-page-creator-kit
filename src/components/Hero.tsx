@@ -1,4 +1,3 @@
-
 import { ChevronDown, Mail, FileText, Briefcase } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -36,20 +35,10 @@ const Hero = () => {
               </p>
             </div>
 
-            {/* Floating "Show My Resume" button above Gmail */}
-            <div className="relative h-20 mb-1 w-fit">
-              <Button
-                className="absolute -top-7 left-1/2 -translate-x-1/2 bg-[#F17C58] hover:bg-[#E16A47] text-white px-6 py-3 rounded-xl font-semibold flex items-center gap-2 shadow-xl hover:shadow-2xl transition-all duration-300 z-20"
-                style={{ minWidth: 210 }}
-              >
-                <FileText className="w-5 h-5" />
-                Show My Resume
-              </Button>
-              {/* Gmail section beneath and overlapping */}
-              <div className="flex items-center gap-3 p-4 bg-gray-50 rounded-2xl border border-gray-200 w-fit mt-10 z-10 relative">
-                <Mail className="w-5 h-5 text-[#F17C58]" />
-                <span className="text-gray-900 font-medium">abdulluh.helal@gmail.com</span>
-              </div>
+            {/* Gmail section */}
+            <div className="flex items-center gap-3 p-4 bg-gray-50 rounded-2xl border border-gray-200 w-fit">
+              <Mail className="w-5 h-5 text-[#F17C58]" />
+              <span className="text-gray-900 font-medium">abdulluh.helal@gmail.com</span>
             </div>
 
             {/* "See My Work" button below Gmail */}
