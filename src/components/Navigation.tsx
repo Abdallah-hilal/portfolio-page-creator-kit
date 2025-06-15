@@ -163,7 +163,7 @@ const Navigation = () => {
         </div>
       </nav>
       {isHomePage && activeItem === "Home" && (
-        <Button className="hidden lg:flex fixed top-12 right-60 z-50 bg-[#F17C58] hover:bg-[#E16A47] text-white px-4 py-2 rounded-lg font-semibold items-center gap-2 shadow-md hover:shadow-lg transition-all">
+        <Button className="hidden lg:flex fixed top-12 right-60 z-50 bg-[#F17C58] hover:bg-[#E16A47] text-white px-6 py-3 rounded-full text-sm font-medium items-center gap-2 shadow-md hover:shadow-lg transition-all">
           <FileText className="w-5 h-5" />
           View Resume
         </Button>
