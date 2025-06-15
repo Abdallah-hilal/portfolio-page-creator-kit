@@ -1,4 +1,7 @@
-import { ChevronDown, Mail, Phone } from "lucide-react";
+
+import { ChevronDown, Mail, Phone, FileText, Briefcase } from "lucide-react";
+import { Button } from "@/components/ui/button";
+
 const Hero = () => {
   return <section className="min-h-screen flex flex-col justify-center items-center relative bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden pt-16">
       {/* Background decorative elements */}
@@ -34,13 +37,25 @@ const Hero = () => {
             
             <div className="flex items-center gap-3 p-4 bg-gray-50 rounded-2xl border border-gray-200 w-fit">
               <Mail className="w-5 h-5 text-[#F17C58]" />
-              <span className="text-gray-900 font-medium">abdallah@example.com</span>
+              <span className="text-gray-900 font-medium">abdulluh.helal@gmail.com</span>
+            </div>
+            
+            {/* Action buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 pt-2">
+              <Button className="bg-[#F17C58] hover:bg-[#E16A47] text-white px-6 py-3 rounded-xl font-semibold flex items-center gap-2 shadow-lg hover:shadow-xl transition-all duration-300">
+                <FileText className="w-5 h-5" />
+                Show My Resume
+              </Button>
+              <Button variant="outline" className="border-2 border-[#F17C58] text-[#F17C58] hover:bg-[#F17C58] hover:text-white px-6 py-3 rounded-xl font-semibold flex items-center gap-2 transition-all duration-300">
+                <Briefcase className="w-5 h-5" />
+                See My Work
+              </Button>
             </div>
             
             <div className="flex items-center gap-12 pt-4">
               <div className="text-center">
-                <div className="text-4xl font-black text-gray-900">5+</div>
-                <div className="text-sm font-medium text-gray-600 uppercase tracking-wider mt-1">Years Experience</div>
+                <div className="text-4xl font-black text-gray-900">1+</div>
+                <div className="text-sm font-medium text-gray-600 uppercase tracking-wider mt-1">Year Experience</div>
               </div>
               <div className="w-px h-12 bg-gray-300"></div>
               <div className="text-center">
@@ -61,11 +76,8 @@ const Hero = () => {
               
               {/* Profile image */}
               <div className="relative z-10">
-                <img src="/lovable-uploads/c23bab3c-222c-4f0b-8920-fcd80f9033ee.png" alt="Abdallah Helal" className="w-72 h-72 lg:w-96 lg:h-96 mx-auto rounded-full object-cover border-8 border-white shadow-2xl relative z-10" />
+                <img src="/lovable-uploads/6ebcda68-310a-4914-800e-f9dd0d7026ef.png" alt="Abdallah Helal" className="w-72 h-72 lg:w-96 lg:h-96 mx-auto rounded-full object-cover border-8 border-white shadow-2xl relative z-10" />
               </div>
-              
-              {/* Floating certification badge */}
-              
             </div>
           </div>
         </div>
