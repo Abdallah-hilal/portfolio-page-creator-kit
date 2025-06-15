@@ -1,8 +1,6 @@
-
 import React from 'react';
 import {
   SiGooglesheets,
-  SiKeras,
   SiMake,
   SiN8N,
   SiNotion,
@@ -10,10 +8,8 @@ import {
   SiPandas,
   SiPlotly,
   SiPython,
-  SiScikitlearn,
   SiSelenium,
   SiTableau,
-  SiTensorflow,
   SiZapier,
 } from 'react-icons/si';
 import { DiDatabase } from 'react-icons/di';
@@ -36,11 +32,11 @@ const SkillIcon = ({ skill, className }: SkillIconProps) => {
     case 'numpy':
       return <SiNumpy {...iconProps} />;
     case 'scikit-learn':
-      return <SiScikitlearn {...iconProps} />;
+      return <img src="/lovable-uploads/1557b0a5-8232-4854-b6db-5f495466648a.png" alt="Scikit-learn" className={iconProps.className} />;
     case 'tensorflow':
-      return <SiTensorflow {...iconProps} />;
+      return <img src="/lovable-uploads/cdc45e84-97cf-46d1-955b-14fe11d848c3.png" alt="TensorFlow" className={iconProps.className} />;
     case 'keras':
-      return <SiKeras {...iconProps} />;
+      return <img src="/lovable-uploads/7ee7e781-8f24-46e0-890d-802388c7d934.png" alt="Keras" className={iconProps.className} />;
     case 'sql':
       return <DiDatabase {...iconProps} />;
 
