@@ -76,7 +76,7 @@ const Hero = () => {
             </div>
 
             <div className="space-y-4">
-              <p className="text-2xl font-medium text-gray-700">
+              <p className="text-xl text-gray-600 leading-relaxed">
                 I build <span className="font-semibold text-gray-800">data science</span> and <span className="font-semibold text-gray-800">automation</span> solutions that help your business <span className="font-semibold text-gray-800">save time</span>, <span className="font-semibold text-gray-800">reduce costs</span>, and <span className="font-semibold text-gray-800">make smarter decisions</span>.
               </p>
               <p className="text-lg text-gray-600 leading-relaxed max-w-2xl">
