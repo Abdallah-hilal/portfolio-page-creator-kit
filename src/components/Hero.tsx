@@ -95,11 +95,9 @@ const Hero = () => {
                   </svg>
                 </a>
                 <a href="https://www.kaggle.com/abdallahhelal" target="_blank" rel="noopener noreferrer" aria-label="Kaggle Profile" className="text-gray-500 hover:text-[#F17C58] transition-colors duration-300">
-                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" className="w-7 h-7" fill="currentColor">
-                    <title>Kaggle</title>
-                    <path d="M21,21H18a1,1,0,0,1-1-1V15a1,1,0,0,1,1-1h3a1,1,0,0,1,1,1v5A1,1,0,0,1,21,21ZM13,12H9a1,1,0,0,1-1-1V4A1,1,0,0,1,9,3h4a1,1,0,0,1,1,1v7A1,1,0,0,1,13,12Zm8,0h0Z" />
-                    <path d="M12.45,12l4.89,8.47A1,1,0,0,0,18,22h3a1,1,0,0,0,.87-1.5l-5.32-9.21A1,1,0,0,0,15.68,11H14a1,1,0,0,0-.6.2A1,1,0,0,0,12.45,12ZM8.45,12l-4.9,8.47A1,1,0,0,0,4.42,22H7a1,1,0,0,0,.87-.5L13.13,12a1,1,0,0,0-.93-1.61H9A1,1,0,0,0,8.45,12Z" />
-                  </svg>
+                  <div className="w-7 h-7 flex items-center justify-center font-black text-xl">
+                    K
+                  </div>
                 </a>
               </div>
             </div>
