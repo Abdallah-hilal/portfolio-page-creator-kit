@@ -135,6 +135,23 @@ const Hero = () => {
                       <p>Kaggle</p>
                     </TooltipContent>
                   </Tooltip>
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <a href="#" target="_blank" rel="noopener noreferrer" aria-label="DataCamp Profile" className="text-gray-500 hover:text-[#F17C58] transition-all duration-300 hover:scale-110">
+                        <svg
+                          className="w-7 h-7"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path d="M22.7,14.4L22.7,14.4l-4-2.1l-0.1-0.1l-2.7-1.4l0.1,0.1l-2.7-1.4L13.1,9l-2.7-1.4l-0.1-0.1L7.6,6.1L7.6,6.1C7.3,6,7,6,6.8,6.1l-4,2.1C2.3,8.5,2,9,2,9.6v4.8c0,0.6,0.3,1.1,0.8,1.3l4,2.1c0.2,0.1,0.4,0.1,0.6,0.1s0.4,0,0.6-0.1l4-2.1l0,0l2.7-1.4l-0.1,0.1l2.7-1.4l0.1,0.1l2.7-1.4l0.1,0.1l0.6-0.3c0.1,0,0.1-0.1,0.2-0.1C22.4,15.6,22.7,15,22.7,14.4z M13.3,13.6l-2.7,1.4L8,16.4v-3.2l2.7-1.4l2.7-1.4V13.6z"></path>
+                        </svg>
+                      </a>
+                    </TooltipTrigger>
+                    <TooltipContent>
+                      <p>DataCamp</p>
+                    </TooltipContent>
+                  </Tooltip>
                 </TooltipProvider>
               </div>
             </div>
