@@ -61,6 +61,8 @@ const SkillIcon = ({ skill, className }: SkillIconProps) => {
       return <SiMake {...iconProps} />;
     case 'zapier':
       return <SiZapier {...iconProps} />;
+    case 'gohighlevel':
+      return <img src="/lovable-uploads/04712556-9998-4af7-b87b-babed2b948f3.png" alt="GoHighLevel" className={iconProps.className} />;
     case 'api integration':
       return <Link {...iconProps} />;
     case 'workflow automation':

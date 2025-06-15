@@ -1,4 +1,3 @@
-
 import { Workflow, Brain, Code, Wrench, BarChart3 as Plotly, Phone, ScanSearch } from "lucide-react";
 import SkillIcon from "./SkillIcon";
 
@@ -19,7 +18,7 @@ const Skills = () => {
     {
       icon: Workflow,
       title: "Automation & Low-Code Platforms",
-      skills: [ "n8n", "Make.com", "Zapier", "API Integration", "Workflow Automation" ],
+      skills: [ "n8n", "Make.com", "Zapier", "GoHighLevel", "API Integration", "Workflow Automation" ],
       lightColor: "bg-purple-100"
     },
     {
