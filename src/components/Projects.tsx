@@ -7,7 +7,7 @@ const Projects = () => {
       title: "Football Match Scraper",
       shortDescription: "Scalable scraper collecting data from 20,000+ football matches",
       description: "Developed a scalable scraper to collect data from over 20,000 football matches. Cleaned and structured the dataset for use in predictive models and data visualization.",
-      image: "/lovable-uploads/1605810230434-7631ac76ec81.png", // Data visualization/AI
+      image: "https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=600&q=80", // Football/soccer analytics
       tags: ["Python", "BeautifulSoup", "Requests", "Pandas"],
       liveUrl: "#",
       githubUrl: "#",
@@ -18,7 +18,7 @@ const Projects = () => {
       title: "Finance Tracker & AI Assistant",
       shortDescription: "Automated personal finance tracker with AI-powered insights",
       description: "Built an automated personal finance tracker that syncs expenses and incomes to Notion via Telegram. Integrated an AI agent to answer natural language queries about financial summaries.",
-      image: "/lovable-uploads/1488590528505-98d2b5aba04b.png", // Coding/Desk
+      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=600&q=80", // Coding/Desk
       tags: ["Telegram Bot", "n8n", "Notion API", "OpenAI API"],
       liveUrl: "#",
       githubUrl: "#",
@@ -29,7 +29,7 @@ const Projects = () => {
       title: "Daily Email Summary Bot",
       shortDescription: "Automated email summarization with daily Telegram notifications",
       description: "Created an automation that summarizes important unread emails and sends a Telegram message daily at 7:00 AM. Helps prioritize email workload using custom filters and NLP.",
-      image: "/lovable-uploads/1531297484001-80022131f5a1.png", // Modern laptop/coding
+      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80", // MacBook laptop with code
       tags: ["n8n", "Gmail API", "Google Cloud Functions", "Telegram"],
       liveUrl: "#",
       githubUrl: "#",
@@ -40,7 +40,7 @@ const Projects = () => {
       title: "Sign Language Recognition",
       shortDescription: "Computer vision model for American Sign Language recognition",
       description: "Developed a computer vision model to recognize American Sign Language gestures using webcam input. Integrated with web and mobile UIs to demonstrate accessibility use cases.",
-      image: "/lovable-uploads/1581090464777-f3220bbe1b8b.png", // Light bulb / AI/Innovation
+      image: "https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?auto=format&fit=crop&w=600&q=80", // Light bulb / innovation
       tags: ["Python", "OpenCV", "MediaPipe", "TensorFlow"],
       liveUrl: "#",
       githubUrl: "#",
@@ -51,7 +51,7 @@ const Projects = () => {
       title: "Gold Price Prediction Model",
       shortDescription: "ML model forecasting gold prices using economic indicators",
       description: "Built a predictive machine learning model to forecast gold prices using historical data and macroeconomic indicators. Achieved high accuracy through feature engineering and model tuning.",
-      image: "/lovable-uploads/1461749280684-dccba630e2f6.png", // Coding/Java screen image
+      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=600&q=80", // finance/coding/data
       tags: ["Python", "Scikit-learn", "XGBoost", "Pandas"],
       liveUrl: "#",
       githubUrl: "#",
