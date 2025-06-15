@@ -46,12 +46,12 @@ const Hero = () => {
                   <TypeAnimation
                     sequence={[
                       titles[0],
-                      2000,
+                      3000,
                       titles[1],
-                      2000,
+                      3000,
                     ]}
                     wrapper="span"
-                    speed={50}
+                    speed={75}
                     repeat={Infinity}
                     className="inline-block"
                   />
