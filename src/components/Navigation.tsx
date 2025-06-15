@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { Menu, X, FileText } from "lucide-react";
@@ -163,7 +162,7 @@ const Navigation = () => {
         </div>
       </nav>
       {isHomePage && activeItem === "Home" && (
-        <Button className="hidden lg:flex fixed top-6 right-8 z-50 bg-[#F17C58] hover:bg-[#E16A47] text-white px-4 py-2 rounded-lg font-semibold items-center gap-2 shadow-md hover:shadow-lg transition-all">
+        <Button className="hidden lg:flex fixed top-6 right-12 z-50 bg-[#F17C58] hover:bg-[#E16A47] text-white px-4 py-2 rounded-lg font-semibold items-center gap-2 shadow-md hover:shadow-lg transition-all">
           <FileText className="w-5 h-5" />
           Show My Resume
         </Button>
