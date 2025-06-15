@@ -80,7 +80,7 @@ const About = () => {
     number: "10+",
     label: "Happy Clients"
   }, {
-    number: "10+",
+    number: "25+",
     label: "Hours on Upwork"
   }];
   return <section className="py-20 bg-gray-50">
