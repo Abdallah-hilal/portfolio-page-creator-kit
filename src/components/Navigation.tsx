@@ -1,5 +1,6 @@
 
 import { useState } from "react";
+import { useLocation } from "react-router-dom";
 import { Menu, X, FileText } from "lucide-react";
 import Logo from "./Logo";
 import { Button } from "@/components/ui/button";
@@ -7,6 +8,8 @@ import { Button } from "@/components/ui/button";
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeItem, setActiveItem] = useState("Home");
+  const location = useLocation();
+  const isHomePage = location.pathname === "/";
 
   const navItems = [
     { name: "Home", href: "#home" },
@@ -129,10 +132,12 @@ const Navigation = () => {
           )}
         </div>
       </nav>
-      <Button className="hidden lg:flex fixed top-6 right-6 z-50 bg-[#F17C58] hover:bg-[#E16A47] text-white px-6 py-3 rounded-xl font-semibold items-center gap-2 shadow-md hover:shadow-lg transition-all">
-        <FileText className="w-5 h-5" />
-        Show My Resume
-      </Button>
+      {isHomePage && (
+        <Button className="hidden lg:flex fixed top-6 right-6 z-50 bg-[#F17C58] hover:bg-[#E16A47] text-white px-6 py-3 rounded-xl font-semibold items-center gap-2 shadow-md hover:shadow-lg transition-all">
+          <FileText className="w-5 h-5" />
+          Show My Resume
+        </Button>
+      )}
     </>
   );
 };
