@@ -1,4 +1,5 @@
 
+
 import { Mail, Phone, MapPin, Github, Linkedin, Twitter } from "lucide-react";
 
 const Contact = () => {
@@ -6,19 +7,19 @@ const Contact = () => {
     {
       icon: Mail,
       label: "Email",
-      value: "john@developer.com",
-      href: "mailto:john@developer.com"
+      value: "abdulluh.helal@gmail.com",
+      href: "mailto:abdulluh.helal@gmail.com"
     },
     {
       icon: Phone,
       label: "Phone",
-      value: "+1 (555) 123-4567",
-      href: "tel:+15551234567"
+      value: "+20 102 218 0428",
+      href: "tel:+201022180428"
     },
     {
       icon: MapPin,
       label: "Location",
-      value: "San Francisco, CA",
+      value: "Egypt, Cairo",
       href: "#"
     }
   ];
@@ -91,7 +92,7 @@ const Contact = () => {
                   <input 
                     type="text" 
                     className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-600 focus:border-transparent text-white"
-                    placeholder="John"
+                    placeholder="Enter your first name"
                   />
                 </div>
                 <div>
@@ -101,7 +102,7 @@ const Contact = () => {
                   <input 
                     type="text" 
                     className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-600 focus:border-transparent text-white"
-                    placeholder="Doe"
+                    placeholder="Enter your last name"
                   />
                 </div>
               </div>
@@ -113,7 +114,7 @@ const Contact = () => {
                 <input 
                   type="email" 
                   className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-600 focus:border-transparent text-white"
-                  placeholder="john@example.com"
+                  placeholder="your.email@example.com"
                 />
               </div>
               
@@ -124,7 +125,7 @@ const Contact = () => {
                 <textarea 
                   rows={5}
                   className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-600 focus:border-transparent text-white resize-none"
-                  placeholder="Tell me about your project..."
+                  placeholder="Hi Abdallah, I'd like to discuss a project opportunity with you..."
                 ></textarea>
               </div>
               

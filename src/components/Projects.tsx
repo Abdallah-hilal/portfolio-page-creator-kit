@@ -3,11 +3,11 @@ import { ExternalLink, Github } from "lucide-react";
 
 // Main categories for the filter tabs
 const categoryOptions = [
+  { label: "All", value: "All" },
   { label: "Automation", value: "Automation" },
   { label: "Data Science", value: "Data Science" },
   { label: "Web Scraping", value: "Web Scraping" },
   { label: "Machine Learning", value: "Machine Learning" },
-  { label: "All", value: "All" },
 ];
 
 const Projects = () => {
