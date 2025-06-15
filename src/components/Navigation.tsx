@@ -1,9 +1,19 @@
 
-import { useState } from "react";
+```tsx
+import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { Menu, X, FileText } from "lucide-react";
 import Logo from "./Logo";
 import { Button } from "@/components/ui/button";
+
+const navItems = [
+  { name: "Home", href: "#home" },
+  { name: "About", href: "#about" },
+  { name: "Skills", href: "#skills" },
+  { name: "Education", href: "#education" },
+  { name: "Projects", href: "#projects" },
+  { name: "Work", href: "#experience" },
+];
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,14 +21,35 @@ const Navigation = () => {
   const location = useLocation();
   const isHomePage = location.pathname === "/";
 
-  const navItems = [
-    { name: "Home", href: "#home" },
-    { name: "About", href: "#about" },
-    { name: "Skills", href: "#skills" },
-    { name: "Education", href: "#education" },
-    { name: "Projects", href: "#projects" },
-    { name: "Work", href: "#experience" },
-  ];
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const navItem = navItems.find((item) => item.href === `#${entry.target.id}`);
+            if (navItem) {
+              setActiveItem(navItem.name);
+            }
+          }
+        });
+      },
+      {
+        rootMargin: "-50% 0px -50% 0px",
+        threshold: 0,
+      }
+    );
+
+    const sections = navItems.map(item => document.querySelector(item.href)).filter(Boolean);
+    sections.forEach((section) => {
+      if (section) observer.observe(section);
+    });
+
+    return () => {
+      sections.forEach((section) => {
+        if (section) observer.unobserve(section);
+      });
+    };
+  }, []);
 
   return (
     <>
@@ -143,3 +174,4 @@ const Navigation = () => {
 };
 
 export default Navigation;
+```
