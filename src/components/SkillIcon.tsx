@@ -1,4 +1,3 @@
-
 import React from 'react';
 import {
   SiGooglesheets,
@@ -47,9 +46,9 @@ const SkillIcon = ({ skill, className }: SkillIconProps) => {
     case 'plotly':
       return <img src="/lovable-uploads/426afe14-be04-4609-8035-7b97176eb1f7.png" alt="Plotly" className={iconProps.className} />;
     case 'seaborn':
-      return <SiPython {...iconProps} />;
+      return <img src="/lovable-uploads/4141144c-20c5-4716-8488-e6e4dae779e7.png" alt="Seaborn" className={iconProps.className} />;
     case 'matplotlib':
-      return <SiPython {...iconProps} />;
+      return <img src="/lovable-uploads/b35a77d3-b305-47e4-90f5-14a1532c2f3b.png" alt="Matplotlib" className={iconProps.className} />;
 
     // Automation & Low-Code Platforms
     case 'n8n':
