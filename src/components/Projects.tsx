@@ -1,14 +1,7 @@
 import React, { useState } from "react";
-import { ExternalLink, Github, Filter as FilterIcon } from "lucide-react";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "./ui/select";
+import { ExternalLink, Github } from "lucide-react";
 
-// Main categories for the filter dropdown
+// Main categories for the filter tabs
 const categoryOptions = [
   { label: "All", value: "All" },
   { label: "Machine Learning", value: "Machine Learning" },
@@ -81,7 +74,7 @@ const Projects = () => {
     },
   ];
 
-  // Remove status filter, only keep category filter
+  // Only keep category filter
   const [categoryFilter, setCategoryFilter] = useState("All");
 
   const getStatusColor = (status: string) => {
@@ -116,28 +109,40 @@ const Projects = () => {
             Here are some of my recent projects that showcase my skills and passion for creating exceptional digital experiences.
           </p>
         </div>
-        {/* Filters Row */}
-        <div className="flex flex-wrap items-center gap-4 mb-8">
-          {/* Category Filter */}
-          <div className="flex items-center gap-2">
-            <FilterIcon className="w-5 h-5 text-gray-500" />
-            <span className="font-medium text-gray-700">Category:</span>
-            <Select value={categoryFilter} onValueChange={setCategoryFilter}>
-              <SelectTrigger className="w-52 bg-white z-20">
-                <SelectValue placeholder="Select category" />
-              </SelectTrigger>
-              <SelectContent>
-                {categoryOptions.map((opt) => (
-                  <SelectItem key={opt.value} value={opt.value}>
-                    {opt.label}
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
+        {/* Category Tabs Row */}
+        <div className="flex justify-center mb-8">
+          <div className="inline-flex rounded-full border border-purple-500 bg-transparent overflow-hidden">
+            {categoryOptions.map((opt) => {
+              const isActive = categoryFilter === opt.value;
+              return (
+                <button
+                  key={opt.value}
+                  type="button"
+                  onClick={() => setCategoryFilter(opt.value)}
+                  className={`px-6 py-2 font-semibold transition-colors text-sm outline-none
+                    ${
+                      isActive
+                        ? "bg-purple-600 text-white"
+                        : "bg-transparent text-purple-500 hover:bg-purple-50"
+                    }
+                    border-none
+                    focus:z-10
+                  `}
+                  style={{
+                    borderRight:
+                      opt.value !== categoryOptions[categoryOptions.length - 1].value
+                        ? "1px solid rgba(139,92,246,.22)" // Tailwind purple-500/20
+                        : undefined,
+                  }}
+                >
+                  {opt.label.toUpperCase()}
+                </button>
+              );
+            })}
           </div>
         </div>
         <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8">
-          {filteredProjects.map((project, index) => (
+          {filteredProjects.map((project) => (
             <div
               key={project.title}
               className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group"
@@ -155,7 +160,6 @@ const Projects = () => {
                   </span>
                 </div>
               </div>
-
               {/* Content Section */}
               <div className="p-6">
                 <div className="flex items-center justify-between mb-3">
@@ -166,11 +170,9 @@ const Projects = () => {
                     {project.date}
                   </span>
                 </div>
-
                 <p className="text-gray-600 mb-4 line-clamp-2">
                   {project.shortDescription}
                 </p>
-
                 {/* Tags */}
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tags.map((tag) => (
@@ -182,7 +184,6 @@ const Projects = () => {
                     </span>
                   ))}
                 </div>
-
                 {/* Links */}
                 <div className="flex gap-4 pt-4 border-t border-gray-100">
                   <a
