@@ -77,7 +77,7 @@ const Hero = () => {
 
             <div className="space-y-4">
               <p className="text-2xl font-medium text-gray-700">
-                I build <span className="font-semibold text-gray-800">data science</span> and <span className="font-semibold text-gray-800">automation</span> solutions that help your business save time, reduce costs, and make smarter decisions.
+                I build <span className="font-semibold text-gray-800">data science</span> and <span className="font-semibold text-gray-800">automation</span> solutions that help your business <span className="font-semibold text-gray-800">save time</span>, <span className="font-semibold text-gray-800">reduce costs</span>, and <span className="font-semibold text-gray-800">make smarter decisions</span>.
               </p>
               <p className="text-lg text-gray-600 leading-relaxed max-w-2xl">
                 Let’s simplify your work and unlock the power of your data.
