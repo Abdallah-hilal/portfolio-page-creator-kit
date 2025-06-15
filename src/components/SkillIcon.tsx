@@ -42,14 +42,14 @@ const SkillIcon = ({ skill, className }: SkillIconProps) => {
       return <img src="/lovable-uploads/48ea64ef-e583-4a22-9cf4-aa80c8d767d8.png" alt="SQL" className={iconProps.className} />;
 
     // Data Visualization & Analysis
-    case 'tableau':
-      return <SiTableau {...iconProps} />;
+    case 'power bi':
+      return <img src="/lovable-uploads/0a15da81-7c63-4e4b-ae38-7db8806dcb08.png" alt="Power BI" className={iconProps.className} />;
+    case 'plotly':
+      return <img src="/lovable-uploads/426afe14-be04-4609-8035-7b97176eb1f7.png" alt="Plotly" className={iconProps.className} />;
     case 'seaborn':
       return <SiPython {...iconProps} />;
     case 'matplotlib':
       return <SiPython {...iconProps} />;
-    case 'plotly':
-      return <SiPlotly {...iconProps} />;
 
     // Automation & Low-Code Platforms
     case 'n8n':

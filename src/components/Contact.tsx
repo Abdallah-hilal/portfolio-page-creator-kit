@@ -1,5 +1,4 @@
 
-
 import { Mail, Phone, MapPin, Github, Linkedin, Twitter } from "lucide-react";
 
 const Contact = () => {
@@ -25,9 +24,9 @@ const Contact = () => {
   ];
 
   const socialLinks = [
-    { icon: Github, href: "#", label: "GitHub" },
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
-    { icon: Twitter, href: "#", label: "Twitter" }
+    { icon: Linkedin, href: "https://www.linkedin.com/in/abdallah-hilal/", label: "LinkedIn" },
+    { icon: Github, href: "https://github.com/Abdallah-hilal", label: "GitHub" },
+    { icon: Twitter, href: "https://x.com/Abdullah_helal6", label: "Twitter" }
   ];
 
   return (
@@ -71,6 +70,8 @@ const Contact = () => {
                   <a 
                     key={social.label}
                     href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex items-center justify-center w-12 h-12 bg-gray-800 hover:bg-orange-600 text-gray-400 hover:text-white rounded-lg transition-all duration-300 hover:scale-110"
                     aria-label={social.label}
                   >

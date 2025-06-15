@@ -22,11 +22,11 @@ const Index = () => {
       <div id="skills">
         <Skills />
       </div>
-      <div id="education">
-        <Education />
-      </div>
       <div id="experience">
         <Experience />
+      </div>
+      <div id="education">
+        <Education />
       </div>
       <div id="projects">
         <Projects />

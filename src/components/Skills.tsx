@@ -13,7 +13,7 @@ const Skills = () => {
     {
       icon: Plotly,
       title: "Data Visualization & Analysis",
-      skills: [ "Tableau", "Seaborn", "Matplotlib", "Plotly" ],
+      skills: [ "Power BI", "Plotly", "Seaborn", "Matplotlib" ],
       lightColor: "bg-green-100"
     },
     {
