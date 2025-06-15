@@ -1,5 +1,5 @@
 
-import { Workflow, Brain, BarChart3, Globe, Code, Zap, Bot, CheckCircle2 } from "lucide-react";
+import { Workflow, Brain, Globe, Code, Bot, CheckCircle2, Wrench, BarChart3 as Plotly } from "lucide-react";
 
 const Skills = () => {
   const skillCategories = [
@@ -10,9 +10,9 @@ const Skills = () => {
       lightColor: "bg-red-100"
     },
     {
-      icon: BarChart3,
+      icon: Plotly,
       title: "Data Visualization & Analysis",
-      skills: [ "Tableau", "Seaborn", "Matplotlib" ],
+      skills: [ "Tableau", "Seaborn", "Matplotlib", "Plotly" ],
       lightColor: "bg-green-100"
     },
     {
@@ -40,7 +40,7 @@ const Skills = () => {
       lightColor: "bg-cyan-100"
     },
     {
-      icon: Zap,
+      icon: Wrench,
       title: "Other Tools & Platforms",
       skills: [ "Git", "Notion", "Google Sheets Automation", "Airtable" ],
       lightColor: "bg-yellow-100"
