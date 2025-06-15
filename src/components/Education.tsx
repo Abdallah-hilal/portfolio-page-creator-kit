@@ -4,10 +4,10 @@ import { GraduationCap, Award, Calendar } from "lucide-react";
 const Education = () => {
   const education = [
     {
-      degree: "Master of Science in Data Science",
-      institution: "University of Technology Brisbane",
-      period: "2017 - 2019",
-      description: "Specialized in machine learning, statistical analysis, and big data processing. Completed capstone project on predictive analytics for business intelligence.",
+      degree: "Bachelor's Degree in Computer Science",
+      institution: "El Shorouk Academy",
+      period: "Oct 2021 - May 2025",
+      description: "Studied core computer science concepts, including data structures, algorithms, object-oriented programming, databases, software development, and problem-solving. Built a strong foundation for data science, automation, and AI applications.",
       type: "degree"
     },
     {
