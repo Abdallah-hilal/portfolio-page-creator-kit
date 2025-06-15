@@ -1,5 +1,4 @@
-
-import { Workflow, Brain, Globe, Code, Bot, CheckCircle2, Wrench, BarChart3 as Plotly } from "lucide-react";
+import { Workflow, Brain, Code, CheckCircle2, Wrench, BarChart3 as Plotly, Phone, ScanSearch } from "lucide-react";
 
 const Skills = () => {
   const skillCategories = [
@@ -28,13 +27,13 @@ const Skills = () => {
       lightColor: "bg-blue-100"
     },
     {
-      icon: Globe,
+      icon: ScanSearch,
       title: "Web Scraping & Data Extraction",
       skills: [ "BeautifulSoup", "Selenium", "Scrapy", "API-based Scraping" ],
       lightColor: "bg-orange-100"
     },
     {
-      icon: Bot,
+      icon: Phone,
       title: "AI Voice Agent",
       skills: [ "Voice Automation", "AI-powered Call Agents", "Customer Support Automation" ],
       lightColor: "bg-cyan-100"
