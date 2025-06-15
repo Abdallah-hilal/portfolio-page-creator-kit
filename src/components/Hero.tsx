@@ -41,8 +41,14 @@ const Hero = () => {
               <span className="text-gray-900 font-medium">abdulluh.helal@gmail.com</span>
             </div>
 
-            {/* "See My Work" button below Gmail */}
-            <div className="flex w-fit pt-2">
+            {/* Action Buttons */}
+            <div className="flex flex-wrap items-center gap-4 pt-2">
+              <Button
+                className="bg-[#F17C58] hover:bg-[#E16A47] text-white px-6 py-3 rounded-xl font-semibold flex items-center gap-2 shadow-md hover:shadow-lg transition-all"
+              >
+                <FileText className="w-5 h-5" />
+                Show My Resume
+              </Button>
               <Button
                 variant="outline"
                 className="border-2 border-[#F17C58] text-[#F17C58] hover:bg-[#F17C58] hover:text-white px-6 py-3 rounded-xl font-semibold flex items-center gap-2 transition-all duration-300"

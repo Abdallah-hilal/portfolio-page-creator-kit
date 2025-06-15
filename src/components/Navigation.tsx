@@ -1,8 +1,6 @@
-
 import { useState } from "react";
-import { Menu, X, FileText } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import Logo from "./Logo";
-import { Button } from "@/components/ui/button";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -43,20 +41,13 @@ const Navigation = () => {
             </a>
           ))}
         </div>
-
-        {/* Resume Button */}
-        <Button
-          className="bg-[#F17C58] hover:bg-[#E16A47] text-white px-6 py-3 rounded-full font-semibold text-sm flex items-center gap-2 shadow-md hover:shadow-lg transition-all"
-        >
-          <FileText className="w-4 h-4" />
-          Show My Resume
-        </Button>
       </div>
 
       {/* Mobile Navigation - Enhanced Design */}
       <div className="lg:hidden relative">
         {/* Mobile Header */}
         <div className="bg-white/95 backdrop-blur-md rounded-2xl shadow-xl border border-gray-200/50 px-6 py-4 flex items-center justify-between min-w-[200px]">
+          {/* Logo */}
           <div className="flex items-center">
             <Logo size="small" />
             <span className="ml-3 font-bold text-gray-900 text-lg">Portfolio</span>
@@ -113,19 +104,6 @@ const Navigation = () => {
                   }`} />
                 </a>
               ))}
-              
-              {/* Resume Button */}
-              <button
-                className="w-full flex items-center justify-center gap-3 py-4 px-5 mt-3 bg-[#F17C58] text-white rounded-xl font-semibold transition-all duration-300 hover:bg-[#E16A47] transform hover:scale-[1.02] active:scale-95 shadow-lg"
-                onClick={() => {
-                  // Handle resume download/view
-                  console.log('Open resume');
-                  setIsOpen(false);
-                }}
-              >
-                <FileText className="w-5 h-5" />
-                <span>Show My Resume</span>
-              </button>
             </div>
             
             {/* Mobile Footer */}
