@@ -1,6 +1,5 @@
-
 import React, { useState } from "react";
-import { ExternalLink, Github, filter as FilterIcon } from "lucide-react";
+import { ExternalLink, Github, Filter as FilterIcon } from "lucide-react";
 import {
   Select,
   SelectContent,
