@@ -1,17 +1,17 @@
-import { BarChart3, Bot, Brain, Globe } from "lucide-react";
+
+import { BarChart3, Bot, Brain, Globe, Phone } from "lucide-react";
 const About = () => {
   const skills = [
     {
       icon: Bot,
       title: "Process Automation",
       description: (
-        <>
-          I connect and automate your apps, tools, and systems using low-code
-          platforms — creating smooth, end-to-end workflows that{" "}
-          <span className="font-semibold text-gray-800">
-            save your valuable time and money.
-          </span>
-        </>
+        <ul className="list-disc list-inside text-left space-y-2 text-gray-600 leading-relaxed">
+          <li>Connect and automate apps, tools, and systems</li>
+          <li>Build low-code workflows (n8n, Make.com, Zapier)</li>
+          <li>API integrations</li>
+          <li>End-to-end automation to <span className="font-semibold text-gray-800">save your valuable time and money</span></li>
+        </ul>
       ),
       color: "bg-green-500",
       lightColor: "bg-green-100",
@@ -19,26 +19,58 @@ const About = () => {
     {
       icon: BarChart3,
       title: "Data Analysis",
-      description:
-        "I analyze, clean, and visualize your data to help you make clear, informed business decisions.",
+      description: (
+        <ul className="list-disc list-inside text-left space-y-2 text-gray-600 leading-relaxed">
+            <li>Data cleaning and preparation</li>
+            <li>Data visualization and reporting</li>
+            <li>SQL and Python analytics</li>
+            <li>Turn raw data into clear business insights</li>
+        </ul>
+      ),
       color: "bg-blue-500",
       lightColor: "bg-blue-100",
     },
     {
       icon: Brain,
       title: "Machine Learning",
-      description:
-        "I build custom ML models to predict trends, automate tasks, and generate valuable business insights.",
+      description: (
+        <ul className="list-disc list-inside text-left space-y-2 text-gray-600 leading-relaxed">
+            <li>Build custom ML models</li>
+            <li>Predict trends and customer behavior</li>
+            <li>Automate decision-making processes</li>
+            <li>Deliver actionable business insights</li>
+        </ul>
+      ),
       color: "bg-purple-500",
       lightColor: "bg-purple-100",
     },
     {
       icon: Globe,
       title: "Web Scraping",
-      description:
-        "I extract valuable data from websites and APIs, giving you access to real-time information for your business needs.",
+      description: (
+        <ul className="list-disc list-inside text-left space-y-2 text-gray-600 leading-relaxed">
+            <li>Extract data from websites and APIs</li>
+            <li>Build custom scrapers with BeautifulSoup, Selenium, Scrapy</li>
+            <li>Collect real-time market and competitor data</li>
+            <li>Provide clean, structured data for your business</li>
+        </ul>
+      ),
       color: "bg-orange-500",
       lightColor: "bg-orange-100",
+    },
+    {
+      icon: Phone,
+      title: "AI Voice Agent",
+      description: (
+        <ul className="list-disc list-inside text-left space-y-2 text-gray-600 leading-relaxed">
+            <li>Build AI-powered voice assistants for customer support & automation</li>
+            <li>Integrate voice bots into your existing systems</li>
+            <li>Automate phone calls, bookings, and customer inquiries</li>
+            <li>Reduce support costs and improve customer experience</li>
+        </ul>
+      ),
+      color: "bg-red-500",
+      lightColor: "bg-red-100",
     },
   ];
   const stats = [{
@@ -61,17 +93,17 @@ const About = () => {
         </div>
         
         {/* Skills Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {skills.map((skill, index) => <div key={skill.title} className="bg-white rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:scale-105 group border border-gray-100">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {skills.map((skill) => <div key={skill.title} className="bg-white rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:scale-105 group border border-gray-100 flex flex-col">
               <div className={`inline-flex items-center justify-center w-16 h-16 ${skill.lightColor} rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300`}>
                 <skill.icon className={`w-8 h-8 text-gray-700`} />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">
                 {skill.title}
               </h3>
-              <p className="text-gray-600 leading-relaxed">
+              <div className="text-gray-600 leading-relaxed flex-grow">
                 {skill.description}
-              </p>
+              </div>
             </div>)}
         </div>
 
