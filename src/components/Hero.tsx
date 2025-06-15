@@ -46,8 +46,8 @@ const Hero = () => {
     }
   }, [charIndex, titleIndex, isFadingOut]);
 
-
-  return <section className="min-h-screen flex flex-col justify-center items-center relative bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden pt-16">
+  return (
+    <section className="min-h-screen flex flex-col justify-center items-center relative bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden pt-16">
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-[#F17C58]/10 rounded-full blur-3xl"></div>
@@ -202,13 +202,15 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      {/* Scroll indicator - Fixed positioning and visibility */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-20">
         <div className="flex flex-col items-center gap-2">
           <span className="text-sm text-gray-600 font-medium">Scroll down</span>
           <ChevronDown className="w-6 h-6 text-[#F17C58]" />
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default Hero;
