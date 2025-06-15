@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { ChevronDown, Briefcase, Mail, Linkedin, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -78,10 +77,10 @@ const Hero = () => {
 
             <div className="space-y-4">
               <p className="text-2xl font-medium text-gray-700">
-                I build data solutions for science.
+                I build <span className="font-semibold text-gray-800">data science and automation solutions</span> that help businesses save time and make smarter decisions.
               </p>
               <p className="text-lg text-gray-600 leading-relaxed max-w-2xl">
-                Specialized in automation, machine learning, and transforming complex data into actionable insights. Based in Brisbane, Australia.
+                Let’s simplify your work and unlock the power of your data.
               </p>
             </div>
 
