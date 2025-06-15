@@ -1,4 +1,5 @@
-import { ChevronDown, Mail, FileText, Briefcase } from "lucide-react";
+
+import { ChevronDown, Briefcase } from "lucide-react";
 import { Button } from "@/components/ui/button";
 const Hero = () => {
   return <section className="min-h-screen flex flex-col justify-center items-center relative bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden pt-16">
@@ -38,10 +39,6 @@ const Hero = () => {
 
             {/* Action Buttons */}
             <div className="flex flex-wrap items-center gap-4 pt-2">
-              <Button className="bg-[#F17C58] hover:bg-[#E16A47] text-white px-6 py-3 rounded-xl font-semibold flex items-center gap-2 shadow-md hover:shadow-lg transition-all">
-                <FileText className="w-5 h-5" />
-                Show My Resume
-              </Button>
               <Button variant="outline" className="border-2 border-[#F17C58] text-[#F17C58] hover:bg-[#F17C58] hover:text-white px-6 py-3 rounded-xl font-semibold flex items-center gap-2 transition-all duration-300">
                 <Briefcase className="w-5 h-5" />
                 See My Work
