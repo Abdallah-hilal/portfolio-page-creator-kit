@@ -66,7 +66,7 @@ const Hero = () => {
                   👋 Welcome to my portfolio
                 </span>
               </div>
-              <h1 className="text-4xl lg:text-5xl font-black text-gray-900 leading-tight">
+              <h1 className="text-3xl lg:text-4xl font-black text-gray-900 leading-tight">
                 Hi, I'm{" "}
                 <span className="text-[#F17C58]">
                   <span className={`inline-block transition-opacity duration-500 ${isFadingOut ? 'opacity-0' : 'opacity-100'}`}>
