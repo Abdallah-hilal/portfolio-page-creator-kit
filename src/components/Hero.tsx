@@ -1,3 +1,4 @@
+
 import { ChevronDown, Mail, Phone } from "lucide-react";
 const Hero = () => {
   return <section className="min-h-screen flex flex-col justify-center items-center relative bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden pt-16">
@@ -65,15 +66,15 @@ const Hero = () => {
               </div>
               
               {/* Floating certification badge */}
-              <div className="absolute -bottom-4 -right-4 bg-white rounded-xl p-5 shadow-xl border border-gray-100 transform rotate-3 hover:rotate-0 transition-transform duration-300">
+              <div className="absolute -bottom-6 -right-6 bg-white rounded-xl p-4 shadow-xl border border-gray-100 transform rotate-3 hover:rotate-0 transition-transform duration-300 min-w-[140px]">
                 <div className="text-center">
-                  <div className="w-10 h-10 bg-gradient-to-br from-[#F17C58] to-[#F17C58]/80 rounded-full mx-auto mb-3 flex items-center justify-center">
-                    <div className="w-5 h-5 bg-white rounded-full"></div>
+                  <div className="w-8 h-8 bg-gradient-to-br from-[#F17C58] to-[#F17C58]/80 rounded-full mx-auto mb-2 flex items-center justify-center">
+                    <div className="w-3 h-3 bg-white rounded-full"></div>
                   </div>
-                  <div className="text-xs font-bold text-gray-900 leading-tight">
-                    ICF CERTIFIED<br />
-                    PROFESSIONAL<br />
-                    DATA SCIENTIST
+                  <div className="text-xs font-bold text-gray-900 leading-tight space-y-0.5">
+                    <div>ICF CERTIFIED</div>
+                    <div>PROFESSIONAL</div>
+                    <div>DATA SCIENTIST</div>
                   </div>
                 </div>
               </div>
