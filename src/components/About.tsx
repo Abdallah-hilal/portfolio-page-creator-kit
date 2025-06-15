@@ -8,8 +8,8 @@ const About = () => {
       description: (
         <ul className="list-disc list-inside text-left space-y-2 text-gray-600 leading-relaxed">
           <li>Connect and automate apps, tools, and systems</li>
-          <li>Build low-code workflows (n8n, Make.com, Zapier)</li>
-          <li>API integrations</li>
+          <li>Build low-code workflows (<span className="font-semibold text-gray-800">n8n, Make.com, Zapier</span>)</li>
+          <li><span className="font-semibold text-gray-800">API integrations</span></li>
           <li>End-to-end automation to <span className="font-semibold text-gray-800">save your valuable time and money</span></li>
         </ul>
       ),
@@ -23,8 +23,8 @@ const About = () => {
         <ul className="list-disc list-inside text-left space-y-2 text-gray-600 leading-relaxed">
             <li>Data cleaning and preparation</li>
             <li>Data visualization and reporting</li>
-            <li>SQL and Python analytics</li>
-            <li>Turn raw data into clear business insights</li>
+            <li><span className="font-semibold text-gray-800">SQL</span> and <span className="font-semibold text-gray-800">Python</span> analytics</li>
+            <li>Turn raw data into <span className="font-semibold text-gray-800">clear business insights</span></li>
         </ul>
       ),
       color: "bg-blue-500",
@@ -35,10 +35,10 @@ const About = () => {
       title: "Machine Learning",
       description: (
         <ul className="list-disc list-inside text-left space-y-2 text-gray-600 leading-relaxed">
-            <li>Build custom ML models</li>
+            <li>Build custom <span className="font-semibold text-gray-800">ML models</span></li>
             <li>Predict trends and customer behavior</li>
             <li>Automate decision-making processes</li>
-            <li>Deliver actionable business insights</li>
+            <li>Deliver <span className="font-semibold text-gray-800">actionable business insights</span></li>
         </ul>
       ),
       color: "bg-purple-500",
@@ -50,8 +50,8 @@ const About = () => {
       description: (
         <ul className="list-disc list-inside text-left space-y-2 text-gray-600 leading-relaxed">
             <li>Extract data from websites and APIs</li>
-            <li>Build custom scrapers with BeautifulSoup, Selenium, Scrapy</li>
-            <li>Collect real-time market and competitor data</li>
+            <li>Build custom scrapers with <span className="font-semibold text-gray-800">BeautifulSoup, Selenium, Scrapy</span></li>
+            <li>Collect real-time <span className="font-semibold text-gray-800">market and competitor data</span></li>
             <li>Provide clean, structured data for your business</li>
         </ul>
       ),
@@ -63,10 +63,10 @@ const About = () => {
       title: "AI Voice Agent",
       description: (
         <ul className="list-disc list-inside text-left space-y-2 text-gray-600 leading-relaxed">
-            <li>Build AI-powered voice assistants for customer support & automation</li>
-            <li>Integrate voice bots into your existing systems</li>
+            <li>Build <span className="font-semibold text-gray-800">AI-powered voice assistants</span> for customer support & automation</li>
+            <li>Integrate <span className="font-semibold text-gray-800">voice bots</span> into your existing systems</li>
             <li>Automate phone calls, bookings, and customer inquiries</li>
-            <li>Reduce support costs and improve customer experience</li>
+            <li>Reduce support costs and <span className="font-semibold text-gray-800">improve customer experience</span></li>
         </ul>
       ),
       color: "bg-red-500",
