@@ -4,36 +4,58 @@ import { ExternalLink, Github } from "lucide-react";
 const Projects = () => {
   const projects = [
     {
-      title: "E-Commerce Platform",
-      shortDescription: "Modern e-commerce solution with real-time inventory",
-      description: "A modern e-commerce solution built with React and Node.js, featuring real-time inventory management and secure payment processing.",
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
-      tags: ["React", "Node.js", "MongoDB", "Stripe"],
+      title: "Football Match Scraper",
+      shortDescription: "Scalable scraper collecting data from 20,000+ football matches",
+      description: "Developed a scalable scraper to collect data from over 20,000 football matches. Cleaned and structured the dataset for use in predictive models and data visualization.",
+      image: "https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=600&h=400&fit=crop",
+      tags: ["Python", "BeautifulSoup", "Requests", "Pandas"],
       liveUrl: "#",
       githubUrl: "#",
-      date: "2024",
+      date: "April 2024",
+      status: "Completed"
+    },
+    {
+      title: "Finance Tracker & AI Assistant",
+      shortDescription: "Automated personal finance tracker with AI-powered insights",
+      description: "Built an automated personal finance tracker that syncs expenses and incomes to Notion via Telegram. Integrated an AI agent to answer natural language queries about financial summaries.",
+      image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&h=400&fit=crop",
+      tags: ["Telegram Bot", "n8n", "Notion API", "OpenAI API"],
+      liveUrl: "#",
+      githubUrl: "#",
+      date: "May 2024",
       status: "Live Project"
     },
     {
-      title: "Task Management App",
-      shortDescription: "Collaborative task management with real-time updates",
-      description: "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
-      image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop",
-      tags: ["React", "TypeScript", "Socket.io", "PostgreSQL"],
+      title: "Daily Email Summary Bot",
+      shortDescription: "Automated email summarization with daily Telegram notifications",
+      description: "Created an automation that summarizes important unread emails and sends a Telegram message daily at 7:00 AM. Helps prioritize email workload using custom filters and NLP.",
+      image: "https://images.unsplash.com/photo-1596526131083-e8c633c948d2?w=600&h=400&fit=crop",
+      tags: ["n8n", "Gmail API", "Google Cloud Functions", "Telegram"],
       liveUrl: "#",
       githubUrl: "#",
-      date: "2024",
-      status: "In Development"
+      date: "March 2024",
+      status: "Live Project"
     },
     {
-      title: "Portfolio Website",
-      shortDescription: "Responsive portfolio with smooth animations",
-      description: "A responsive portfolio website showcasing modern design principles with smooth animations and optimized performance.",
-      image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=400&fit=crop",
-      tags: ["React", "Tailwind CSS", "Framer Motion"],
+      title: "Sign Language Recognition",
+      shortDescription: "Computer vision model for American Sign Language recognition",
+      description: "Developed a computer vision model to recognize American Sign Language gestures using webcam input. Integrated with web and mobile UIs to demonstrate accessibility use cases.",
+      image: "https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=600&h=400&fit=crop",
+      tags: ["Python", "OpenCV", "MediaPipe", "TensorFlow"],
       liveUrl: "#",
       githubUrl: "#",
-      date: "2024",
+      date: "June 2024",
+      status: "Completed"
+    },
+    {
+      title: "Gold Price Prediction Model",
+      shortDescription: "ML model forecasting gold prices using economic indicators",
+      description: "Built a predictive machine learning model to forecast gold prices using historical data and macroeconomic indicators. Achieved high accuracy through feature engineering and model tuning.",
+      image: "https://images.unsplash.com/photo-1610375461246-83df859d849d?w=600&h=400&fit=crop",
+      tags: ["Python", "Scikit-learn", "XGBoost", "Pandas"],
+      liveUrl: "#",
+      githubUrl: "#",
+      date: "February 2024",
       status: "Completed"
     }
   ];
