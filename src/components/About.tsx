@@ -1,3 +1,4 @@
+
 import { BarChart3, Bot, Database, Brain } from "lucide-react";
 const About = () => {
   const skills = [{
@@ -39,9 +40,9 @@ const About = () => {
           <h2 className="text-5xl font-bold text-gray-900 mb-6">
             What do I help?
           </h2>
-          <p className="text-gray-600 max-w-3xl mx-auto leading-relaxed text-xl">I help businesses solve problems and build efficient solutions by combining data science, AI, and automation. My work is focused on creating digital products that save time, reduce costs, and drive business growth.
-
-        </p>
+          <p className="text-gray-600 max-w-3xl mx-auto leading-relaxed text-xl">
+            I help businesses solve problems and build efficient solutions by combining <span className="font-semibold text-gray-800">data science</span>, <span className="font-semibold text-gray-800">AI</span>, and <span className="font-semibold text-gray-800">automation</span>. My work is focused on creating <span className="font-semibold text-gray-800">digital products</span> that <span className="font-semibold text-gray-800">save time</span>, <span className="font-semibold text-gray-800">reduce costs</span>, and <span className="font-semibold text-gray-800">drive business growth</span>.
+          </p>
         </div>
         
         {/* Skills Grid */}
