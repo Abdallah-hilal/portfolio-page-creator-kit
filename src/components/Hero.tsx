@@ -1,22 +1,13 @@
-
 import { useState, useEffect } from "react";
 import { ChevronDown, Briefcase, Mail, Linkedin, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
-
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 const titles = ["a Data Scientist", "an Automation Specialist"];
-
 const Hero = () => {
   const [titleIndex, setTitleIndex] = useState(0);
   const [text, setText] = useState('');
   const [charIndex, setCharIndex] = useState(0);
   const [isFadingOut, setIsFadingOut] = useState(false);
-
   useEffect(() => {
     if (isFadingOut) {
       // After fade out, change title and reset for typing
@@ -29,7 +20,6 @@ const Hero = () => {
       }, 500); // Corresponds to fade out duration
       return () => clearTimeout(timer);
     }
-
     const currentTitle = titles[titleIndex];
     if (charIndex < currentTitle.length) {
       // Typing effect
@@ -46,9 +36,7 @@ const Hero = () => {
       return () => clearTimeout(timer);
     }
   }, [charIndex, titleIndex, isFadingOut]);
-
-  return (
-    <section className="min-h-screen flex flex-col justify-center items-center relative bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden pt-16">
+  return <section className="min-h-screen flex flex-col justify-center items-center relative bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden pt-16">
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-[#F17C58]/10 rounded-full blur-3xl"></div>
@@ -56,7 +44,7 @@ const Hero = () => {
       </div>
 
       {/* Main content container */}
-      <div className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl max-w-7xl px-8 py-16 md:py-20 relative z-10 border border-white/20 md:px-[60px] mx-[66px] my-0">
+      <div className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl max-w-7xl px-8 py-16 md:py-20 relative z-10 border border-white/20 md:px-[60px] my-0 mx-[70px]">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left side - Text content */}
           <div className="text-left space-y-8 relative">
@@ -179,13 +167,7 @@ const Hero = () => {
                   <Tooltip>
                     <TooltipTrigger asChild>
                       <a href="https://www.datacamp.com/portfolio/AbdallahHelal" target="_blank" rel="noopener noreferrer" aria-label="DataCamp Profile" className="text-gray-500 hover:text-[#F17C58] transition-all duration-300 hover:scale-110">
-                        <svg
-                          className="w-7 h-7"
-                          viewBox="-9.6 -9.6 43.20 43.20"
-                          role="img"
-                          fill="currentColor"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
+                        <svg className="w-7 h-7" viewBox="-9.6 -9.6 43.20 43.20" role="img" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                           <g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M12.946 18.151v-5.239L21.209 8.2 19.2 7.048l-6.254 3.567V5.36c0-.356-.192-.689-.5-.866L4.922.177a1.434 1.434 0 0 0-1.455.044 1.438 1.438 0 0 0-.676 1.224v14.777A1.44 1.44 0 0 0 4.92 17.49l6.032-3.44v4.683a1 1 0 0 0 .504.867l7.73 4.4 2.01-1.152-8.25-4.697zM10.953 5.938v5.814L4.785 15.27V2.4l6.168 3.539v-.001z"></path></g></svg>
                       </a>
                     </TooltipTrigger>
@@ -196,13 +178,8 @@ const Hero = () => {
                   <Tooltip>
                     <TooltipTrigger asChild>
                       <a href="https://leetcode.com/u/Abdallah_helal/" target="_blank" rel="noopener noreferrer" aria-label="LeetCode Profile" className="text-gray-500 hover:text-[#F17C58] transition-all duration-300 hover:scale-110">
-                        <svg
-                          className="w-7 h-7"
-                          viewBox="0 0 24 24"
-                          fill="currentColor"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path d="M16.102 17.93l-2.697 2.607c-.466.467-1.111.662-1.823.662s-1.357-.195-1.824-.662l-4.332-4.363c-.467-.467-.702-1.15-.702-1.863s.235-1.357.702-1.824l4.319-4.38c.467-.467 1.125-.645 1.837-.645s1.357.195 1.823.662l2.697 2.606c.514.515 1.365.497 1.9-.038.535-.536.553-1.387.039-1.901l-2.609-2.636a5.055 5.055 0 0 0-2.445-1.317l2.467-2.503c.516-.514.498-1.366-.037-1.901-.535-.535-1.387-.552-1.902-.038l-10.1 10.101c-.981.982-1.494 2.337-1.494 3.835 0 1.498.513 2.895 1.494 3.875l4.347 4.361c.981.979 2.337 1.452 3.834 1.452s2.853-.512 3.835-1.494l2.609-2.637c.514-.514.496-1.365-.039-1.9s-1.386-.553-1.899-.039zM20.811 13.01H10.666c-.702 0-1.27.604-1.27 1.346s.568 1.346 1.27 1.346h10.145c.701 0 1.27-.604 1.27-1.346s-.569-1.346-1.27-1.346z"/>
+                        <svg className="w-7 h-7" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M16.102 17.93l-2.697 2.607c-.466.467-1.111.662-1.823.662s-1.357-.195-1.824-.662l-4.332-4.363c-.467-.467-.702-1.15-.702-1.863s.235-1.357.702-1.824l4.319-4.38c.467-.467 1.125-.645 1.837-.645s1.357.195 1.823.662l2.697 2.606c.514.515 1.365.497 1.9-.038.535-.536.553-1.387.039-1.901l-2.609-2.636a5.055 5.055 0 0 0-2.445-1.317l2.467-2.503c.516-.514.498-1.366-.037-1.901-.535-.535-1.387-.552-1.902-.038l-10.1 10.101c-.981.982-1.494 2.337-1.494 3.835 0 1.498.513 2.895 1.494 3.875l4.347 4.361c.981.979 2.337 1.452 3.834 1.452s2.853-.512 3.835-1.494l2.609-2.637c.514-.514.496-1.365-.039-1.9s-1.386-.553-1.899-.039zM20.811 13.01H10.666c-.702 0-1.27.604-1.27 1.346s.568 1.346 1.27 1.346h10.145c.701 0 1.27-.604 1.27-1.346s-.569-1.346-1.27-1.346z" />
                         </svg>
                       </a>
                     </TooltipTrigger>
@@ -224,8 +201,6 @@ const Hero = () => {
           <ChevronDown className="w-6 h-6 text-[#F17C58]" />
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
