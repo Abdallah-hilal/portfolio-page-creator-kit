@@ -1,4 +1,3 @@
-
 import React from 'react';
 import {
   SiGooglesheets,
@@ -56,7 +55,7 @@ const SkillIcon = ({ skill, className }: SkillIconProps) => {
 
     // Automation & Low-Code Platforms
     case 'n8n':
-      return <SiN8N {...iconProps} />;
+      return <img src="/lovable-uploads/654aa2a2-e3d9-47e7-a2f8-8be6c4f2f6c9.png" alt="n8n" className={iconProps.className} />;
     case 'make.com':
       return <SiMake {...iconProps} />;
     case 'zapier':
