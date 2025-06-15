@@ -1,9 +1,7 @@
 import { ChevronDown, Mail, FileText, Briefcase } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
 const Hero = () => {
-  return (
-    <section className="min-h-screen flex flex-col justify-center items-center relative bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden pt-16">
+  return <section className="min-h-screen flex flex-col justify-center items-center relative bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden pt-16">
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-[#F17C58]/10 rounded-full blur-3xl"></div>
@@ -36,23 +34,15 @@ const Hero = () => {
             </div>
 
             {/* Gmail section */}
-            <div className="flex items-center gap-3 p-4 bg-gray-50 rounded-2xl border border-gray-200 w-fit">
-              <Mail className="w-5 h-5 text-[#F17C58]" />
-              <span className="text-gray-900 font-medium">abdulluh.helal@gmail.com</span>
-            </div>
+            
 
             {/* Action Buttons */}
             <div className="flex flex-wrap items-center gap-4 pt-2">
-              <Button
-                className="bg-[#F17C58] hover:bg-[#E16A47] text-white px-6 py-3 rounded-xl font-semibold flex items-center gap-2 shadow-md hover:shadow-lg transition-all"
-              >
+              <Button className="bg-[#F17C58] hover:bg-[#E16A47] text-white px-6 py-3 rounded-xl font-semibold flex items-center gap-2 shadow-md hover:shadow-lg transition-all">
                 <FileText className="w-5 h-5" />
                 Show My Resume
               </Button>
-              <Button
-                variant="outline"
-                className="border-2 border-[#F17C58] text-[#F17C58] hover:bg-[#F17C58] hover:text-white px-6 py-3 rounded-xl font-semibold flex items-center gap-2 transition-all duration-300"
-              >
+              <Button variant="outline" className="border-2 border-[#F17C58] text-[#F17C58] hover:bg-[#F17C58] hover:text-white px-6 py-3 rounded-xl font-semibold flex items-center gap-2 transition-all duration-300">
                 <Briefcase className="w-5 h-5" />
                 See My Work
               </Button>
@@ -83,11 +73,7 @@ const Hero = () => {
 
               {/* Profile image */}
               <div className="relative z-10">
-                <img
-                  src="/lovable-uploads/6ebcda68-310a-4914-800e-f9dd0d7026ef.png"
-                  alt="Abdallah Helal"
-                  className="w-72 h-72 lg:w-96 lg:h-96 mx-auto rounded-full object-cover border-8 border-white shadow-2xl relative z-10"
-                />
+                <img src="/lovable-uploads/6ebcda68-310a-4914-800e-f9dd0d7026ef.png" alt="Abdallah Helal" className="w-72 h-72 lg:w-96 lg:h-96 mx-auto rounded-full object-cover border-8 border-white shadow-2xl relative z-10" />
               </div>
             </div>
           </div>
@@ -101,8 +87,6 @@ const Hero = () => {
           <ChevronDown className="w-6 h-6 text-[#F17C58]" />
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
