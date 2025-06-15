@@ -40,7 +40,7 @@ const About = () => {
           <h2 className="text-5xl font-bold text-gray-900 mb-6">
             What do I help?
           </h2>
-          <p className="text-gray-600 max-w-3xl mx-auto leading-relaxed text-xl">
+          <p className="text-2xl font-medium text-gray-700 max-w-3xl mx-auto">
             I help businesses solve problems and build efficient solutions by combining <span className="font-semibold text-gray-800">data science</span>, <span className="font-semibold text-gray-800">AI</span>, and <span className="font-semibold text-gray-800">automation</span>. My work is focused on creating <span className="font-semibold text-gray-800">digital products</span> that <span className="font-semibold text-gray-800">save time</span>, <span className="font-semibold text-gray-800">reduce costs</span>, and <span className="font-semibold text-gray-800">drive business growth</span>.
           </p>
         </div>
