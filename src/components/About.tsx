@@ -123,10 +123,11 @@ const About = () => {
         <div className="bg-white rounded-3xl p-12 shadow-lg">
           <div className="max-w-4xl mx-auto text-center">
             <h3 className="text-3xl font-bold text-gray-900 mb-6">About Me</h3>
+            <p className="text-lg text-gray-700 leading-relaxed mb-4">
+              I can help you with <span className="font-semibold text-gray-800">automation, data science, and AI solutions</span> that save time, reduce costs, and simplify your business.
+            </p>
             <p className="text-lg text-gray-700 leading-relaxed mb-8">
-              I'm a passionate data scientist with 5+ years of experience transforming raw data into actionable insights 
-              and building automated solutions that drive business growth and operational efficiency. 
-              I use process design to create digital products that help businesses solve complex problems and make data-driven decisions.
+              Using <span className="font-semibold text-gray-800">Python, machine learning, web scraping, low-code platforms (n8n, Make.com, Zapier), and API integrations</span>, I build efficient systems tailored to your needs.
             </p>
             <div className="inline-flex items-center gap-4 bg-teal-50 px-6 py-3 rounded-full">
               <div className="w-3 h-3 bg-teal-500 rounded-full animate-pulse"></div>
