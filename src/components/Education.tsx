@@ -21,28 +21,28 @@ const Education = () => {
 
   const certifications = [
     {
-      name: "AWS Certified Solutions Architect",
-      issuer: "Amazon Web Services",
-      year: "2023",
-      description: "Professional-level certification demonstrating expertise in designing distributed systems on AWS."
+      name: "Machine Learning Specialization",
+      issuer: "Stanford University – Coursera",
+      year: "August 2024",
+      courses: 3,
+      description: "Completed a 3-course specialization taught by Andrew Ng covering supervised learning, unsupervised learning, recommendation systems, and reinforcement learning. Gained deep practical skills to build and deploy ML models.",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Coursera-Logo_600x600.svg/2048px-Coursera-Logo_600x600.svg.png"
     },
     {
-      name: "Google Cloud Professional Data Engineer",
-      issuer: "Google Cloud",
-      year: "2022",
-      description: "Certification in designing and building data processing systems on Google Cloud Platform."
+      name: "Associate Data Scientist in Python",
+      issuer: "DataCamp",
+      year: "November 2024",
+      courses: 9,
+      description: "Completed a 90-hour career track, mastering core data science concepts with hands-on projects in Python, pandas, data visualization, and machine learning.",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/DataCamp_logo.svg/2048px-DataCamp_logo.svg.png"
     },
     {
-      name: "Microsoft Azure Data Scientist Associate",
-      issuer: "Microsoft",
-      year: "2022",
-      description: "Expertise in implementing machine learning solutions using Azure Machine Learning service."
-    },
-    {
-      name: "Tableau Desktop Specialist",
-      issuer: "Tableau",
-      year: "2021",
-      description: "Proficiency in creating interactive data visualizations and dashboards."
+      name: "ALX Data Science Certificate",
+      issuer: "ALX",
+      year: "August 2024",
+      courses: 8,
+      description: "Completed 8 intensive courses in data science, covering Python, SQL, data wrangling, statistics, machine learning, and project-based learning to build real-world data-driven solutions.",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/ALX_Logo.png/2048px-ALX_Logo.png"
     }
   ];
 
@@ -96,12 +96,20 @@ const Education = () => {
             {certifications.map((cert, index) => (
               <div key={index} className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
                 <div className="flex items-start justify-between mb-3">
-                  <h4 className="text-lg font-bold text-gray-900 flex-1">{cert.name}</h4>
+                  <div className="flex items-center gap-3 flex-1">
+                    <img src={cert.logo} alt={cert.issuer} className="w-8 h-8 object-contain" />
+                    <h4 className="text-lg font-bold text-gray-900">{cert.name}</h4>
+                  </div>
                   <span className="text-sm font-medium text-orange-600 bg-orange-100 px-3 py-1 rounded-full ml-2">
                     {cert.year}
                   </span>
                 </div>
-                <p className="text-orange-600 font-semibold mb-3">{cert.issuer}</p>
+                <p className="text-orange-600 font-semibold mb-2">{cert.issuer}</p>
+                <div className="mb-3">
+                  <span className="text-sm font-medium text-gray-600 bg-gray-100 px-2 py-1 rounded">
+                    Courses: {cert.courses}
+                  </span>
+                </div>
                 <p className="text-gray-700 text-sm leading-relaxed">{cert.description}</p>
               </div>
             ))}
