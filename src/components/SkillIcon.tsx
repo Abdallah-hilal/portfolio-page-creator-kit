@@ -1,4 +1,3 @@
-
 import React from 'react';
 import {
   SiGooglesheets,
@@ -6,10 +5,7 @@ import {
   SiMake,
   SiN8N,
   SiNotion,
-  SiNumpy,
-  SiPandas,
   SiPlotly,
-  SiPython,
   SiScikitlearn,
   SiSelenium,
   SiTableau,
@@ -30,11 +26,11 @@ const SkillIcon = ({ skill, className }: SkillIconProps) => {
   switch (skill.toLowerCase()) {
     // Programming & Data Science
     case 'python':
-      return <SiPython {...iconProps} />;
+      return <img src="/lovable-uploads/b92e3a9f-8ba2-4d91-b45f-d40efb41e0d2.png" alt="Python" className={iconProps.className} />;
     case 'pandas':
-      return <SiPandas {...iconProps} />;
+      return <img src="/lovable-uploads/a0c850e3-254b-4561-9b15-c40a7c74ba8c.png" alt="Pandas" className={iconProps.className} />;
     case 'numpy':
-      return <SiNumpy {...iconProps} />;
+      return <img src="/lovable-uploads/03b83a01-f12f-4400-ad5e-ff379079c872.png" alt="NumPy" className={iconProps.className} />;
     case 'scikit-learn':
       return <SiScikitlearn {...iconProps} />;
     case 'tensorflow':
