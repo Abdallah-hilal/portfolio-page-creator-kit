@@ -1,4 +1,3 @@
-
 import { ChevronDown, Briefcase, Mail, Linkedin, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -138,20 +137,7 @@ const Hero = () => {
                   <Tooltip>
                     <TooltipTrigger asChild>
                       <a href="https://www.datacamp.com/portfolio/AbdallahHelal" target="_blank" rel="noopener noreferrer" aria-label="DataCamp Profile" className="text-gray-500 hover:text-[#F17C58] transition-all duration-300 hover:scale-110">
-                        <svg
-                          className="w-7 h-7"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path d="M12.33,16.4,9.6,17.8,7.2,16.4V13.6l2.4-1.4,2.73-1.6v3.2Z"></path>
-                          <path d="M20.92,15.75,17.4,13.8V10.2l3.52-1.95a1,1,0,0,1,1,1.74Z"></path>
-                          <path d="M14.67,12.2,12,13.8l-2.67-1.6L6.6,10.2,3.08,8.25a1,1,0,0,1-1-1.74l3.52-1.95a1,1,0,0,1,1,0l3.52,1.95L14.67,9Z"></path>
-                        </svg>
+                        <img src="https://images.icon-icons.com/3914/PNG/512/datacamp_logo_icon_249069.png" alt="DataCamp Logo" className="w-7 h-7" />
                       </a>
                     </TooltipTrigger>
                     <TooltipContent>
