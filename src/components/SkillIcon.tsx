@@ -57,7 +57,7 @@ const SkillIcon = ({ skill, className }: SkillIconProps) => {
     case 'n8n':
       return <img src="/lovable-uploads/654aa2a2-e3d9-47e7-a2f8-8be6c4f2f6c9.png" alt="n8n" className={iconProps.className} />;
     case 'make.com':
-      return <SiMake {...iconProps} />;
+      return <img src="/lovable-uploads/2ec6b24e-3cc1-49f0-8767-04f528b0161f.png" alt="Make.com" className={iconProps.className} />;
     case 'zapier':
       return <SiZapier {...iconProps} />;
     case 'gohighlevel':
