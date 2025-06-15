@@ -10,8 +10,9 @@ const navItems = [
   { name: "About", href: "#about" },
   { name: "Skills", href: "#skills" },
   { name: "Education", href: "#education" },
+  { name: "Experience", href: "#experience" },
   { name: "Projects", href: "#projects" },
-  { name: "Work", href: "#experience" },
+  { name: "Testimonials", href: "#testimonials" },
 ];
 
 const Navigation = () => {
@@ -72,7 +73,7 @@ const Navigation = () => {
                 key={item.name}
                 href={item.href}
                 onClick={() => setActiveItem(item.name)}
-                className={`px-6 py-3 rounded-full font-medium text-sm transition-all duration-300 ${
+                className={`px-4 py-3 rounded-full font-medium text-sm transition-all duration-300 whitespace-nowrap ${
                   activeItem === item.name
                     ? "bg-[#F17C58] text-white shadow-md"
                     : "text-gray-700 hover:text-[#F17C58] hover:bg-gray-50"
