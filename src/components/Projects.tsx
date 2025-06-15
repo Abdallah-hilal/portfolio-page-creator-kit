@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import { ExternalLink, Github, Filter as FilterIcon } from "lucide-react";
 import {
@@ -7,6 +8,15 @@ import {
   SelectTrigger,
   SelectValue,
 } from "./ui/select";
+
+// Main categories for the new filter dropdown
+const categoryOptions = [
+  { label: "All", value: "All" },
+  { label: "Machine Learning", value: "Machine Learning" },
+  { label: "Automation", value: "Automation" },
+  { label: "Web Scraping", value: "Web Scraping" },
+  { label: "Data Science", value: "Data Science" },
+];
 
 const Projects = () => {
   const projects = [
@@ -19,7 +29,8 @@ const Projects = () => {
       liveUrl: "#",
       githubUrl: "#",
       date: "April 2024",
-      status: "Completed"
+      status: "Completed",
+      category: "Web Scraping",
     },
     {
       title: "Finance Tracker & AI Assistant",
@@ -30,7 +41,8 @@ const Projects = () => {
       liveUrl: "#",
       githubUrl: "#",
       date: "May 2024",
-      status: "Live Project"
+      status: "Live Project",
+      category: "Automation",
     },
     {
       title: "Daily Email Summary Bot",
@@ -41,7 +53,8 @@ const Projects = () => {
       liveUrl: "#",
       githubUrl: "#",
       date: "March 2024",
-      status: "Live Project"
+      status: "Live Project",
+      category: "Automation",
     },
     {
       title: "Sign Language Recognition",
@@ -52,7 +65,8 @@ const Projects = () => {
       liveUrl: "#",
       githubUrl: "#",
       date: "June 2024",
-      status: "Completed"
+      status: "Completed",
+      category: "Machine Learning",
     },
     {
       title: "Gold Price Prediction Model",
@@ -63,11 +77,13 @@ const Projects = () => {
       liveUrl: "#",
       githubUrl: "#",
       date: "February 2024",
-      status: "Completed"
-    }
+      status: "Completed",
+      category: "Data Science",
+    },
   ];
 
   const [statusFilter, setStatusFilter] = useState("All");
+  const [categoryFilter, setCategoryFilter] = useState("All");
 
   const statusOptions = [
     { label: "All", value: "All" },
@@ -89,10 +105,12 @@ const Projects = () => {
     }
   };
 
-  const filteredProjects =
-    statusFilter === "All"
-      ? projects
-      : projects.filter((proj) => proj.status === statusFilter);
+  // Apply BOTH filters
+  const filteredProjects = projects.filter(
+    (proj) =>
+      (statusFilter === "All" || proj.status === statusFilter) &&
+      (categoryFilter === "All" || proj.category === categoryFilter)
+  );
 
   return (
     <section className="py-20 bg-gray-50">
@@ -108,25 +126,43 @@ const Projects = () => {
             Here are some of my recent projects that showcase my skills and passion for creating exceptional digital experiences.
           </p>
         </div>
-
-        {/* Filter Dropdown */}
-        <div className="flex items-center gap-3 mb-8">
-          <FilterIcon className="w-5 h-5 text-gray-500" />
-          <span className="font-medium text-gray-700">Filter by status:</span>
-          <Select value={statusFilter} onValueChange={setStatusFilter}>
-            <SelectTrigger className="w-44 bg-white z-20">
-              <SelectValue placeholder="Select status" />
-            </SelectTrigger>
-            <SelectContent>
-              {statusOptions.map((opt) => (
-                <SelectItem key={opt.value} value={opt.value}>
-                  {opt.label}
-                </SelectItem>
-              ))}
-            </SelectContent>
-          </Select>
+        {/* Filters Row */}
+        <div className="flex flex-wrap items-center gap-4 mb-8">
+          {/* Status Filter */}
+          <div className="flex items-center gap-2">
+            <FilterIcon className="w-5 h-5 text-gray-500" />
+            <span className="font-medium text-gray-700">Status:</span>
+            <Select value={statusFilter} onValueChange={setStatusFilter}>
+              <SelectTrigger className="w-40 bg-white z-20">
+                <SelectValue placeholder="Select status" />
+              </SelectTrigger>
+              <SelectContent>
+                {statusOptions.map((opt) => (
+                  <SelectItem key={opt.value} value={opt.value}>
+                    {opt.label}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+          </div>
+          {/* Category Filter */}
+          <div className="flex items-center gap-2">
+            <FilterIcon className="w-5 h-5 text-gray-500" />
+            <span className="font-medium text-gray-700">Category:</span>
+            <Select value={categoryFilter} onValueChange={setCategoryFilter}>
+              <SelectTrigger className="w-52 bg-white z-20">
+                <SelectValue placeholder="Select category" />
+              </SelectTrigger>
+              <SelectContent>
+                {categoryOptions.map((opt) => (
+                  <SelectItem key={opt.value} value={opt.value}>
+                    {opt.label}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+          </div>
         </div>
-
         <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8">
           {filteredProjects.map((project, index) => (
             <div 
@@ -197,7 +233,7 @@ const Projects = () => {
         </div>
         {filteredProjects.length === 0 && (
           <div className="text-center text-gray-500 text-lg mt-12">
-            No projects found for this status.
+            No projects found for this filter.
           </div>
         )}
       </div>
@@ -206,3 +242,4 @@ const Projects = () => {
 };
 
 export default Projects;
+
