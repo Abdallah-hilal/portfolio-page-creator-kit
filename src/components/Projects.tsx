@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { ExternalLink, Github, Filter as FilterIcon } from "lucide-react";
 import {
@@ -9,7 +8,7 @@ import {
   SelectValue,
 } from "./ui/select";
 
-// Main categories for the new filter dropdown
+// Main categories for the filter dropdown
 const categoryOptions = [
   { label: "All", value: "All" },
   { label: "Machine Learning", value: "Machine Learning" },
@@ -82,15 +81,8 @@ const Projects = () => {
     },
   ];
 
-  const [statusFilter, setStatusFilter] = useState("All");
+  // Remove status filter, only keep category filter
   const [categoryFilter, setCategoryFilter] = useState("All");
-
-  const statusOptions = [
-    { label: "All", value: "All" },
-    { label: "Live Project", value: "Live Project" },
-    { label: "Completed", value: "Completed" },
-    { label: "In Development", value: "In Development" },
-  ];
 
   const getStatusColor = (status: string) => {
     switch (status) {
@@ -105,11 +97,9 @@ const Projects = () => {
     }
   };
 
-  // Apply BOTH filters
+  // Filter only by category
   const filteredProjects = projects.filter(
-    (proj) =>
-      (statusFilter === "All" || proj.status === statusFilter) &&
-      (categoryFilter === "All" || proj.category === categoryFilter)
+    (proj) => categoryFilter === "All" || proj.category === categoryFilter
   );
 
   return (
@@ -128,23 +118,6 @@ const Projects = () => {
         </div>
         {/* Filters Row */}
         <div className="flex flex-wrap items-center gap-4 mb-8">
-          {/* Status Filter */}
-          <div className="flex items-center gap-2">
-            <FilterIcon className="w-5 h-5 text-gray-500" />
-            <span className="font-medium text-gray-700">Status:</span>
-            <Select value={statusFilter} onValueChange={setStatusFilter}>
-              <SelectTrigger className="w-40 bg-white z-20">
-                <SelectValue placeholder="Select status" />
-              </SelectTrigger>
-              <SelectContent>
-                {statusOptions.map((opt) => (
-                  <SelectItem key={opt.value} value={opt.value}>
-                    {opt.label}
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
-          </div>
           {/* Category Filter */}
           <div className="flex items-center gap-2">
             <FilterIcon className="w-5 h-5 text-gray-500" />
@@ -165,14 +138,14 @@ const Projects = () => {
         </div>
         <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8">
           {filteredProjects.map((project, index) => (
-            <div 
+            <div
               key={project.title}
               className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group"
             >
               {/* Image Section */}
               <div className="relative h-48 overflow-hidden">
-                <img 
-                  src={project.image} 
+                <img
+                  src={project.image}
                   alt={project.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
@@ -182,7 +155,7 @@ const Projects = () => {
                   </span>
                 </div>
               </div>
-              
+
               {/* Content Section */}
               <div className="p-6">
                 <div className="flex items-center justify-between mb-3">
@@ -193,15 +166,15 @@ const Projects = () => {
                     {project.date}
                   </span>
                 </div>
-                
+
                 <p className="text-gray-600 mb-4 line-clamp-2">
                   {project.shortDescription}
                 </p>
-                
+
                 {/* Tags */}
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tags.map((tag) => (
-                    <span 
+                    <span
                       key={tag}
                       className="px-3 py-1 bg-[#F17C58]/10 text-[#F17C58] text-xs font-medium rounded-full"
                     >
@@ -209,17 +182,17 @@ const Projects = () => {
                     </span>
                   ))}
                 </div>
-                
+
                 {/* Links */}
                 <div className="flex gap-4 pt-4 border-t border-gray-100">
-                  <a 
+                  <a
                     href={project.liveUrl}
                     className="inline-flex items-center gap-2 text-sm font-medium text-gray-700 hover:text-[#F17C58] transition-colors"
                   >
                     <ExternalLink className="w-4 h-4" />
                     Live Demo
                   </a>
-                  <a 
+                  <a
                     href={project.githubUrl}
                     className="inline-flex items-center gap-2 text-sm font-medium text-gray-700 hover:text-[#F17C58] transition-colors"
                   >
@@ -242,4 +215,3 @@ const Projects = () => {
 };
 
 export default Projects;
-
