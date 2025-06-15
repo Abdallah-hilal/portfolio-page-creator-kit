@@ -1,4 +1,3 @@
-
 import React from 'react';
 import {
   SiGooglesheets,
@@ -86,7 +85,7 @@ const SkillIcon = ({ skill, className }: SkillIconProps) => {
     case 'scrapy':
       return <img src="/lovable-uploads/53da92b7-6280-4b67-85c6-58c757e10c9a.png" alt="Scrapy" className={iconProps.className} />;
     case 'api-based scraping':
-      return <Link {...iconProps} />;
+      return <img src="/lovable-uploads/55ba76c7-c28c-4ce4-8c8c-48ce8a895152.png" alt="API-based Scraping" className={iconProps.className} />;
 
     // AI Voice Agent
     case 'voice automation':
