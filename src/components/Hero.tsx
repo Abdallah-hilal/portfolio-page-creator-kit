@@ -1,20 +1,21 @@
 
-import { ChevronDown, Mail, Phone, FileText, Briefcase } from "lucide-react";
+import { ChevronDown, Mail, FileText, Briefcase } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Hero = () => {
-  return <section className="min-h-screen flex flex-col justify-center items-center relative bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden pt-16">
+  return (
+    <section className="min-h-screen flex flex-col justify-center items-center relative bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden pt-16">
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-[#F17C58]/10 rounded-full blur-3xl"></div>
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-[#F17C58]/5 rounded-full blur-3xl"></div>
       </div>
-      
-      {/* Main content container - Adjusted margins and padding */}
+
+      {/* Main content container */}
       <div className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl max-w-7xl px-8 py-16 md:py-20 relative z-10 border border-white/20 md:px-[60px] mx-[66px] my-0">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left side - Text content with adjusted spacing */}
-          <div className="text-left space-y-8">
+          {/* Left side - Text content */}
+          <div className="text-left space-y-8 relative">
             <div className="space-y-4">
               <div className="inline-block">
                 <span className="text-sm font-medium text-[#F17C58] bg-[#F17C58]/10 px-4 py-2 rounded-full">
@@ -25,7 +26,7 @@ const Hero = () => {
                 Hi, I'm <span className="text-[#F17C58]">Abdallah</span>
               </h1>
             </div>
-            
+
             <div className="space-y-4">
               <p className="text-2xl font-medium text-gray-700">
                 I build data solutions for science.
@@ -34,24 +35,35 @@ const Hero = () => {
                 Specialized in automation, machine learning, and transforming complex data into actionable insights. Based in Brisbane, Australia.
               </p>
             </div>
-            
-            <div className="flex items-center gap-3 p-4 bg-gray-50 rounded-2xl border border-gray-200 w-fit">
-              <Mail className="w-5 h-5 text-[#F17C58]" />
-              <span className="text-gray-900 font-medium">abdulluh.helal@gmail.com</span>
-            </div>
-            
-            {/* Action buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 pt-2">
-              <Button className="bg-[#F17C58] hover:bg-[#E16A47] text-white px-6 py-3 rounded-xl font-semibold flex items-center gap-2 shadow-lg hover:shadow-xl transition-all duration-300">
+
+            {/* Floating "Show My Resume" button above Gmail */}
+            <div className="relative h-20 mb-1 w-fit">
+              <Button
+                className="absolute -top-7 left-1/2 -translate-x-1/2 bg-[#F17C58] hover:bg-[#E16A47] text-white px-6 py-3 rounded-xl font-semibold flex items-center gap-2 shadow-xl hover:shadow-2xl transition-all duration-300 z-20"
+                style={{ minWidth: 210 }}
+              >
                 <FileText className="w-5 h-5" />
                 Show My Resume
               </Button>
-              <Button variant="outline" className="border-2 border-[#F17C58] text-[#F17C58] hover:bg-[#F17C58] hover:text-white px-6 py-3 rounded-xl font-semibold flex items-center gap-2 transition-all duration-300">
+              {/* Gmail section beneath and overlapping */}
+              <div className="flex items-center gap-3 p-4 bg-gray-50 rounded-2xl border border-gray-200 w-fit mt-10 z-10 relative">
+                <Mail className="w-5 h-5 text-[#F17C58]" />
+                <span className="text-gray-900 font-medium">abdulluh.helal@gmail.com</span>
+              </div>
+            </div>
+
+            {/* "See My Work" button below Gmail */}
+            <div className="flex w-fit pt-2">
+              <Button
+                variant="outline"
+                className="border-2 border-[#F17C58] text-[#F17C58] hover:bg-[#F17C58] hover:text-white px-6 py-3 rounded-xl font-semibold flex items-center gap-2 transition-all duration-300"
+              >
                 <Briefcase className="w-5 h-5" />
                 See My Work
               </Button>
             </div>
-            
+
+            {/* Experience/Projects stats */}
             <div className="flex items-center gap-12 pt-4">
               <div className="text-center">
                 <div className="text-4xl font-black text-gray-900">1+</div>
@@ -64,8 +76,8 @@ const Hero = () => {
               </div>
             </div>
           </div>
-          
-          {/* Right side - Image with adjusted positioning */}
+
+          {/* Right side - Image */}
           <div className="flex justify-center lg:justify-end relative">
             <div className="relative">
               {/* Decorative background shape */}
@@ -73,16 +85,20 @@ const Hero = () => {
                 <div className="absolute inset-0 bg-gradient-to-br from-[#F17C58]/20 to-[#F17C58]/10 rounded-full transform rotate-6"></div>
                 <div className="absolute inset-2 bg-gradient-to-br from-[#F17C58]/10 to-transparent rounded-full transform -rotate-3"></div>
               </div>
-              
+
               {/* Profile image */}
               <div className="relative z-10">
-                <img src="/lovable-uploads/6ebcda68-310a-4914-800e-f9dd0d7026ef.png" alt="Abdallah Helal" className="w-72 h-72 lg:w-96 lg:h-96 mx-auto rounded-full object-cover border-8 border-white shadow-2xl relative z-10" />
+                <img
+                  src="/lovable-uploads/6ebcda68-310a-4914-800e-f9dd0d7026ef.png"
+                  alt="Abdallah Helal"
+                  className="w-72 h-72 lg:w-96 lg:h-96 mx-auto rounded-full object-cover border-8 border-white shadow-2xl relative z-10"
+                />
               </div>
             </div>
           </div>
         </div>
       </div>
-      
+
       {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
         <div className="flex flex-col items-center gap-2">
@@ -90,6 +106,8 @@ const Hero = () => {
           <ChevronDown className="w-6 h-6 text-[#F17C58]" />
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default Hero;
