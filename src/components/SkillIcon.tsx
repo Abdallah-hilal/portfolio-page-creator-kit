@@ -1,3 +1,4 @@
+
 import React from 'react';
 import {
   SiAirtable,
@@ -103,7 +104,7 @@ const SkillIcon = ({ skill, className }: SkillIconProps) => {
     case 'google sheets automation':
       return <img src="/lovable-uploads/27b26e72-2ddf-4938-9e56-c425fdb3ea07.png" alt="Google Sheets" className={iconProps.className} />;
     case 'airtable':
-      return <SiAirtable {...iconProps} />;
+      return <img src="https://static-00.iconduck.com/assets.00/airtable-icon-512x428-olxouyvv.png" alt="Airtable" className={iconProps.className} />;
 
     default:
       return <CheckCircle2 {...iconProps} />;
