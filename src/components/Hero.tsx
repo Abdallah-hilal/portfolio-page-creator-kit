@@ -89,8 +89,10 @@ const Hero = () => {
                 <a href="https://github.com/abdallah-helal" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" className="text-gray-500 hover:text-[#F17C58] transition-colors duration-300">
                   <Github className="w-7 h-7" />
                 </a>
-                <a href="https://www.upwork.com/freelancers/~01bb96f2647f529f76" target="_blank" rel="noopener noreferrer" aria-label="Upwork Profile" className="transition-opacity duration-300 hover:opacity-75">
-                  <img src="https://www.citypng.com/public/uploads/preview/upwork-round-logo-icon-png-7017516949686332n4bo69bd8.png" alt="Upwork Profile" className="w-7 h-7" />
+                <a href="https://www.upwork.com/freelancers/~01bb96f2647f529f76" target="_blank" rel="noopener noreferrer" aria-label="Upwork Profile" className="text-gray-500 hover:text-[#F17C58] transition-colors duration-300">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-7 h-7">
+                    <path d="M3 7v5a3 3 0 0 0 6 0V7h1l4 6c0.824 1.319 1.945 2 3.5 2a3.5 3.5 0 0 0 0 -7c-2.027 0 -3.137 1 -3.5 3 -0.242 1.33 -0.908 4 -2 8" />
+                  </svg>
                 </a>
                 <a href="https://www.kaggle.com/abdallahhelal" target="_blank" rel="noopener noreferrer" aria-label="Kaggle Profile" className="text-gray-500 hover:text-[#F17C58] transition-colors duration-300">
                   <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" className="w-7 h-7" fill="currentColor"><title>Kaggle</title><path d="M10.153 24c-1.95 0-3.523-1.573-3.523-3.523V3.523C6.63 1.573 8.203 0 10.153 0s3.523 1.573 3.523 3.523v16.954c0 1.95-1.573 3.523-3.523 3.523zm9.79-10.37L13.23 3.523v6.577c0 .378-.308.686-.686.686H6.012c-.378 0-.686-.308-.686-.686V4.023c0-.378-.308-.686-.686-.686H.58c-.378 0-.686.308-.686.686v13.725c0 .378.308.686.686.686h4.06c.378 0 .686-.308.686-.686v-5.49c0-.378.308.686.686-.686h6.532c.378 0 .686.308.686.686v5.908c0 .378.308.686.686.686h4.06c.378 0 .686-.308.686-.686l-.11-13.726z"/></svg>
