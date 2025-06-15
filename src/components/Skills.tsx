@@ -37,7 +37,7 @@ const Skills = () => {
     {
       icon: Phone,
       title: "AI Voice Agent",
-      skills: [ "Voice Automation", "AI-powered Call Agents", "Customer Support Automation" ],
+      skills: [ "Voice Automation", "AI-powered Call Agents", "Customer Support Automation", "Twilio" ],
       lightColor: "bg-cyan-100"
     },
     {

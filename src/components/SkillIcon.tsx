@@ -95,6 +95,8 @@ const SkillIcon = ({ skill, className }: SkillIconProps) => {
       return <Bot {...iconProps} />;
     case 'customer support automation':
       return <Bot {...iconProps} />;
+    case 'twilio':
+      return <img src="/lovable-uploads/f0f40f93-e965-4b9f-bd5c-232d1573df81.png" alt="Twilio" className={iconProps.className} />;
 
     // Other Tools & Platforms
     case 'git':
