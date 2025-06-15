@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { ChevronDown, Briefcase, Mail, Linkedin, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -7,20 +8,45 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { TypeAnimation } from "react-type-animation";
 
 const titles = ["a Data Scientist", "an Automation Specialist"];
 
 const Hero = () => {
   const [titleIndex, setTitleIndex] = useState(0);
+  const [text, setText] = useState('');
+  const [charIndex, setCharIndex] = useState(0);
+  const [isFadingOut, setIsFadingOut] = useState(false);
 
   useEffect(() => {
-    const intervalId = setInterval(() => {
-      setTitleIndex((prevIndex) => (prevIndex + 1) % titles.length);
-    }, 3000); // Change title every 3 seconds
+    if (isFadingOut) {
+      // After fade out, change title and reset for typing
+      const timer = setTimeout(() => {
+        const nextTitleIndex = (titleIndex + 1) % titles.length;
+        setTitleIndex(nextTitleIndex);
+        setText('');
+        setCharIndex(0);
+        setIsFadingOut(false);
+      }, 500); // Corresponds to fade out duration
+      return () => clearTimeout(timer);
+    }
 
-    return () => clearInterval(intervalId);
-  }, []);
+    const currentTitle = titles[titleIndex];
+    if (charIndex < currentTitle.length) {
+      // Typing effect
+      const timer = setTimeout(() => {
+        setText(prev => prev + currentTitle.charAt(charIndex));
+        setCharIndex(prev => prev + 1);
+      }, 150); // Slower typing speed
+      return () => clearTimeout(timer);
+    } else {
+      // Finished typing, wait then fade out
+      const timer = setTimeout(() => {
+        setIsFadingOut(true);
+      }, 3000); // Wait 3 seconds
+      return () => clearTimeout(timer);
+    }
+  }, [charIndex, titleIndex, isFadingOut]);
+
 
   return <section className="min-h-screen flex flex-col justify-center items-center relative bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden pt-16">
       {/* Background decorative elements */}
@@ -43,18 +69,9 @@ const Hero = () => {
               <h1 className="text-4xl lg:text-5xl font-black text-gray-900 leading-tight">
                 Hi, I'm{" "}
                 <span className="text-[#F17C58]">
-                  <TypeAnimation
-                    sequence={[
-                      titles[0],
-                      3000,
-                      titles[1],
-                      3000,
-                    ]}
-                    wrapper="span"
-                    speed={75}
-                    repeat={Infinity}
-                    className="inline-block"
-                  />
+                  <span className={`inline-block transition-opacity duration-500 ${isFadingOut ? 'opacity-0' : 'opacity-100'}`}>
+                    {text || '\u00A0'}
+                  </span>
                 </span>
               </h1>
             </div>
