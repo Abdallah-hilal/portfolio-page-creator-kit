@@ -1,4 +1,5 @@
-import { ChevronDown, Briefcase } from "lucide-react";
+
+import { ChevronDown, Briefcase, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 const Hero = () => {
   return <section className="min-h-screen flex flex-col justify-center items-center relative bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden pt-16">
@@ -41,7 +42,13 @@ const Hero = () => {
               <Button asChild variant="outline" className="border-2 border-[#F17C58] text-[#F17C58] hover:bg-[#F17C58] hover:text-white px-6 py-3 rounded-xl font-semibold flex items-center gap-2 transition-all duration-300">
                 <a href="#projects">
                   <Briefcase className="w-5 h-5" />
-                  View Projects
+                  Explore My Work
+                </a>
+              </Button>
+              <Button asChild className="bg-[#F17C58] text-white hover:bg-[#E16A47] px-6 py-3 rounded-xl font-semibold flex items-center gap-2 transition-all duration-300">
+                <a href="#contact">
+                  <Mail className="w-5 h-5" />
+                  Get in touch
                 </a>
               </Button>
             </div>
