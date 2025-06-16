@@ -44,7 +44,7 @@ const Hero = () => {
       </div>
 
       {/* Main content container */}
-      <div className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl max-w-7xl px-8 py-16 md:py-20 relative z-10 border border-white/20 md:px-[60px] my-0 mx-[70px]">
+      <div className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl max-w-7xl px-8 py-16 md:py-20 relative z-10 border border-white/20 md:px-[60px] my-0 mx-4 md:mx-[70px]">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left side - Text content */}
           <div className="text-left space-y-8 relative">
@@ -194,11 +194,11 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Scroll indicator - Fixed positioning and visibility */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-20">
-        <div className="flex flex-col items-center gap-2">
-          <span className="text-sm text-gray-600 font-medium">Scroll down</span>
-          <ChevronDown className="w-6 h-6 text-[#F17C58]" />
+      {/* Scroll indicator - Improved mobile positioning */}
+      <div className="absolute bottom-4 md:bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-20">
+        <div className="flex flex-col items-center gap-1 md:gap-2">
+          <span className="text-xs md:text-sm text-gray-600 font-medium">Scroll down</span>
+          <ChevronDown className="w-5 h-5 md:w-6 md:h-6 text-[#F17C58]" />
         </div>
       </div>
     </section>;
