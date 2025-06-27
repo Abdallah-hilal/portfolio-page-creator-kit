@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { ChevronDown, Briefcase, Mail, Linkedin, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -119,7 +120,7 @@ const Hero = () => {
 
               {/* Profile image */}
               <div className="relative z-10">
-                <img src="/lovable-uploads/93a8976d-aa5d-4b83-a061-ed94ada1813e.png" alt="Abdallah Helal" className="w-72 h-72 lg:w-96 lg:h-96 mx-auto rounded-full object-cover border-8 border-white shadow-2xl relative z-10" />
+                <img src="/lovable-uploads/19dd1880-85df-499e-bfb8-67aa4d351d24.png" alt="Abdallah Helal" className="w-72 h-72 lg:w-96 lg:h-96 mx-auto rounded-full object-cover border-8 border-white shadow-2xl relative z-10" />
               </div>
               
               {/* Social Links */}
