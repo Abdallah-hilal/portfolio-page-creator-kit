@@ -2,12 +2,15 @@ import { useState, useEffect } from "react";
 import { ChevronDown, Briefcase, Mail, Linkedin, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+
 const titles = ["a Data Scientist", "an Automation Specialist"];
+
 const Hero = () => {
   const [titleIndex, setTitleIndex] = useState(0);
   const [text, setText] = useState('');
   const [charIndex, setCharIndex] = useState(0);
   const [isFadingOut, setIsFadingOut] = useState(false);
+
   useEffect(() => {
     if (isFadingOut) {
       // After fade out, change title and reset for typing
@@ -36,7 +39,9 @@ const Hero = () => {
       return () => clearTimeout(timer);
     }
   }, [charIndex, titleIndex, isFadingOut]);
-  return <section className="min-h-screen flex flex-col justify-center items-center relative bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden pt-16">
+
+  return (
+    <section className="min-h-screen flex flex-col justify-center items-center relative bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden pt-16">
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-[#F17C58]/10 rounded-full blur-3xl"></div>
@@ -114,7 +119,7 @@ const Hero = () => {
 
               {/* Profile image */}
               <div className="relative z-10">
-                <img src="/lovable-uploads/710cffca-786e-40f1-a31c-31a56d5e6bb7.png" alt="Abdallah Helal" className="w-72 h-72 lg:w-96 lg:h-96 mx-auto rounded-full object-cover border-8 border-white shadow-2xl relative z-10" />
+                <img src="/lovable-uploads/93a8976d-aa5d-4b83-a061-ed94ada1813e.png" alt="Abdallah Helal" className="w-72 h-72 lg:w-96 lg:h-96 mx-auto rounded-full object-cover border-8 border-white shadow-2xl relative z-10" />
               </div>
               
               {/* Social Links */}
@@ -201,6 +206,8 @@ const Hero = () => {
           <ChevronDown className="w-5 h-5 md:w-6 md:h-6 text-[#F17C58]" />
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default Hero;
