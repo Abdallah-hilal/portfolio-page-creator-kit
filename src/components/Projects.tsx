@@ -18,7 +18,7 @@ const Projects = () => {
       title: "Upwork Job Alerts — Every 10 Minutes!",
       shortDescription: "Automated job monitoring system with AI-powered alerts",
       description: "Built an intelligent automation that monitors Upwork for relevant job postings every 10 minutes. Uses AI to analyze, summarize, and filter opportunities, then sends personalized job alerts via Telegram with detailed match scores and recommendations.",
-      image: "/lovable-uploads/bdf1636b-793c-4828-a121-a560dbec78eb.png",
+      image: "/lovable-uploads/92a999bb-bb04-40a0-adb4-0679cb0036fd.png",
       tags: ["n8n", "Upwork API", "Google Gemini", "Telegram Bot", "AI Agent"],
       liveUrl: "#",
       githubUrl: "#",
