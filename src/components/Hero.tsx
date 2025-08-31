@@ -4,7 +4,7 @@ import { ChevronDown, Briefcase, Mail, Linkedin, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
-const titles = ["a Data Scientist", "an Automation Specialist"];
+const titles = ["an Automation Specialist"];
 
 const Hero = () => {
   const [titleIndex, setTitleIndex] = useState(0);
@@ -72,7 +72,7 @@ const Hero = () => {
 
             <div className="space-y-4">
               <p className="text-xl text-gray-600 leading-relaxed">
-                I build <span className="font-semibold text-gray-800">data science</span> and <span className="font-semibold text-gray-800">automation</span> solutions that help your business <span className="font-semibold text-gray-800">save time</span>, <span className="font-semibold text-gray-800">reduce costs</span>, and <span className="font-semibold text-gray-800">make smarter decisions</span>.
+                I build <span className="font-semibold text-gray-800">automation</span> solutions that help your business <span className="font-semibold text-gray-800">save time</span>, <span className="font-semibold text-gray-800">reduce costs</span>, and <span className="font-semibold text-gray-800">make smarter decisions</span>.
               </p>
               <p className="text-lg text-gray-600 leading-relaxed max-w-2xl">
                 Let's simplify your work and unlock the power of your data.

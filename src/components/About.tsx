@@ -1,5 +1,5 @@
 
-import { BarChart3, Bot, Brain, Globe, Phone } from "lucide-react";
+import { BarChart3, Bot, Brain, Globe, MessageSquare } from "lucide-react";
 const About = () => {
   const skills = [
     {
@@ -17,13 +17,13 @@ const About = () => {
       lightColor: "bg-green-100",
     },
     {
-      icon: Phone,
-      title: "AI Voice Agent",
+      icon: MessageSquare,
+      title: "Chat Bot",
       description: (
         <ul className="list-disc list-inside text-left space-y-2 text-gray-600 leading-relaxed">
-            <li>Build <span className="font-semibold text-gray-800">AI-powered voice assistants</span> for customer support & automation</li>
-            <li>Integrate <span className="font-semibold text-gray-800">voice bots</span> into your existing systems</li>
-            <li>Automate phone calls, bookings, and customer inquiries</li>
+            <li>Build <span className="font-semibold text-gray-800">AI-powered chat bots</span> for customer support & automation</li>
+            <li>Integrate <span className="font-semibold text-gray-800">chat bots</span> into your existing systems</li>
+            <li>Automate customer inquiries and support tickets</li>
             <li>Reduce support costs and <span className="font-semibold text-gray-800">improve customer experience</span></li>
         </ul>
       ),
@@ -88,7 +88,7 @@ const About = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-5xl font-bold text-gray-900 mb-6">
-            What do I help?
+            Services I Offer
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             I help businesses solve problems and build efficient solutions by combining <span className="font-semibold text-gray-800">data science</span>, <span className="font-semibold text-gray-800">AI</span>, and <span className="font-semibold text-gray-800">automation</span>. My work is focused on creating <span className="font-semibold text-gray-800">digital products</span> that <span className="font-semibold text-gray-800">save time</span>, <span className="font-semibold text-gray-800">reduce costs</span>, and <span className="font-semibold text-gray-800">drive business growth</span>.

@@ -3,14 +3,6 @@
 import React, { useState } from "react";
 import { ExternalLink, Github } from "lucide-react";
 
-// Main categories for the filter tabs
-const categoryOptions = [
-  { label: "All", value: "All" },
-  { label: "Automation", value: "Automation" },
-  { label: "Data Science", value: "Data Science" },
-  { label: "Web Scraping", value: "Web Scraping" },
-  { label: "Machine Learning", value: "Machine Learning" },
-];
 
 const Projects = () => {
   const projects = [
@@ -88,26 +80,8 @@ const Projects = () => {
     },
   ];
 
-  // Only keep category filter
-  const [categoryFilter, setCategoryFilter] = useState("All");
 
-  const getStatusColor = (status: string) => {
-    switch (status) {
-      case "Live Project":
-        return "bg-green-100 text-green-800";
-      case "In Development":
-        return "bg-yellow-100 text-yellow-800";
-      case "Completed":
-        return "bg-blue-100 text-blue-800";
-      default:
-        return "bg-gray-100 text-gray-800";
-    }
-  };
 
-  // Filter only by category
-  const filteredProjects = projects.filter(
-    (proj) => categoryFilter === "All" || proj.category === categoryFilter
-  );
 
   return (
     <section className="py-20 bg-gray-50">
@@ -123,46 +97,8 @@ const Projects = () => {
             Here are some of my recent projects that showcase my skills and passion for creating exceptional digital experiences.
           </p>
         </div>
-        {/* Category Tabs Row */}
-        <div className="flex justify-center mb-8">
-          <div className="inline-flex rounded-full bg-white border border-[#F17C58]/30 shadow-sm overflow-hidden">
-            {categoryOptions.map((opt) => {
-              const isActive = categoryFilter === opt.value;
-              return (
-                <button
-                  key={opt.value}
-                  type="button"
-                  onClick={() => setCategoryFilter(opt.value)}
-                  className={`
-                    px-6
-                    py-2
-                    font-semibold
-                    text-sm
-                    outline-none
-                    transition-all
-                    duration-200
-                    rounded-full
-                    ${isActive
-                      ? "bg-[#F17C58] text-white shadow-md"
-                      : "bg-white text-[#F17C58] hover:bg-[#f17c58]/10 hover:text-[#F17C58]"}
-                    border-none
-                    focus-visible:ring-2 focus-visible:ring-[#F17C58] focus-visible:ring-offset-2
-                  `}
-                  style={{
-                    borderRight:
-                      opt.value !== categoryOptions[categoryOptions.length - 1].value
-                        ? "1px solid #f17c5822"
-                        : undefined,
-                  }}
-                >
-                  {opt.label.toUpperCase()}
-                </button>
-              );
-            })}
-          </div>
-        </div>
         <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8">
-          {filteredProjects.map((project) => (
+          {projects.map((project) => (
             <div
               key={project.title}
               className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group"
@@ -174,11 +110,6 @@ const Projects = () => {
                   alt={project.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
-                <div className="absolute top-4 right-4">
-                  <span className={`px-3 py-1 rounded-full text-xs font-medium ${getStatusColor(project.status)}`}>
-                    {project.status}
-                  </span>
-                </div>
               </div>
               {/* Content Section */}
               <div className="p-6">
@@ -207,13 +138,6 @@ const Projects = () => {
                 {/* Links */}
                 <div className="flex gap-4 pt-4 border-t border-gray-100">
                   <a
-                    href={project.liveUrl}
-                    className="inline-flex items-center gap-2 text-sm font-medium text-gray-700 hover:text-[#F17C58] transition-colors"
-                  >
-                    <ExternalLink className="w-4 h-4" />
-                    Live Demo
-                  </a>
-                  <a
                     href={project.githubUrl}
                     className="inline-flex items-center gap-2 text-sm font-medium text-gray-700 hover:text-[#F17C58] transition-colors"
                   >
@@ -225,11 +149,6 @@ const Projects = () => {
             </div>
           ))}
         </div>
-        {filteredProjects.length === 0 && (
-          <div className="text-center text-gray-500 text-lg mt-12">
-            No projects found for this filter.
-          </div>
-        )}
       </div>
     </section>
   );
