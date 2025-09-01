@@ -72,10 +72,7 @@ const Hero = () => {
 
             <div className="space-y-4">
               <p className="text-xl text-gray-600 leading-relaxed">
-                I build <span className="font-semibold text-gray-800">automation</span> solutions that help your business <span className="font-semibold text-gray-800">save time</span>, <span className="font-semibold text-gray-800">reduce costs</span>, and <span className="font-semibold text-gray-800">make smarter decisions</span>.
-              </p>
-              <p className="text-lg text-gray-600 leading-relaxed max-w-2xl">
-                Let's simplify your work and unlock the power of your data.
+                Saving time is saving money — I build automation systems that do both. I design solutions that help businesses save time, cut costs, and scale with confidence. Together, we can simplify your work and unlock new opportunities for growth.
               </p>
             </div>
 
@@ -120,7 +117,7 @@ const Hero = () => {
 
               {/* Profile image */}
               <div className="relative z-10">
-                <img src="/lovable-uploads/19dd1880-85df-499e-bfb8-67aa4d351d24.png" alt="Abdallah Helal" className="w-72 h-72 lg:w-96 lg:h-96 mx-auto rounded-full object-cover border-8 border-white shadow-2xl relative z-10" />
+                <img src="/lovable-uploads/2be2e231-b7ba-4979-9db9-214ee074722a.png" alt="Abdallah Helal" className="w-72 h-72 lg:w-96 lg:h-96 mx-auto rounded-full object-cover border-8 border-white shadow-2xl relative z-10" />
               </div>
               
               {/* Social Links */}
