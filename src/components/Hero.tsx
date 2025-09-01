@@ -72,7 +72,7 @@ const Hero = () => {
 
             <div className="space-y-4">
               <p className="text-xl text-gray-600 leading-relaxed">
-                Saving time is saving money — I build automation systems that do both. I design solutions that help businesses save time, cut costs, and scale with confidence. Together, we can simplify your work and unlock new opportunities for growth.
+                Saving time is saving money — I build <span className="font-semibold text-gray-800">automation systems</span> that do both. I design solutions that help businesses <span className="font-semibold text-gray-800">save time</span>, <span className="font-semibold text-gray-800">cut costs</span>, and <span className="font-semibold text-gray-800">scale with confidence</span>.<br /><br />Together, we can <span className="font-semibold text-gray-800">simplify your work</span> and unlock <span className="font-semibold text-gray-800">new opportunities for growth</span>.
               </p>
             </div>
 
