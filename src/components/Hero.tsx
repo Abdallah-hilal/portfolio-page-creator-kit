@@ -117,7 +117,7 @@ const Hero = () => {
 
               {/* Profile image */}
               <div className="relative z-10">
-                <img src="/lovable-uploads/2be2e231-b7ba-4979-9db9-214ee074722a.png" alt="Abdallah Helal" className="w-72 h-72 lg:w-96 lg:h-96 mx-auto rounded-full object-cover border-8 border-card shadow-2xl relative z-10" />
+                <img src="/lovable-uploads/profile-professional.png" alt="Abdallah Helal" className="w-72 h-72 lg:w-96 lg:h-96 mx-auto rounded-full object-cover border-8 border-card shadow-2xl relative z-10" />
               </div>
               
               {/* Social Links */}
