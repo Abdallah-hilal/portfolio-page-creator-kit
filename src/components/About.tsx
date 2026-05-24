@@ -44,14 +44,14 @@ const services = [
 ];
 
 const stats = [
-  { value: "30+", label: "AI Projects Delivered" },
-  { value: "Workflow", label: "Automation Systems Shipped" },
-  { value: "Business", label: "Integrations Built" },
+  { value: "30+", label: "AI Projects" },
+  { value: "Workflow", label: "Systems" },
+  { value: "Business", label: "Integrations" },
 ];
 
 const About = () => {
   return (
-    <section className="py-24 lg:py-32 bg-muted/40 relative overflow-hidden">
+    <section className="py-20 lg:py-24 bg-muted/40 relative overflow-hidden">
       <div
         className="absolute inset-0 opacity-[0.03] pointer-events-none"
         style={{
@@ -61,17 +61,17 @@ const About = () => {
         }}
       />
 
-      <div className="relative max-w-7xl mx-auto px-6 lg:px-10">
-        <div className="max-w-3xl mb-16">
+      <div className="relative max-w-6xl mx-auto px-6 lg:px-10">
+        <div className="max-w-3xl mb-12">
           <span className="inline-block text-xs font-semibold tracking-[0.2em] text-accent uppercase mb-4">
             What I Build
           </span>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-foreground leading-[1.05] tracking-tight mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-foreground leading-[1.1] tracking-tight mb-5">
             AI Systems & Automation
             <br />
             <span className="text-accent">Solutions</span>
           </h2>
-          <p className="text-lg md:text-xl text-foreground/70 leading-relaxed">
+          <p className="text-base md:text-lg text-foreground/70 leading-relaxed">
             I design{" "}
             <span className="font-semibold text-foreground">AI-powered systems</span>{" "}
             that help businesses{" "}
@@ -86,28 +86,28 @@ const About = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-5 lg:gap-6 mb-20">
+        <div className="grid md:grid-cols-2 gap-4 lg:gap-5 mb-14">
           {services.map((s) => (
             <div
               key={s.title}
-              className="group relative bg-card rounded-2xl p-7 lg:p-8 border border-border hover:border-accent/40 hover:shadow-xl transition-all duration-300"
+              className="group relative bg-card rounded-xl p-5 lg:p-6 border border-border hover:border-accent/40 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300"
             >
-              <div className="flex items-start justify-between mb-6">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-accent to-secondary text-background flex items-center justify-center shadow-md group-hover:scale-110 transition-transform">
-                  <s.icon className="w-6 h-6" />
+              <div className="flex items-start justify-between mb-4">
+                <div className="w-11 h-11 rounded-lg bg-gradient-to-br from-accent to-secondary text-background flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform">
+                  <s.icon className="w-5 h-5" />
                 </div>
-                <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover:text-accent group-hover:rotate-45 transition-all" />
+                <ArrowUpRight className="w-4 h-4 text-muted-foreground group-hover:text-accent group-hover:rotate-45 transition-all" />
               </div>
-              <h3 className="text-2xl font-bold text-foreground mb-4">
+              <h3 className="text-lg lg:text-xl font-bold text-foreground mb-3">
                 {s.title}
               </h3>
-              <ul className="space-y-2.5">
+              <ul className="space-y-2">
                 {s.points.map((p, i) => (
                   <li
                     key={i}
-                    className="flex gap-3 text-sm md:text-base text-foreground/70 leading-relaxed"
+                    className="flex gap-2.5 text-sm text-foreground/70 leading-relaxed"
                   >
-                    <span className="mt-2 w-1.5 h-1.5 rounded-full bg-accent shrink-0" />
+                    <span className="mt-[7px] w-1.5 h-1.5 rounded-full bg-accent shrink-0" />
                     <span>{p}</span>
                   </li>
                 ))}
@@ -116,13 +116,13 @@ const About = () => {
           ))}
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-border rounded-2xl overflow-hidden border border-border">
+        <div className="grid grid-cols-3 gap-px bg-border rounded-xl overflow-hidden border border-border">
           {stats.map((s) => (
-            <div key={s.label} className="bg-card p-8 text-center">
-              <div className="text-4xl md:text-5xl font-black text-foreground mb-2">
+            <div key={s.label} className="bg-card px-4 py-6 text-center">
+              <div className="text-2xl md:text-3xl font-black text-foreground mb-1">
                 {s.value}
               </div>
-              <div className="text-sm font-medium text-muted-foreground uppercase tracking-wider">
+              <div className="text-[11px] md:text-xs font-medium text-muted-foreground uppercase tracking-wider">
                 {s.label}
               </div>
             </div>
