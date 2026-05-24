@@ -1,144 +1,136 @@
+import { Workflow, Bot, Plug, Database, ArrowUpRight } from "lucide-react";
 
-import { BarChart3, Bot, Brain, Globe, MessageSquare } from "lucide-react";
+const services = [
+  {
+    icon: Workflow,
+    title: "AI Workflow Automation",
+    points: [
+      "Design and build n8n workflows that automate repetitive operations",
+      "Connect apps, APIs, and databases into one seamless flow",
+      "Replace manual ops with reliable, monitored automations",
+      "Save hours of work every single week",
+    ],
+  },
+  {
+    icon: Bot,
+    title: "AI Agents & Chat Systems",
+    points: [
+      "Build AI customer support agents powered by LangChain + OpenAI",
+      "Multi-step AI workflows that reason, decide, and act",
+      "Integrate with WhatsApp, websites, and CRM platforms",
+      "Cut support load and deliver 24/7 responses",
+    ],
+  },
+  {
+    icon: Plug,
+    title: "Business Systems Integration",
+    points: [
+      "API integrations between your internal tools and platforms",
+      "Automate internal ops across sales, ops, finance, marketing",
+      "Centralize workflows across teams into one source of truth",
+      "Unblock teams with automation that actually scales",
+    ],
+  },
+  {
+    icon: Database,
+    title: "Data & AI Solutions",
+    points: [
+      "Python automation, scraping, and data pipelines",
+      "AI-enhanced insights on top of your business data",
+      "Reporting, analytics, and dashboards that drive decisions",
+      "Turn raw data into operational leverage",
+    ],
+  },
+];
+
+const stats = [
+  { value: "30+", label: "AI Projects Delivered" },
+  { value: "Workflow", label: "Automation Systems Shipped" },
+  { value: "Business", label: "Integrations Built" },
+];
+
 const About = () => {
-  const skills = [
-    {
-      icon: Bot,
-      title: "Process Automation",
-      description: (
-        <ul className="list-disc list-inside text-left space-y-2 text-gray-600 leading-relaxed">
-          <li>Connect and automate apps, tools, and systems</li>
-          <li>Build low-code workflows (<span className="font-semibold text-gray-800">n8n, Make.com, Zapier</span>)</li>
-          <li><span className="font-semibold text-gray-800">API integrations</span></li>
-          <li>End-to-end automation to <span className="font-semibold text-gray-800">save your valuable time and money</span></li>
-        </ul>
-      ),
-      color: "bg-green-500",
-      lightColor: "bg-green-100",
-    },
-    {
-      icon: MessageSquare,
-      title: "Chat Bot",
-      description: (
-        <ul className="list-disc list-inside text-left space-y-2 text-gray-600 leading-relaxed">
-            <li>Build <span className="font-semibold text-gray-800">AI-powered chat bots</span> for customer support & automation</li>
-            <li>Integrate <span className="font-semibold text-gray-800">chat bots</span> into your existing systems</li>
-            <li>Automate customer inquiries and support tickets</li>
-            <li>Reduce support costs and <span className="font-semibold text-gray-800">improve customer experience</span></li>
-        </ul>
-      ),
-      color: "bg-red-500",
-      lightColor: "bg-red-100",
-    },
-    {
-      icon: Globe,
-      title: "Web Scraping",
-      description: (
-        <ul className="list-disc list-inside text-left space-y-2 text-gray-600 leading-relaxed">
-            <li>Extract data from websites and APIs</li>
-            <li>Build custom scrapers with <span className="font-semibold text-gray-800">BeautifulSoup, Selenium, Scrapy</span></li>
-            <li>Collect real-time <span className="font-semibold text-gray-800">market and competitor data</span></li>
-            <li>Provide clean, structured data for your business</li>
-        </ul>
-      ),
-      color: "bg-orange-500",
-      lightColor: "bg-orange-100",
-    },
-    {
-      icon: Brain,
-      title: "Machine Learning",
-      description: (
-        <ul className="list-disc list-inside text-left space-y-2 text-gray-600 leading-relaxed">
-            <li>Build custom <span className="font-semibold text-gray-800">ML models</span></li>
-            <li>Predict trends and customer behavior</li>
-            <li>Automate decision-making processes</li>
-            <li>Deliver <span className="font-semibold text-gray-800">actionable business insights</span></li>
-        </ul>
-      ),
-      color: "bg-purple-500",
-      lightColor: "bg-purple-100",
-    },
-    {
-      icon: BarChart3,
-      title: "Data Analysis",
-      description: (
-        <ul className="list-disc list-inside text-left space-y-2 text-gray-600 leading-relaxed">
-            <li>Data cleaning and preparation</li>
-            <li>Data visualization and reporting</li>
-            <li><span className="font-semibold text-gray-800">SQL</span> and <span className="font-semibold text-gray-800">Python</span> analytics</li>
-            <li>Turn raw data into <span className="font-semibold text-gray-800">clear business insights</span></li>
-        </ul>
-      ),
-      color: "bg-blue-500",
-      lightColor: "bg-blue-100",
-    },
-  ];
-  const stats = [{
-    number: "50+",
-    label: "Projects Completed"
-  }, {
-    number: "10+",
-    label: "Happy Clients"
-  }, {
-    number: "25+",
-    label: "Hours on Upwork"
-  }];
-  return <section className="py-20 bg-gray-50">
-      <div className="max-w-6xl mx-auto px-6">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-5xl font-bold text-gray-900 mb-6">
-            Services I Offer
+  return (
+    <section className="py-24 lg:py-32 bg-muted/40 relative overflow-hidden">
+      <div
+        className="absolute inset-0 opacity-[0.03] pointer-events-none"
+        style={{
+          backgroundImage:
+            "radial-gradient(hsl(var(--foreground)) 1px, transparent 1px)",
+          backgroundSize: "32px 32px",
+        }}
+      />
+
+      <div className="relative max-w-7xl mx-auto px-6 lg:px-10">
+        <div className="max-w-3xl mb-16">
+          <span className="inline-block text-xs font-semibold tracking-[0.2em] text-accent uppercase mb-4">
+            What I Build
+          </span>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-foreground leading-[1.05] tracking-tight mb-6">
+            AI Systems & Automation
+            <br />
+            <span className="text-accent">Solutions</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            I help businesses solve problems and build efficient solutions by combining <span className="font-semibold text-gray-800">data science</span>, <span className="font-semibold text-gray-800">AI</span>, and <span className="font-semibold text-gray-800">automation</span>. My work is focused on creating <span className="font-semibold text-gray-800">digital products</span> that <span className="font-semibold text-gray-800">save time</span>, <span className="font-semibold text-gray-800">reduce costs</span>, and <span className="font-semibold text-gray-800">drive business growth</span>.
+          <p className="text-lg md:text-xl text-foreground/70 leading-relaxed">
+            I design{" "}
+            <span className="font-semibold text-foreground">AI-powered systems</span>{" "}
+            that help businesses{" "}
+            <span className="font-semibold text-foreground">automate operations</span>,{" "}
+            <span className="font-semibold text-foreground">streamline workflows</span>,
+            integrate tools, and{" "}
+            <span className="font-semibold text-foreground">reduce manual work</span>{" "}
+            using modern{" "}
+            <span className="font-semibold text-foreground">AI</span> and{" "}
+            <span className="font-semibold text-foreground">automation</span>{" "}
+            technologies.
           </p>
         </div>
-        
-        {/* Skills Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {skills.map((skill) => <div key={skill.title} className="bg-white rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:scale-105 group border border-gray-100 flex flex-col">
-              <div className={`inline-flex items-center justify-center w-16 h-16 ${skill.lightColor} rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                <skill.icon className={`w-8 h-8 text-gray-700`} />
+
+        <div className="grid md:grid-cols-2 gap-5 lg:gap-6 mb-20">
+          {services.map((s) => (
+            <div
+              key={s.title}
+              className="group relative bg-card rounded-2xl p-7 lg:p-8 border border-border hover:border-accent/40 hover:shadow-xl transition-all duration-300"
+            >
+              <div className="flex items-start justify-between mb-6">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-accent to-secondary text-background flex items-center justify-center shadow-md group-hover:scale-110 transition-transform">
+                  <s.icon className="w-6 h-6" />
+                </div>
+                <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover:text-accent group-hover:rotate-45 transition-all" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                {skill.title}
+              <h3 className="text-2xl font-bold text-foreground mb-4">
+                {s.title}
               </h3>
-              <div className="text-gray-600 leading-relaxed flex-grow">
-                {skill.description}
-              </div>
-            </div>)}
-        </div>
-
-        {/* Stats Section */}
-        <div className="flex justify-center gap-16 mb-16">
-          {stats.map((stat, index) => <div key={stat.label} className="text-center">
-              <div className="text-5xl font-bold text-gray-900 mb-2">
-                {stat.number}
-              </div>
-              <div className="text-gray-600 font-medium">
-                {stat.label}
-              </div>
-            </div>)}
-        </div>
-
-        {/* About Description */}
-        <div className="bg-white rounded-3xl p-12 shadow-lg">
-          <div className="max-w-4xl mx-auto text-center">
-            <h3 className="text-3xl font-bold text-gray-900 mb-6">About Me</h3>
-            <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              I can help you with <span className="font-semibold text-gray-800">automation, data science, and AI solutions</span> that save time, reduce costs, and simplify your business.
-            </p>
-            <p className="text-lg text-gray-700 leading-relaxed mb-8">
-              Using <span className="font-semibold text-gray-800">Python, machine learning, web scraping, low-code platforms (n8n, Make.com, Zapier), and API integrations</span>, I build efficient systems tailored to your needs.
-            </p>
-            <div className="inline-flex items-center gap-4 bg-teal-50 px-6 py-3 rounded-full">
-              <div className="w-3 h-3 bg-teal-500 rounded-full animate-pulse"></div>
-              <span className="text-teal-700 font-medium">Available for new projects</span>
+              <ul className="space-y-2.5">
+                {s.points.map((p, i) => (
+                  <li
+                    key={i}
+                    className="flex gap-3 text-sm md:text-base text-foreground/70 leading-relaxed"
+                  >
+                    <span className="mt-2 w-1.5 h-1.5 rounded-full bg-accent shrink-0" />
+                    <span>{p}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
-          </div>
+          ))}
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-border rounded-2xl overflow-hidden border border-border">
+          {stats.map((s) => (
+            <div key={s.label} className="bg-card p-8 text-center">
+              <div className="text-4xl md:text-5xl font-black text-foreground mb-2">
+                {s.value}
+              </div>
+              <div className="text-sm font-medium text-muted-foreground uppercase tracking-wider">
+                {s.label}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default About;
