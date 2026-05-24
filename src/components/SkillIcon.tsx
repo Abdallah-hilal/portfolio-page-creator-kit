@@ -1,19 +1,6 @@
 import React from 'react';
-import {
-  SiGooglesheets,
-  SiMake,
-  SiN8N,
-  SiNotion,
-  SiNumpy,
-  SiPandas,
-  SiPlotly,
-  SiPython,
-  SiSelenium,
-  SiTableau,
-  SiZapier,
-} from 'react-icons/si';
-import { DiDatabase } from 'react-icons/di';
-import { Bot, BrainCircuit, CheckCircle2, Cpu, Link, Mic, Search, Workflow } from 'lucide-react';
+import { SiNotion, SiSelenium } from 'react-icons/si';
+import { Bot, BrainCircuit, CheckCircle2, Cpu, Link, Search, Workflow } from 'lucide-react';
 
 interface SkillIconProps {
   skill: string;
