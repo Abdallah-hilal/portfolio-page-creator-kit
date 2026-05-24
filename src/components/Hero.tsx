@@ -117,7 +117,7 @@ const Hero = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label="LinkedIn"
-                      className="w-10 h-10 flex items-center justify-center rounded-full border border-border text-foreground/70 hover:text-accent hover:border-accent transition-all"
+                      className="w-10 h-10 flex items-center justify-center rounded-full border border-border bg-card hover:bg-[#0A66C2] hover:text-white hover:border-[#0A66C2] transition-all hover:-translate-y-0.5"
                     >
                       <Linkedin className="w-4 h-4" />
                     </a>
@@ -131,7 +131,7 @@ const Hero = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label="YouTube"
-                      className="w-10 h-10 flex items-center justify-center rounded-full border border-border text-foreground/70 hover:text-accent hover:border-accent transition-all"
+                      className="w-10 h-10 flex items-center justify-center rounded-full border border-border bg-card hover:bg-[#FF0000] hover:text-white hover:border-[#FF0000] transition-all hover:-translate-y-0.5"
                     >
                       <Youtube className="w-4 h-4" />
                     </a>
@@ -145,7 +145,7 @@ const Hero = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label="Linktree"
-                      className="w-10 h-10 flex items-center justify-center rounded-full border border-border text-foreground/70 hover:text-accent hover:border-accent transition-all"
+                      className="w-10 h-10 flex items-center justify-center rounded-full border border-border bg-card hover:bg-[#43E660] hover:text-white hover:border-[#43E660] transition-all hover:-translate-y-0.5"
                     >
                       <Link2 className="w-4 h-4" />
                     </a>
@@ -159,7 +159,7 @@ const Hero = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label="DataCamp"
-                      className="w-10 h-10 flex items-center justify-center rounded-full border border-border text-foreground/70 hover:text-accent hover:border-accent transition-all"
+                      className="w-10 h-10 flex items-center justify-center rounded-full border border-border bg-card hover:bg-[#03EF62] hover:text-black hover:border-[#03EF62] transition-all hover:-translate-y-0.5"
                     >
                       <svg
                         viewBox="-9.6 -9.6 43.2 43.2"
@@ -197,10 +197,10 @@ const Hero = () => {
               {floatingTags.map((t, i) => (
                 <div
                   key={t.label}
-                  className={`absolute ${t.className} bg-card border border-border shadow-lg rounded-full px-3 py-1.5 text-xs font-semibold text-foreground/80 backdrop-blur-sm`}
+                  className={`absolute ${t.className} bg-card/80 border border-border/60 shadow-sm rounded-full px-2.5 py-1 text-[11px] font-medium text-foreground/70 backdrop-blur-sm`}
                   style={{
-                    animation: `float 6s ease-in-out infinite`,
-                    animationDelay: `${i * 0.6}s`,
+                    animation: `float 7s ease-in-out infinite`,
+                    animationDelay: `${i * 0.7}s`,
                   }}
                 >
                   {t.label}
